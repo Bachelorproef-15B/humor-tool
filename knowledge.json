@@ -1,0 +1,285 @@
+{
+  "_meta": {
+    "status": "vervangen door field research",
+    "project": "Bachelorproef: Strategisch humorgebruik in leiderschap bij Vlaamse kmo's",
+    "versie": "0.1.0"
+  },
+
+  "humorstijlen": [
+    {
+      "id": "affiliative",
+      "naam": "Affiliatieve humor",
+      "uitleg": "Humor die gericht is op het samenbrengen van mensen, het bevorderen van groepsgevoel en het verlichten van sociale spanningen. De leidinggevende lacht met zijn team, nooit over hen.",
+      "wanneerWel": [
+        "Bij teambuilding of informele momenten",
+        "Om de sfeer te ontspannen na een drukke periode",
+        "Bij onboarding van nieuwe medewerkers",
+        "Om empathie te tonen na een moeilijke situatie"
+      ],
+      "wanneerNiet": [
+        "Wanneer het team onder hoge stress staat en focus nodig heeft",
+        "Tijdens formele evaluatie- of disciplinegesprekken",
+        "Als de humor ten koste gaat van buitenstaanders of klanten"
+      ],
+      "voorbeeldzin": "'Kijk, we hebben het project op tijd afgeleverd. Zelfs al heeft de koffieautomaat ons meer gemotiveerd dan de planning.' (gezegd met een knipoog naar het team)"
+    },
+    {
+      "id": "self-enhancing",
+      "naam": "Zelfversterkende humor",
+      "uitleg": "De leidinggevende gebruikt humor om zichzelf te relativeren en veerkrachtig te blijven, ook onder druk. Het gaat om een intern positief perspectief dat stress omzet in relativeringsvermogen.",
+      "wanneerWel": [
+        "Bij persoonlijke tegenslagen of fouten van de leidinggevende zelf",
+        "In crisismomenten om eigen rust te bewaren en uit te stralen",
+        "Om authenticiteit en kwetsbaarheid te tonen tegenover het team",
+        "Tijdens veranderingstrajecten om hoop en positivisme te bewaren"
+      ],
+      "wanneerNiet": [
+        "Als het team behoefte heeft aan duidelijkheid en daadkracht",
+        "Wanneer het als oppervlakkigheid of onverschilligheid kan worden geinterpreteerd",
+        "Bij ernstige externe crises die directe actie vereisen"
+      ],
+      "voorbeeldzin": "'Ik heb gisteren de verkeerde cijfers gepresenteerd aan de raad van bestuur. Gelukkig had ik ook de goede bij. Leerpunt: altijd twee bestanden openen.' (zelf relativerend, geen schaamte)"
+    },
+    {
+      "id": "aggressive",
+      "naam": "Agressieve humor",
+      "uitleg": "Humor die anderen ridiculiseert, sarcasme gebruikt of mensen uitsluit. Deze stijl kan tijdelijk hilarisch lijken maar is destructief voor vertrouwen en psychologische veiligheid op de werkvloer.",
+      "wanneerWel": [
+        "zelden aanbevolen in leiderschapscontexten",
+        "Eventueel in zeer vertrouwde 1-op-1-relaties mits wederzijdse expliciete context",
+        "Als zelfkritiek op eigen gedrag, nooit gericht op anderen"
+      ],
+      "wanneerNiet": [
+        "Nooit gericht op persoonlijke kenmerken van medewerkers",
+        "Niet in groepssettings waar hierarchie de kwetsbaarheid vergroot",
+        "Niet als reactie op fouten of slecht presterende medewerkers",
+        "Nooit als verkapte kritiek of als 'grap' verpakte feedback"
+      ],
+      "voorbeeldzin": "'Dat rapport was zo slecht, ik heb het gebruikt als nachtlectuur.' (NEGATIEF VOORBEELD: dit ondermijnt vertrouwen en moet vermeden worden)"
+    },
+    {
+      "id": "self-defeating",
+      "naam": "Zelfondermijnende humor",
+      "uitleg": "De leidinggevende lacht zichzelf weg om anderen te plezieren of goedkeuring te zoeken. Dit ondermijnt het eigen gezag en geloofwaardigheid op termijn.",
+      "wanneerWel": [
+        "zelden strategisch inzetbaar als leidinggevende",
+        "Mogelijk in kleine dosis om barriers te verlagen bij nieuwe teams, mits snel gecorrigeerd door daadkrachtig gedrag"
+      ],
+      "wanneerNiet": [
+        "Niet als patroon of vaste communicatiestijl",
+        "Niet bij teams die nood hebben aan stabiliteit en richting",
+        "Niet als reactie op kritiek van medewerkers of stakeholders",
+        "Niet bij onderhandelingen of situaties waarbij autoriteit telt"
+      ],
+      "voorbeeldzin": "'Ik weet eigenlijk ook niet goed wat de beste aanpak is, maar we zien wel.' (NEGATIEF VOORBEELD: dit creert onzekerheid in het team)"
+    }
+  ],
+
+  "situaties": [
+    {
+      "id": "sit_01",
+      "titel": "Een conflict tussen twee teamleden oplossen",
+      "beschrijving": "Twee medewerkers liggen in de clinch na een meningsverschil over de aanpak van een project. De spanning is voelbaar in het team.",
+      "aanbevolenHumorstijl": "affiliative",
+      "concreteTip": "Gebruik een luchtige observatie over hoe het team altijd fel discussieert omdat iedereen gepassioneerd is, en benoem dat als kracht voor je tussenkomst.",
+      "waarschuwing": "Gebruik nooit humor om het conflict zelf te minimaliseren of weg te lachen. Erken eerst de ernst van de situatie.",
+      "voorbeeld": "'Jullie passie voor dit project is duidelijk, bijna te duidelijk. Laten we die energie samen in de juiste richting sturen.'"
+    },
+    {
+      "id": "sit_02",
+      "titel": "Slecht nieuws brengen over reorganisatie of ontslagen",
+      "beschrijving": "De leidinggevende moet aan het team communiceren dat er structurele wijzigingen komen die jobs beinvloeden.",
+      "aanbevolenHumorstijl": "geen",
+      "concreteTip": "Dit is een situatie waarbij humor volledig achterwege moet blijven. Directheid, empathie en eerlijkheid zijn de enige gepaste toon.",
+      "waarschuwing": "Elk grappig of relativerend element wordt als respectloos ervaren en beschadigt het vertrouwen blijvend.",
+      "voorbeeld": "Geen humorvoorbeeld van toepassing. Focus op heldere, menselijke communicatie."
+    },
+    {
+      "id": "sit_03",
+      "titel": "Een presentatie geven aan het voltallige team over de jaarresultaten",
+      "beschrijving": "De leidinggevende presenteert de jaarcijfers aan het team. De resultaten zijn matig maar niet dramatisch.",
+      "aanbevolenHumorstijl": "self-enhancing",
+      "concreteTip": "Open met een zelfonthullende observatie die aantoont dat je de realiteit ziet, maar er toch positief in staat. Dit creert psychologische veiligheid voor het team.",
+      "waarschuwing": "Relativeer nooit de tekortkoming zelf, enkel jouw eigen reactie erop. Het team wil zien dat je het serieus neemt.",
+      "voorbeeld": "'Ik had gehoopt u vandaag champagne aan te bieden. We hebben bruiswater. Maar de weg naar champagne ligt er, en die gaan we samen bewandelen.'"
+    },
+    {
+      "id": "sit_04",
+      "titel": "Onboarding van een nieuwe medewerker",
+      "beschrijving": "Een nieuwe collega start en voelt zich onwennig in het team. De groepsdynamiek is al sterk aanwezig.",
+      "aanbevolenHumorstijl": "affiliative",
+      "concreteTip": "Gebruik inclusieve humor die de nieuwe medewerker verwelkomt in de groep zonder hem/haar als buitenstaander te framen. Gedeelde teamverhalen werken goed.",
+      "waarschuwing": "Vermijd inside jokes die de nieuwe medewerker nog niet begrijpt: dit vergroot het gevoel van buitenstaander zijn.",
+      "voorbeeld": "'Wij hebben hier een gulden regel: de koffiepot is heilig. Al de rest leren we je wel bij.' (warm, inclusief, laagdrempelig)"
+    },
+    {
+      "id": "sit_05",
+      "titel": "Een vergadering die vastloopt door overmatige detailfocus",
+      "beschrijving": "Het team geraakt verstrikt in details en verliest het grote plaatje uit het oog. De vergadering loopt vast.",
+      "aanbevolenHumorstijl": "affiliative",
+      "concreteTip": "Een korte, speelse onderbreking kan de groep resetten. Benoem het patroon met humor en stuur dan actief bij met een vraag die terugkeert naar het doel.",
+      "waarschuwing": "Gebruik humor als reset, niet als vervanging van sturing. Volg de grap onmiddellijk op met een concrete vraag of beslissing.",
+      "voorbeeld": "'We zijn nu 20 minuten bezig met de kleur van de knop. Ik ga even een executive decision nemen: de knop wordt blauw. Gaan we verder?' (gecombineerd met een lach)"
+    },
+    {
+      "id": "sit_06",
+      "titel": "Feedback geven op een zwakke prestatie van een medewerker",
+      "beschrijving": "Een medewerker leverde werk af dat onder de verwachtingen bleef. De leidinggevende moet dit aankaarten.",
+      "aanbevolenHumorstijl": "geen",
+      "concreteTip": "Feedback verdient directheid en respect. Gebruik geen humor om de boodschap te verzachten: dit verwart de medewerker over de ernst van de situatie.",
+      "waarschuwing": "Agressieve of zelfondermijnende humor is hier bijzonder schadelijk. Elke grap kan als spot of minachting worden gelezen.",
+      "voorbeeld": "Geen humorvoorbeeld van toepassing. Directe, constructieve feedback is de enige gepaste aanpak."
+    },
+    {
+      "id": "sit_07",
+      "titel": "Teamvergadering na een succesvolle projectafronding",
+      "beschrijving": "Het team heeft een belangrijk project op tijd en binnen budget afgeleverd. Er is een moment van viering.",
+      "aanbevolenHumorstijl": "affiliative",
+      "concreteTip": "Dit is het ideale moment voor warme, inclusieve humor die de gedeelde inspanning viert. Verwijs naar specifieke momenten uit het project die het team zal herkennen.",
+      "waarschuwing": "Zorg dat iedereen zich opgenomen voelt in de viering. Vermijd humor die bepaalde personen uitsluit of een enkeling overmatig benadrukt.",
+      "voorbeeld": "'Drie maanden geleden dacht ik dat dit project ons zou doen. Vandaag mag ik zeggen: het heeft ons gemaakt. Proficiat aan iedereen, ook aan de koffiemachine.'"
+    },
+    {
+      "id": "sit_08",
+      "titel": "Omgaan met een eigen fout als leidinggevende",
+      "beschrijving": "De leidinggevende heeft een vergissing gemaakt die zichtbaar is voor het team, bijvoorbeeld een verkeerde beslissing of miscommunicatie.",
+      "aanbevolenHumorstijl": "self-enhancing",
+      "concreteTip": "Erken de fout openlijk en gebruik zelfrelaterende humor om te tonen dat je het aankan. Dit versterkt eerder dan ondermijnt je gezag, omdat het authenticiteit uitstraalt.",
+      "waarschuwing": "Relativeer de fout, niet de verantwoordelijkheid. De humor mag het probleem niet doen verdwijnen: actie blijft nodig.",
+      "voorbeeld": "'Ik heb die vergadering verkeerd ingepland. Klassiek. Hier is de nieuwe uitnodiging, ditmaal nagekeken door twee mensen en de kalender-app.'"
+    },
+    {
+      "id": "sit_09",
+      "titel": "Een langdurig veranderingstraject begeleiden",
+      "beschrijving": "Het team gaat door een periode van langdurige verandering (nieuwe tools, structuur, cultuur). Vermoeidheid en weerstand bouwen op.",
+      "aanbevolenHumorstijl": "self-enhancing",
+      "concreteTip": "Humor kan een buffer zijn tegen verandermoeheid. Gebruik het spaarzaam maar consistent om veerkracht en positivisme te signaleren zonder de uitdagingen te minimaliseren.",
+      "waarschuwing": "Vermijd humor die de weerstand van het team wegwuift of bagatelliseert. Erken altijd eerst de moeilijkheid.",
+      "voorbeeld": "'We zijn nu in maand vier van de transitie. Ik beloof jullie: de andere kant van deze tunnel bestaat. Ik heb er alvast de catering besteld.'"
+    },
+    {
+      "id": "sit_10",
+      "titel": "Onderhandelen met een externe partner of klant",
+      "beschrijving": "De leidinggevende onderhandelt met een externe partij over contract, prijs of samenwerking.",
+      "aanbevolenHumorstijl": "affiliative",
+      "concreteTip": "Lichte affiliatieve humor kan de relatie versoepelen en vertrouwen wekken, maar enkel als de andere partij er ook voor openstaat. Lees de kamer.",
+      "waarschuwing": "Nooit humor gebruiken rond de inhoud van de onderhandeling zelf. Dit kan als onprofessioneel of als onderwaardering van de deal worden ervaren.",
+      "voorbeeld": "'Ik heb gehoord dat jullie koffie in Gent beter is dan in Brussel. Dat alleen is al reden genoeg om hier samen te werken.' (ijsbreker, niet meer)"
+    }
+  ],
+
+  "dosAndDonts": {
+    "dos": [
+      {
+        "id": "do_01",
+        "titel": "Lees de kamer voor je humor inzet",
+        "uitleg": "Effectieve humor is situationeel. Neem altijd even de tijd om te peilen naar de stemming, het energieniveau en de behoeften van het team voordat je humor inzet."
+      },
+      {
+        "id": "do_02",
+        "titel": "Gebruik humor om te verbinden, niet om indruk te maken",
+        "uitleg": "De beste humor in leiderschap richt zich op het versterken van de relatie met het team. Humor die dient om zelf beter over te komen, werkt averechts."
+      },
+      {
+        "id": "do_03",
+        "titel": "Erken je eigen fouten met zelfrelaterende humor",
+        "uitleg": "Leidinggevenden die hun eigen vergissingen kunnen relativeren met een glimlach, bouwen sneller vertrouwen op dan zij die altijd onberispelijk willen lijken."
+      },
+      {
+        "id": "do_04",
+        "titel": "Wees consistent in je humorstijl",
+        "uitleg": "Een leidinggevende die regelmatig en voorspelbaar gebruik maakt van warme humor, creert een veiliger teamklimaat dan iemand die humor sporadisch en onverwacht inzet."
+      },
+      {
+        "id": "do_05",
+        "titel": "Pas humor aan de culturele context aan",
+        "uitleg": "In Vlaamse kmo's is humor vaak indirect, zelfrelativerend en gebaseerd op gedeelde ervaringen. Internationale of generieke humor mist vaak de nuance die lokale teams verbindt."
+      },
+      {
+        "id": "do_06",
+        "titel": "Gebruik humor als aanvulling op duidelijke communicatie, nooit als vervanging",
+        "uitleg": "Humor ondersteunt de boodschap maar vervangt ze nooit. Na een grap volgt altijd een duidelijke conclusie, beslissing of richting."
+      }
+    ],
+    "donts": [
+      {
+        "id": "dont_01",
+        "titel": "Gebruik nooit humor ten koste van een individu",
+        "uitleg": "Grappen over persoonlijke kenmerken, fouten of afkomst van teamleden vernietigen psychologische veiligheid en het vertrouwen in de leidinggevende."
+      },
+      {
+        "id": "dont_02",
+        "titel": "Vermijd humor bij ernstige of emotioneel beladen situaties",
+        "uitleg": "Bij ontslag, rouw, burn-out of ernstig conflict is humor altijd misplaatst, hoe goed bedoeld ook. Menselijkheid zonder humor is hier de sterkste respons."
+      },
+      {
+        "id": "dont_03",
+        "titel": "Lach nooit om iemand die kwetsbaar is",
+        "uitleg": "Een medewerker die een fout toegeeft of emotioneel is, verdient empathie. Humor op dat moment, ook al is het zacht bedoeld, wordt ervaren als afwijzing."
+      },
+      {
+        "id": "dont_04",
+        "titel": "Gebruik humor niet als verkapte kritiek of passief-agressief signaal",
+        "uitleg": "Sarcasme of grapjes die eigenlijk kritiek zijn ('Jij vergeet altijd de deadline, haha') zijn destructief en ondermijnen open communicatie in het team."
+      },
+      {
+        "id": "dont_05",
+        "titel": "Dwing humor niet af in een gespannen groep",
+        "uitleg": "Als de sfeer zwaar is en het team niet klaar is voor lichtheid, werkt een grap averechts. Mislukte humor vergroot de afstand tussen leidinggevende en team."
+      },
+      {
+        "id": "dont_06",
+        "titel": "Onderschat niet de impact van hierarchie op humor",
+        "uitleg": "Wat een collega grappig vindt, kan door een ondergeschikte als verplichte lach worden ervaren. Als leidinggevende draag je de verantwoordelijkheid voor de impact van je humor, niet enkel de intentie."
+      }
+    ]
+  },
+
+  "bronnen": [
+    {
+      "id": "bron_01",
+      "auteur": "Martin, R. A.",
+      "jaar": 2007,
+      "titel": "The Psychology of Humor: An Integrative Approach",
+      "uitgever": "Elsevier Academic Press",
+      "link": "_LINK",
+      "nota": "kernbron voor de vier humorstijlen (Humor Styles Questionnaire)"
+    },
+    {
+      "id": "bron_02",
+      "auteur": "Holmes, J., & Marra, M.",
+      "jaar": 2006,
+      "titel": "Humor and Leadership Style",
+      "uitgever": "Humor: International Journal of Humor Research, 19(2), 119-138",
+      "link": "_LINK",
+      "nota": "onderzoek naar humor als leiderschapsstrategie in werkcontexten"
+    },
+    {
+      "id": "bron_03",
+      "auteur": "Cooper, C. D.",
+      "jaar": 2008,
+      "titel": "Elucidating the bonds of workplace humor: A relational process model",
+      "uitgever": "Human Relations, 61(8), 1087-1115",
+      "link": "_LINK",
+      "nota": "focust op relationele effecten van humor tussen leidinggevenden en medewerkers"
+    },
+    {
+      "id": "bron_04",
+      "auteur": "Avolio, B. J., Howell, J. M., & Sosik, J. J.",
+      "jaar": 1999,
+      "titel": "A funny thing happened on the way to the bottom line: Humor as a moderator of leadership style effects",
+      "uitgever": "Academy of Management Journal, 42(2), 219-227",
+      "link": "_LINK",
+      "nota": "klassiek artikel over humor als moderator in transformationeel leiderschap"
+    },
+    {
+      "id": "bron_05",
+      "auteur": "Romero, E. J., & Cruthirds, K. W.",
+      "jaar": 2006,
+      "titel": "The Use of Humor in the Workplace",
+      "uitgever": "Academy of Management Perspectives, 20(2), 58-69",
+      "link": "_LINK",
+      "nota": "praktisch overzichtsartikel over humor op de werkvloer, inclusief kmo-relevante inzichten"
+    }
+  ]
+}

@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Humor in Leiderschap: Vlaamse kmo's</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent:      #f9a823;
+      --accent-dark: #ca8006;
+      --accent-soft: #fef9ec;
+      --bg:          #ffffff;
+      --surface:     #f5f5f5;
+      --border:      #e6e6e6;
+      --text:        #0d0d0d;
+      --text-muted:  #737373;
+      --green:       #1a9247;
+      --green-soft:  #eaf5ef;
+      --red:         #c0392b;
+      --red-soft:    #fdf0ef;
+      --bubble-bot:  #f2f2f2;
+      --radius:      4px;
+      --radius-lg:   8px;
+      --nav-h:       62px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* Dark mode variabelen */
+    body.dark-mode {
+      --bg:         #111118;
+      --surface:    #1a1a24;
+      --border:     #2e2e40;
+      --text:       #e4e4f0;
+      --text-muted: #8888a8;
+      --bubble-bot: #24243a;
+      --accent-soft: #2a1f08;
+      --green-soft: #0a1f12;
+      --red-soft:   #1f0a0a;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding-top: var(--nav-h);
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 0 2rem;
+      z-index: 1000;
+      gap: 1rem;
+      transition: box-shadow 0.3s ease, background 0.3s, border-color 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.09); border-bottom-color: transparent; }
+    body.dark-mode nav { background: rgba(17,17,24,0.96); }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text);
+      white-space: nowrap;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: color 0.3s;
+    }
+    .nav-brand span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 0; list-style: none; justify-content: center; }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 0.45rem 0.85rem;
+      transition: background 0.15s, color 0.15s;
+      display: block;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { background: var(--accent); color: #fff; }
+
+    /* Dark mode toggle */
+    .theme-toggle {
+      background: none;
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      padding: 0;
+    }
+    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+
+    /* Mobiel menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 0;
+      z-index: 999;
+      flex-direction: column;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.75rem 2rem;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.12s;
+    }
+    .mobile-menu a:hover { background: var(--accent-soft); }
+
+    /* Secties */
+    section {
+      position: relative;
+      min-height: calc(100vh - var(--nav-h));
+      padding: 6rem 2rem 5rem;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Sectie-specifieke achtergronden */
+    #home    { background: #ffffff; }
+    #chatbot { background: #f6f3ff; }
+    #quiz    { background: #fff9f2; }
+    #dnd     { background: #f8f7f5; }
+    #bronnen { background: #f0f7f4; }
+    #over    { background: var(--accent-soft); }
+
+    body.dark-mode #home    { background: #0f0f1a; }
+    body.dark-mode #chatbot { background: #120f24; }
+    body.dark-mode #quiz    { background: #1a140e; }
+    body.dark-mode #dnd     { background: #111111; }
+    body.dark-mode #bronnen { background: #0c1810; }
+    body.dark-mode #over    { background: #1a1408; }
+    body.dark-mode .wave-divider { display: none; }
+
+    /* Wave dividers */
+    .wave-divider {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      margin-top: -1px;
+    }
+    .wave-divider svg { display: block; width: 100%; }
+
+    /* Decoratieve blob */
+    .blob-bg { position: absolute; pointer-events: none; z-index: 0; }
+
+    /* Typografie */
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      text-align: center;
+    }
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      font-weight: 800;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    p  { color: var(--text-muted); }
+
+    .accent { color: var(--accent); }
+
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    /* Knoppen */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .btn:active { opacity: 0.85; transform: scale(0.97) !important; }
+
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(249,168,35,0.38);
+    }
+    .btn-outline { background: transparent; color: var(--text); border-color: var(--border); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* Home hero */
+    #home .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #home .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    #home h1 { margin: 0; }
+    #home .lead {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.78;
+      text-align: center;
+    }
+
+    /* Feature grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4.5rem;
+    }
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, background 0.3s, color 0.3s;
+    }
+    .feature-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.28s ease;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    .feature-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 14px 36px rgba(249,168,35,0.2); border-color: rgba(249,168,35,0.4); }
+    .feature-card:hover::after { transform: scaleX(1); }
+    .feature-icon { font-size: 1.6rem; margin-bottom: 0.85rem; display: block; }
+    .feature-card h3 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.4rem; }
+    .feature-card p  { font-size: 0.85rem; }
+    a.feature-card { text-decoration: none; color: inherit; display: block; }
+
+    @media (max-width: 640px) { .feature-grid { grid-template-columns: 1fr; gap: 1rem; } }
+
+    /* Chatbot */
+    #chatbot { padding-bottom: 5rem; }
+
+    .chat-wrapper {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      height: 640px;
+      max-height: 82vh;
+      overflow: hidden;
+      box-shadow: 0 6px 32px rgba(120,80,220,0.1);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .chat-header {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .chat-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .chat-header-text strong { display: block; font-size: 0.95rem; font-weight: 800; }
+    .chat-header-text span   { font-size: 0.78rem; opacity: 0.88; }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      scroll-behavior: smooth;
+    }
+    .chat-messages::-webkit-scrollbar { width: 4px; }
+    .chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    /* Chat bubble slide-in */
+    .msg { display: flex; align-items: flex-end; gap: 0.5rem; max-width: 85%; opacity: 0; }
+    .msg.bot  { align-self: flex-start; animation: msgInBot  0.3s ease forwards; }
+    .msg.user { align-self: flex-end; flex-direction: row-reverse; animation: msgInUser 0.3s ease forwards; }
+
+    @keyframes msgInBot  { from { opacity:0; transform: translateX(-14px) translateY(6px); } to { opacity:1; transform: none; } }
+    @keyframes msgInUser { from { opacity:0; transform: translateX(14px)  translateY(6px); } to { opacity:1; transform: none; } }
+
+    .msg-avatar {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      color: #fff;
+    }
+    .msg-bubble {
+      padding: 0.75rem 1rem;
+      border-radius: 14px;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+    .msg.bot  .msg-bubble { background: var(--bubble-bot); border-bottom-left-radius: 3px; color: var(--text); transition: background 0.3s, color 0.3s; }
+    .msg.user .msg-bubble { background: var(--accent); color: #fff; border-bottom-right-radius: 3px; }
+    .msg-bubble p + p   { margin-top: 0.5rem; }
+    .msg-bubble strong  { font-weight: 700; }
+
+    /* Typewriter cursor */
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 0.7s step-end infinite;
+      color: var(--accent);
+      margin-left: 1px;
+    }
+    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+
+    .situation-list { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
+
+    .sit-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 0.6rem 0.9rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.14s, color 0.14s, border-color 0.14s, transform 0.14s;
+    }
+    .sit-btn:hover  { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateX(4px); }
+    .sit-btn:disabled { cursor: default; }
+
+    .advies-card { display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.88rem; }
+    .advies-section { display: flex; flex-direction: column; gap: 0.15rem; }
+    .advies-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.65; }
+    .advies-warning {
+      background: rgba(0,0,0,0.12);
+      border-left: 3px solid rgba(255,255,255,0.5);
+      padding: 0.45rem 0.7rem;
+      font-size: 0.82rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .chat-footer { padding: 0.9rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: center; transition: border-color 0.3s; }
+
+    /* Quiz sectie */
+    .quiz-shell {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2rem 2.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 4px 28px rgba(249,168,35,0.09);
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .quiz-progress-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.55rem;
+    }
+    .quiz-progress-track {
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    .quiz-progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      transition: width 0.45s ease;
+    }
+
+    .quiz-stage { position: relative; overflow: hidden; }
+
+    .quiz-card {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+    .quiz-card.active  { opacity: 1; transform: translateX(0); }
+    .quiz-card.exiting { opacity: 0; transform: translateX(-40px); }
+
+    .quiz-vraag {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+      line-height: 1.5;
+    }
+    .quiz-antwoorden { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .quiz-btn {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1.1rem;
+      text-align: left;
+      cursor: pointer;
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.45;
+      transition: border-color 0.16s, background 0.16s, transform 0.16s, color 0.3s;
+    }
+    .quiz-btn:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateX(4px); }
+
+    .quiz-result { padding: 0.5rem 0; animation: fadeUp 0.4s ease forwards; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+
+    .quiz-result-icon { font-size: 2.8rem; margin-bottom: 0.5rem; }
+    .quiz-result-stijl {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .quiz-result-uitleg { color: var(--text-muted); max-width: 520px; margin: 0 auto 1.5rem; font-size: 0.95rem; line-height: 1.7; }
+    .quiz-result-tip {
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      padding: 0.9rem 1.1rem;
+      text-align: left;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .quiz-result-tip strong { color: var(--text); }
+
+    /* Do's en don'ts */
+    .dnd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 640px) { .dnd-grid { grid-template-columns: 1fr; } }
+    .dnd-col { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .dnd-header {
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 0.65rem 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .dnd-header.green { background: var(--green); color: #fff; }
+    .dnd-header.red   { background: var(--red);   color: #fff; }
+
+    .dnd-item {
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      border-radius: 0 0 var(--radius) var(--radius);
+      transition: transform 0.18s, box-shadow 0.18s, background 0.3s;
+    }
+    .dnd-item.green { background: var(--green-soft); border-left: 3px solid var(--green); }
+    .dnd-item.red   { background: var(--red-soft);   border-left: 3px solid var(--red);   }
+    .dnd-item:hover { transform: translateX(3px); box-shadow: 0 3px 12px rgba(0,0,0,0.06); }
+    .dnd-item h3 { font-size: 0.9rem; color: var(--text); margin-bottom: 0; }
+    .dnd-item p  { font-size: 0.82rem; }
+
+    /* Bronnen */
+    .bron-list { display: flex; flex-direction: column; gap: 0.85rem; }
+    .bron-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: 1.1rem 1.4rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: box-shadow 0.2s, transform 0.2s, background 0.3s, border-color 0.3s;
+    }
+    .bron-item:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.07); transform: translateX(4px); }
+    .bron-num {
+      width: 28px; height: 28px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      border-radius: var(--radius);
+    }
+    .bron-body { flex: 1; }
+    .bron-body strong { font-size: 0.92rem; color: var(--text); }
+    .bron-body p { font-size: 0.84rem; margin-top: 0.2rem; }
+    .bron-nota {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.74rem;
+      font-style: italic;
+      color: var(--text-muted);
+      background: var(--surface);
+      padding: 0.15rem 0.5rem;
+    }
+
+    /* Over */
+    #over .over-card {
+      background: var(--bg);
+      border: 1px solid rgba(249,168,35,0.25);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      box-shadow: 0 4px 24px rgba(249,168,35,0.12);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .placeholder-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #fff8e1;
+      color: #92690a;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border: 1px solid #f9d963;
+      border-radius: var(--radius);
+      letter-spacing: 0.03em;
+    }
+
+    /* Laden */
+    .loading { display: flex; align-items: center; justify-content: center; min-height: 200px; color: var(--text-muted); font-size: 0.9rem; gap: 0.5rem; }
+    .spinner { width: 18px; height: 18px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      nav { padding: 0 1.25rem; grid-template-columns: auto 1fr auto auto; }
+      section { padding: 4rem 1.25rem 3rem; }
+    }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+
+    /* Typing indicator */
+    .typing { display: flex; gap: 4px; align-items: center; padding: 0.6rem 0.85rem; }
+    .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--text-muted); animation: bounce 1.2s infinite; }
+    .typing span:nth-child(2) { animation-delay: 0.2s; }
+    .typing span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce { 0%,80%,100% { transform:translateY(0); opacity:0.4; } 40% { transform:translateY(-5px); opacity:1; } }
+
+    /* Scroll reveal */
+    [data-reveal] { opacity:0; transform:translateY(26px); transition: opacity 0.56s ease, transform 0.56s ease; }
+    [data-reveal].revealed { opacity:1; transform:none; }
+    [data-reveal="delay-1"] { transition-delay: 0.08s; }
+    [data-reveal="delay-2"] { transition-delay: 0.18s; }
+    [data-reveal="delay-3"] { transition-delay: 0.28s; }
+    [data-reveal="delay-4"] { transition-delay: 0.38s; }
+
+    /* Terug naar boven */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      width: 46px; height: 46px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(249,168,35,0.45);
+      z-index: 900;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.28s, transform 0.28s, background 0.16s;
+      pointer-events: none;
+    }
+    .back-to-top.visible { opacity:1; transform:none; pointer-events:auto; }
+    .back-to-top:hover { background: var(--accent-dark); }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a class="nav-brand" href="#home">Humor <span>&amp;</span> Leiderschap</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home"    onclick="closeMenu()">Home</a></li>
+    <li><a href="#chatbot" onclick="closeMenu()">Chatbot</a></li>
+    <li><a href="#quiz"    onclick="closeMenu()">Quiz</a></li>
+    <li><a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a></li>
+    <li><a href="#bronnen" onclick="closeMenu()">Bronnen</a></li>
+    <li><a href="#over"    onclick="closeMenu()">Over</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Thema wisselen" onclick="toggleTheme()">
+    <!-- Maan: zichtbaar in light mode -->
+    <svg id="iconMoon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <!-- Zon: zichtbaar in dark mode -->
+    <svg id="iconSun" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none;">
+      <circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+      <line x1="8" y1="1" x2="8" y2="3"   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="1" y1="8" x2="3" y2="8"   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="3.1" y1="3.1" x2="4.5" y2="4.5"   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="11.5" y1="11.5" x2="12.9" y2="12.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="12.9" y1="3.1" x2="11.5" y2="4.5"  stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="4.5" y1="11.5" x2="3.1" y2="12.9"  stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home"    onclick="closeMenu()">Home</a>
+  <a href="#chatbot" onclick="closeMenu()">Chatbot</a>
+  <a href="#quiz"    onclick="closeMenu()">Quiz</a>
+  <a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a>
+  <a href="#bronnen" onclick="closeMenu()">Bronnen</a>
+  <a href="#over"    onclick="closeMenu()">Over</a>
+</div>
+
+
+<!-- HOME -->
+<section id="home">
+  <div class="container">
+    <div class="hero">
+      <span class="badge" data-reveal>Bachelorproef &middot; Vlaamse kmo's</span>
+      <h1 data-reveal="delay-1">Humor als <span class="accent">strategisch</span> leiderschapsinstrument</h1>
+      <p class="lead" data-reveal="delay-2">
+        Deze interactieve tool helpt leidinggevenden binnen Vlaamse kmo's om humor bewust en situatiegericht in te zetten.
+        Ontdek welke humorstijl past bij jouw situatie en wat je beter vermijdt.
+      </p>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;" data-reveal="delay-3">
+        <a class="btn btn-primary" href="#chatbot">Start de tool</a>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-reveal="delay-2">
+        <span class="feature-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="4" width="22" height="16" rx="6" fill="#f9a823" opacity="0.14" stroke="#f9a823" stroke-width="1.8"/>
+            <circle cx="9" cy="12" r="2.2" fill="#f9a823"/>
+            <circle cx="15" cy="12" r="2.2" fill="#f9a823"/>
+            <circle cx="21" cy="12" r="2.2" fill="#f9a823"/>
+            <polygon points="6,20 6,26 12,20" fill="#f9a823" opacity="0.7"/>
+          </svg>
+        </span>
+        <h3>Situatieadvies</h3>
+        <p>Kies een werksituatie en ontvang concreet advies via de chatbot.</p>
+      </div>
+      <a class="feature-card" href="#dnd" data-reveal="delay-3">
+        <span class="feature-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="15" r="8" fill="#1a9247" opacity="0.12" stroke="#1a9247" stroke-width="1.8"/>
+            <path d="M6,15 L9,18 L14,12" stroke="#1a9247" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="22" cy="10" r="6" fill="#c0392b" opacity="0.1" stroke="#c0392b" stroke-width="1.7"/>
+            <line x1="19" y1="10" x2="25" y2="10" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+            <line x1="22" y1="7" x2="22" y2="13" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <h3>Do's en don'ts</h3>
+        <p>Duidelijke richtlijnen voor effectief en respectvol humorgebruik.</p>
+      </a>
+      <div class="feature-card" data-reveal="delay-4">
+        <span class="feature-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="3" width="18" height="22" rx="3" fill="#f9a823" opacity="0.12" stroke="#f9a823" stroke-width="1.8"/>
+            <line x1="8" y1="10" x2="18" y2="10" stroke="#f9a823" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="8" y1="14" x2="18" y2="14" stroke="#f9a823" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="8" y1="18" x2="14" y2="18" stroke="#f9a823" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="23" cy="22" r="5.5" fill="#ca8006" opacity="0.9"/>
+            <path d="M20.5,22 L22,23.5 L25.5,20" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <h3>Academisch onderbouwd</h3>
+        <p>Gebaseerd op wetenschappelijk onderzoek naar humor in organisaties.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background:#ffffff;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
+    <path d="M0,0 C360,60 720,60 1080,30 C1260,15 1380,10 1440,30 L1440,60 L0,60 Z" fill="#f6f3ff"/>
+  </svg>
+</div>
+
+
+<!-- CHATBOT -->
+<section id="chatbot">
+  <svg class="blob-bg" style="top:20px;right:-80px;width:320px;" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="160" cy="160" rx="140" ry="115" fill="#a78bfa" opacity="0.07"/>
+  </svg>
+  <div class="container">
+    <h2 data-reveal>Situatieadvies</h2>
+    <p class="section-intro" data-reveal="delay-1">
+      Klik op een situatie en ontvang direct praktisch advies over hoe je humor strategisch kunt inzetten.
+    </p>
+    <div class="chat-wrapper" data-reveal="delay-2">
+      <div class="chat-header">
+        <div class="chat-avatar">&#128516;</div>
+        <div class="chat-header-text">
+          <strong>HumorBot</strong>
+          <span>Strategisch humoradvies voor leidinggevenden</span>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="loading"><div class="spinner"></div> Laden...</div>
+      </div>
+      <div class="chat-footer">
+        <button class="btn btn-outline" id="resetBtn" onclick="resetChat()" style="display:none;">
+          Stel een nieuwe vraag
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background:#f6f3ff;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
+    <path d="M0,20 C480,60 960,0 1440,35 L1440,60 L0,60 Z" fill="#fff9f2"/>
+  </svg>
+</div>
+
+
+<!-- QUIZ -->
+<section id="quiz">
+  <svg class="blob-bg" style="top:-20px;right:-100px;width:380px;" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="190" cy="190" rx="165" ry="130" fill="#f9a823" opacity="0.06"/>
+  </svg>
+  <div class="container">
+    <h2 data-reveal>Welke humorstijl past bij jou?</h2>
+    <p class="section-intro" data-reveal="delay-1">
+      Zes situaties, vier keuzes per vraag. Ontdek welke humorstijl het best bij jou als leidinggevende aansluit.
+    </p>
+    <div class="quiz-shell" data-reveal="delay-2">
+      <div class="quiz-progress-label" id="quizProgressLabel">Vraag 1 van 6</div>
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div>
+      </div>
+      <div class="quiz-stage" id="quizStage"></div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background:#fff9f2;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
+    <path d="M0,15 C360,60 720,0 1080,40 C1260,58 1380,50 1440,30 L1440,60 L0,60 Z" fill="#f8f7f5"/>
+  </svg>
+</div>
+
+
+<!-- DO'S EN DON'TS -->
+<section id="dnd">
+  <svg class="blob-bg" style="top:20px;right:-80px;width:300px;" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="150" cy="150" rx="130" ry="105" fill="#1a9247" opacity="0.05"/>
+  </svg>
+  <svg class="blob-bg" style="bottom:40px;left:-70px;width:280px;" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="140" cy="140" rx="120" ry="95" fill="#c0392b" opacity="0.04"/>
+  </svg>
+  <div class="container">
+    <h2 data-reveal>Do's en don'ts</h2>
+    <p class="section-intro" data-reveal="delay-1">
+      Richtlijnen voor effectief en respectvol humorgebruik als leidinggevende in een Vlaamse kmo.
+    </p>
+    <div class="dnd-grid" id="dndGrid" data-reveal="delay-2">
+      <div class="loading"><div class="spinner"></div> Laden...</div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background:#f8f7f5;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
+    <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#f0f7f4"/>
+  </svg>
+</div>
+
+
+<!-- BRONNEN -->
+<section id="bronnen">
+  <svg class="blob-bg" style="top:40px;right:-70px;width:280px;" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="140" cy="140" rx="120" ry="100" fill="#1a9247" opacity="0.07"/>
+  </svg>
+  <div class="container">
+    <h2 data-reveal>Bronnen</h2>
+    <p class="section-intro" data-reveal="delay-1">
+      De inhoud van dit prototype is gebaseerd op onderstaande academische bronnen.
+      De data is momenteel een placeholder en wordt later vervangen door fieldresearch.
+    </p>
+    <div class="bron-list" id="bronList" data-reveal="delay-2">
+      <div class="loading"><div class="spinner"></div> Laden...</div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="background:#f0f7f4;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
+    <path d="M0,20 C360,60 720,0 1080,35 C1260,52 1380,42 1440,20 L1440,60 L0,60 Z" fill="#fef9ec"/>
+  </svg>
+</div>
+
+
+<!-- OVER -->
+<section id="over">
+  <svg class="blob-bg" style="top:-40px;right:-100px;width:380px;" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="190" cy="190" rx="165" ry="135" fill="#f9a823" opacity="0.08"/>
+  </svg>
+  <div class="container">
+    <h2 data-reveal>Over dit project</h2>
+    <div class="over-card" data-reveal="delay-1">
+      <div><span class="placeholder-badge">Prototype: placeholder data</span></div>
+      <p style="color:var(--text);">
+        Deze tool is ontwikkeld als onderdeel van een <strong>bachelorproef</strong> over
+        strategisch humorgebruik in leiderschap binnen Vlaamse kmo's.
+      </p>
+      <p>
+        De huidige inhoud (humorstijlen, situatieadviezen, do's en don'ts en bronnen)
+        is op dit moment <strong>placeholder data</strong> gebaseerd op algemene kennis
+        over humor in organisatiegedrag. Alle teksten zijn duidelijk gemarkeerd met
+        "vervangen door field research".
+      </p>
+      <p>
+        In een volgende fase wordt de data vervangen door bevindingen uit kwalitatief
+        fieldresearch bij leidinggevenden van Vlaamse kmo's: interviews, observaties
+        en casestudies.
+      </p>
+      <hr class="divider" style="margin:0;" />
+      <p style="font-size:0.85rem; color:var(--text-muted);">
+        <strong style="color:var(--text);">Studierichting:</strong> [invullen]<br />
+        <strong style="color:var(--text);">Promotor:</strong> [invullen]<br />
+        <strong style="color:var(--text);">Academiejaar:</strong> 2025-2026
+      </p>
+    </div>
+  </div>
+</section>
+
+<button class="back-to-top" id="backToTop" aria-label="Terug naar boven" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M9 14 L9 4 M4 9 L9 4 L14 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+
+<script>
+  'use strict';
+
+  /* ===================== DATA ===================== */
+  let appData = null;
+
+  async function loadData() {
+    try {
+      const res = await fetch('./knowledge.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      appData = await res.json();
+      renderAll();
+    } catch (err) {
+      console.error('Fout bij laden knowledge.json:', err);
+      document.querySelectorAll('.loading').forEach(el => {
+        el.innerHTML = 'Kon de data niet laden. Zorg dat je de site via een lokale server opent.';
+        el.style.color = 'var(--red)';
+      });
+    }
+  }
+
+  function renderAll() {
+    renderDnD();
+    renderBronnen();
+    initChat();
+    initQuiz();
+  }
+
+  function renderDnD() {
+    const grid = document.getElementById('dndGrid');
+    const { dos, donts } = appData.dosAndDonts;
+    grid.innerHTML = `
+      <div class="dnd-col">
+        <div class="dnd-header green">Do's</div>
+        ${dos.map(d => `<div class="dnd-item green"><h3>${escHtml(d.titel)}</h3><p>${escHtml(d.uitleg)}</p></div>`).join('')}
+      </div>
+      <div class="dnd-col">
+        <div class="dnd-header red">Don'ts</div>
+        ${donts.map(d => `<div class="dnd-item red"><h3>${escHtml(d.titel)}</h3><p>${escHtml(d.uitleg)}</p></div>`).join('')}
+      </div>`;
+  }
+
+  function renderBronnen() {
+    const list = document.getElementById('bronList');
+    list.innerHTML = appData.bronnen.map((b, i) => `
+      <div class="bron-item">
+        <div class="bron-num">${i + 1}</div>
+        <div class="bron-body">
+          <strong>${b.auteur} (${b.jaar}). ${b.titel}.</strong>
+          <p>${b.uitgever}</p>
+          <span class="bron-nota">${b.nota}</span>
+        </div>
+      </div>`).join('');
+  }
+
+  /* ===================== DARK MODE ===================== */
+  let darkMode = false;
+
+  function toggleTheme() {
+    darkMode = !darkMode;
+    document.body.classList.toggle('dark-mode', darkMode);
+    document.getElementById('iconMoon').style.display = darkMode ? 'none'  : '';
+    document.getElementById('iconSun').style.display  = darkMode ? ''      : 'none';
+  }
+
+  /* ===================== CHATBOT ===================== */
+  const BOT_TYPING_DELAY = 1000;   // ms typing indicator
+  const CHAR_DELAY       = 22;     // ms per character (~45 chars/sec)
+  let chatBlocked = false;
+
+  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  async function showTypingIndicator() {
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = 'msg bot';
+    div.id = 'typingIndicator';
+    div.innerHTML = `
+      <div class="msg-avatar">&#128516;</div>
+      <div class="msg-bubble" style="padding:0;">
+        <div class="typing"><span></span><span></span><span></span></div>
+      </div>`;
+    messages.appendChild(div);
+    scrollChat();
+    await sleep(BOT_TYPING_DELAY);
+    const el = document.getElementById('typingIndicator');
+    if (el) el.remove();
+  }
+
+  async function typeBotMessage(text) {
+    chatBlocked = true;
+    await showTypingIndicator();
+
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = 'msg bot';
+    const bubbleId = 'typeBubble_' + Date.now();
+    div.innerHTML = `<div class="msg-avatar">&#128516;</div><div class="msg-bubble typing-cursor" id="${bubbleId}"></div>`;
+    messages.appendChild(div);
+    scrollChat();
+
+    const bubble = document.getElementById(bubbleId);
+    for (let i = 0; i <= text.length; i++) {
+      bubble.textContent = text.slice(0, i);
+      if (i % 6 === 0) scrollChat();
+      await sleep(CHAR_DELAY);
+    }
+    bubble.classList.remove('typing-cursor');
+    chatBlocked = false;
+  }
+
+  async function addBotHtml(html) {
+    await showTypingIndicator();
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = 'msg bot';
+    div.innerHTML = `<div class="msg-avatar">&#128516;</div><div class="msg-bubble">${html}</div>`;
+    messages.appendChild(div);
+    scrollChat();
+  }
+
+  async function addAdviesMessageTyped(situatie) {
+    const stijl = appData.humorstijlen.find(h => h.id === situatie.aanbevolenHumorstijl);
+    const stijlNaam = stijl
+      ? stijl.naam
+      : situatie.aanbevolenHumorstijl === 'geen'
+        ? 'Geen humor aanbevolen in deze situatie'
+        : situatie.aanbevolenHumorstijl;
+
+    await showTypingIndicator();
+
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = 'msg bot';
+    div.innerHTML = `
+      <div class="msg-avatar">&#128516;</div>
+      <div class="msg-bubble" style="max-width:440px;">
+        <div class="advies-card">
+          <div class="advies-section">
+            <span class="advies-label">Situatie</span>
+            <strong>${escHtml(situatie.titel)}</strong>
+            <p style="margin-top:0.25rem;font-size:0.83rem;">${escHtml(situatie.beschrijving)}</p>
+          </div>
+          <div class="advies-section">
+            <span class="advies-label">Aanbevolen humorstijl</span>
+            <strong>${escHtml(stijlNaam)}</strong>
+          </div>
+          <div class="advies-section">
+            <span class="advies-label">Concrete tip</span>
+            <span>${escHtml(situatie.concreteTip)}</span>
+          </div>
+          <div class="advies-section">
+            <span class="advies-label">Voorbeeld</span>
+            <em style="font-size:0.85rem;">${escHtml(situatie.voorbeeld)}</em>
+          </div>
+          <div class="advies-warning">
+            Let op: ${escHtml(situatie.waarschuwing)}
+          </div>
+        </div>
+      </div>`;
+    messages.appendChild(div);
+    scrollChat();
+  }
+
+  function addUserMessage(text) {
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = 'msg user';
+    div.innerHTML = `
+      <div class="msg-bubble">${escHtml(text)}</div>
+      <div class="msg-avatar" style="background:var(--accent-dark);">&#128100;</div>`;
+    messages.appendChild(div);
+    scrollChat();
+  }
+
+  async function initChat() {
+    const messages = document.getElementById('chatMessages');
+    messages.innerHTML = '';
+    document.getElementById('resetBtn').style.display = 'none';
+    await typeBotMessage('Hallo! Ik help je om humor strategisch in te zetten als leidinggevende. Over welke situatie wil je advies?');
+    showSituationList();
+  }
+
+  async function resetChat() {
+    const messages = document.getElementById('chatMessages');
+    messages.innerHTML = '';
+    document.getElementById('resetBtn').style.display = 'none';
+    await typeBotMessage('Prima. Kies een nieuwe situatie waarvoor je advies wilt.');
+    showSituationList();
+  }
+
+  function showSituationList() {
+    const html = `
+      <div class="situation-list">
+        ${appData.situaties.map(s => `
+          <button class="sit-btn" onclick="handleSituationClick('${s.id}')">
+            ${s.titel}
+          </button>`).join('')}
+      </div>`;
+    addBotHtml(html);
+  }
+
+  function handleSituationClick(situatieId) {
+    if (chatBlocked) return;
+    const situatie = appData.situaties.find(s => s.id === situatieId);
+    if (!situatie) return;
+
+    document.querySelectorAll('.sit-btn').forEach(btn => {
+      btn.disabled = true;
+      btn.style.opacity = '0.45';
+      btn.style.cursor = 'default';
+    });
+
+    addUserMessage(situatie.titel);
+
+    addAdviesMessageTyped(situatie).then(() => {
+      document.getElementById('resetBtn').style.display = 'flex';
+      scrollChat();
+    });
+  }
+
+  function scrollChat() {
+    const messages = document.getElementById('chatMessages');
+    requestAnimationFrame(() => { messages.scrollTop = messages.scrollHeight; });
+  }
+
+  function escHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* ===================== QUIZ ===================== */
+  const QUIZ_VRAGEN = [
+    {
+      vraag: "Je team heeft net een stressvol project afgerond en de sfeer is nog gespannen. Wat doe je als eerste?",
+      antwoorden: [
+        { tekst: "Je maakt een luchtige opmerking over de gekte van de voorbije weken, zodat iedereen even kan ademen.", stijl: "affiliatief" },
+        { tekst: "Je herinnert jezelf eraan dat dit erbij hoort, lacht er stilletjes om en behoudt je rust.", stijl: "zelfversterkend" },
+        { tekst: "Je maakt een grap over de blunders die er zijn gemaakt, zodat iedereen er samen om kan lachen.", stijl: "agressief" },
+        { tekst: "Je vertelt zelf een verhaal over iets wat bij jou fout ging, om de anderen op hun gemak te stellen.", stijl: "zelfondermijnend" }
+      ]
+    },
+    {
+      vraag: "Een vergadering loopt vast op een detail dat al 20 minuten wordt besproken. Hoe reageer je?",
+      antwoorden: [
+        { tekst: "Je maakt een kleine grap richting de groep en stuurt de vergadering daarna bewust terug op koers.", stijl: "affiliatief" },
+        { tekst: "Je denkt: 'Hier gaan we weer', glimlacht er intern om en neemt rustig het woord.", stijl: "zelfversterkend" },
+        { tekst: "Je maakt een spottende opmerking over wie het meest aan het woord is, om de zaak los te trekken.", stijl: "agressief" },
+        { tekst: "Je zegt dat jij ook de neiging hebt om te blijven hangen bij details en stelt voor door te gaan.", stijl: "zelfondermijnend" }
+      ]
+    },
+    {
+      vraag: "Na een presentatie merk je dat je een fout hebt gemaakt. Hoe ga je er mee om?",
+      antwoorden: [
+        { tekst: "Je vertelt het met een glimlach aan het team en betrekt hen erbij: 'Heeft iemand dit al gezien?'", stijl: "affiliatief" },
+        { tekst: "Je lacht er intern om en beschouwt het als een leuke anekdote voor later.", stijl: "zelfversterkend" },
+        { tekst: "Je maakt terloops een grapje richting de collega die je de verkeerde informatie gaf.", stijl: "agressief" },
+        { tekst: "Je zegt het openlijk aan het team: 'Dat was een klassieke fout van mij. Volgende keer beter.'", stijl: "zelfondermijnend" }
+      ]
+    },
+    {
+      vraag: "Een nieuwe medewerker stelt een vraag die je al tientallen keren hebt beantwoord. Wat doe je?",
+      antwoorden: [
+        { tekst: "Je beantwoordt de vraag met een warme glimlach en maakt een kleine grap om hen op hun gemak te stellen.", stijl: "affiliatief" },
+        { tekst: "Je neemt een innerlijk momentje, lacht er stil om en geeft rustig antwoord.", stijl: "zelfversterkend" },
+        { tekst: "Je maakt een grap richting de groep over hoe dit 'de vraag van de maand' is.", stijl: "agressief" },
+        { tekst: "Je vertelt dat jij vroeger dezelfde vraag stelde en lacht de situatie daarmee weg.", stijl: "zelfondermijnend" }
+      ]
+    },
+    {
+      vraag: "Je bedrijf gaat door een moeilijke periode. Het team is zichtbaar bezorgd. Hoe gebruik je humor?",
+      antwoorden: [
+        { tekst: "Je brengt een lichte noot in de teamvergadering om de sfeer iets te verlichten, zonder de ernst weg te wuiven.", stijl: "affiliatief" },
+        { tekst: "Je houdt je gevoel voor humor voor jezelf als innerlijk kompas, maar deelt het niet actief.", stijl: "zelfversterkend" },
+        { tekst: "Je maakt een cynische opmerking over de situatie om het gesprek op gang te brengen.", stijl: "agressief" },
+        { tekst: "Je deelt openlijk dat jij het zelf ook moeilijk vindt en lacht er een beetje bij.", stijl: "zelfondermijnend" }
+      ]
+    },
+    {
+      vraag: "Je geeft feedback aan een medewerker die het duidelijk al moeilijk heeft. Hoe benader je dit?",
+      antwoorden: [
+        { tekst: "Je opent het gesprek luchtig om de spanning te breken, maar schakelt snel over op oprechte feedback.", stijl: "affiliatief" },
+        { tekst: "Je blijft kalm en neutraal, humor past hier niet.", stijl: "zelfversterkend" },
+        { tekst: "Je maakt een lichte grap over de situatie zodat het minder zwaar aanvoelt.", stijl: "agressief" },
+        { tekst: "Je deelt een eigen faalmoment om te laten zien dat fouten menselijk zijn.", stijl: "zelfondermijnend" }
+      ]
+    }
+  ];
+
+  const STIJL_TIPS = {
+    'affiliatief':      'Gebruik je gave voor inclusieve humor bewust: maak grapjes die verbinden, niet uitsluiten. Humor is voor jou een brug naar het team.',
+    'zelfversterkend':  'Jouw innerlijke veerkracht is een stille kracht. Deel die vaker: een lach op het juiste moment kan ook anderen helpen relativeren.',
+    'agressief':        'Let op de impact van je humor op anderen. Wat voor jou luchtig voelt, kan als kritiek overkomen. Richt grapjes op situaties, nooit op personen.',
+    'zelfondermijnend': 'Jezelf relativeren straalt authenticiteit uit. Overdrijf het niet: zorg dat eigen fouten benoemen het teamvertrouwen versterkt in plaats van ondermijnt.'
+  };
+
+  let quizScores = {};
+  let quizVraagIndex = 0;
+  let quizCurrentCard = null;
+
+  function initQuiz() {
+    quizScores = { affiliatief: 0, zelfversterkend: 0, agressief: 0, zelfondermijnend: 0 };
+    quizVraagIndex = 0;
+    toonVraag(0, false);
+  }
+
+  function toonVraag(index, animate) {
+    const stage = document.getElementById('quizStage');
+    const totaal = QUIZ_VRAGEN.length;
+
+    document.getElementById('quizProgressLabel').textContent = `Vraag ${index + 1} van ${totaal}`;
+    document.getElementById('quizProgressFill').style.width = ((index / totaal) * 100) + '%';
+
+    const vraag = QUIZ_VRAGEN[index];
+
+    const card = document.createElement('div');
+    card.className = 'quiz-card';
+    card.innerHTML = `
+      <p class="quiz-vraag">${escHtml(vraag.vraag)}</p>
+      <div class="quiz-antwoorden">
+        ${vraag.antwoorden.map((a, i) => `
+          <button class="quiz-btn" onclick="kiesAntwoord('${a.stijl}', ${index})">${escHtml(a.tekst)}</button>
+        `).join('')}
+      </div>`;
+
+    if (animate && quizCurrentCard) {
+      quizCurrentCard.classList.add('exiting');
+      setTimeout(() => {
+        stage.innerHTML = '';
+        stage.appendChild(card);
+        quizCurrentCard = card;
+        requestAnimationFrame(() => card.classList.add('active'));
+      }, 280);
+    } else {
+      stage.innerHTML = '';
+      stage.appendChild(card);
+      quizCurrentCard = card;
+      requestAnimationFrame(() => card.classList.add('active'));
+    }
+  }
+
+  function kiesAntwoord(stijl, index) {
+    quizScores[stijl] = (quizScores[stijl] || 0) + 1;
+    const volgende = index + 1;
+
+    if (volgende < QUIZ_VRAGEN.length) {
+      quizVraagIndex = volgende;
+      toonVraag(volgende, true);
+    } else {
+      toonResultaat();
+    }
+  }
+
+  function toonResultaat() {
+    const totaal = QUIZ_VRAGEN.length;
+    document.getElementById('quizProgressLabel').textContent = 'Resultaat';
+    document.getElementById('quizProgressFill').style.width = '100%';
+
+    const winnaar = Object.entries(quizScores).sort((a, b) => b[1] - a[1])[0][0];
+    const stijlData = appData && appData.humorstijlen
+      ? appData.humorstijlen.find(h => h.id === winnaar)
+      : null;
+    const naam    = stijlData ? stijlData.naam  : winnaar;
+    const uitleg  = stijlData ? stijlData.uitleg : '';
+    const tip     = STIJL_TIPS[winnaar] || '';
+
+    const stage = document.getElementById('quizStage');
+
+    if (quizCurrentCard) quizCurrentCard.classList.add('exiting');
+
+    setTimeout(() => {
+      stage.innerHTML = `
+        <div class="quiz-result">
+          <div class="quiz-result-icon">&#127775;</div>
+          <div class="quiz-result-stijl">${escHtml(naam)}</div>
+          <p class="quiz-result-uitleg">${escHtml(uitleg)}</p>
+          <div class="quiz-result-tip"><strong>Praktische tip:</strong> ${escHtml(tip)}</div>
+          <button class="btn btn-primary" onclick="herlaadQuiz()">Opnieuw proberen</button>
+        </div>`;
+    }, 280);
+  }
+
+  function herlaadQuiz() {
+    initQuiz();
+  }
+
+  /* ===================== NAV / SCROLL ===================== */
+  const navAnchors = document.querySelectorAll('.nav-links a');
+  const sections   = document.querySelectorAll('section[id]');
+
+  function updateActiveNav() {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY + 80 >= sec.offsetTop) current = sec.id;
+    });
+    navAnchors.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+
+  const mainNav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    mainNav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 320);
+  }, { passive: true });
+
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu()  { document.getElementById('mobileMenu').classList.remove('open'); }
+
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+    revealEls.forEach(el => obs.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('revealed'));
+  }
+
+  loadData();
+</script>
+</body>
+</html>
