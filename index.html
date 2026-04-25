@@ -8,43 +8,48 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --accent:      #f9a823;
-      --accent-dark: #ca8006;
-      --accent-soft: #fef9ec;
+      --accent:      #f5a623;
+      --accent-dark: #d4891a;
+      --accent-soft: #fff3dc;
       --bg:          #ffffff;
-      --surface:     #f5f5f5;
-      --border:      #e6e6e6;
-      --text:        #0d0d0d;
-      --text-muted:  #737373;
-      --green:       #1a9247;
-      --green-soft:  #eaf5ef;
-      --red:         #c0392b;
-      --red-soft:    #fdf0ef;
-      --bubble-bot:  #f2f2f2;
+      --surface:     #f4f2ff;
+      --border:      #dddaf5;
+      --text:        #1a1a2e;
+      --text-muted:  #5c5882;
+      --green:       #22c55e;
+      --green-soft:  rgba(34,197,94,0.13);
+      --red:         #ef4444;
+      --red-soft:    rgba(239,68,68,0.13);
+      --bubble-bot:  #2a1f4e;
+      --sec-dark:    #0d0b1a;
+      --sec-mid:     #2a1f4e;
+      --sec-light:   #f4f2ff;
       --radius:      4px;
       --radius-lg:   8px;
       --nav-h:       62px;
       --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
-    /* Dark mode variabelen */
     body.dark-mode {
-      --bg:         #111118;
-      --surface:    #1a1a24;
-      --border:     #2e2e40;
-      --text:       #e4e4f0;
-      --text-muted: #8888a8;
-      --bubble-bot: #24243a;
-      --accent-soft: #2a1f08;
-      --green-soft: #0a1f12;
-      --red-soft:   #1f0a0a;
+      --bg:          #1a1530;
+      --surface:     #241a3e;
+      --border:      #3a3060;
+      --text:        #e4e0ff;
+      --text-muted:  #9490b8;
+      --accent-soft: #2a1a04;
+      --green-soft:  rgba(34,197,94,0.09);
+      --red-soft:    rgba(239,68,68,0.09);
+      --bubble-bot:  #241a3e;
+      --sec-dark:    #1a1530;
+      --sec-mid:     #241a3e;
+      --sec-light:   #0d0b1a;
     }
 
     html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
       font-family: var(--font);
-      background: var(--bg);
+      background: var(--sec-dark);
       color: var(--text);
       line-height: 1.65;
       padding-top: var(--nav-h);
@@ -52,34 +57,33 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    /* Nav */
+    /* Nav - always dark */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       height: var(--nav-h);
-      background: rgba(255,255,255,0.96);
+      background: rgba(13,11,26,0.97);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
       display: grid;
       grid-template-columns: auto 1fr auto;
       align-items: center;
       padding: 0 2rem;
       z-index: 1000;
       gap: 1rem;
-      transition: box-shadow 0.3s ease, background 0.3s, border-color 0.3s;
+      transition: box-shadow 0.3s ease;
     }
-    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.09); border-bottom-color: transparent; }
-    body.dark-mode nav { background: rgba(17,17,24,0.96); }
+    nav.scrolled { box-shadow: 0 2px 28px rgba(0,0,0,0.5); border-bottom-color: transparent; }
+    body.dark-mode nav { background: rgba(26,21,48,0.97); }
 
     .nav-brand {
       font-weight: 800;
       font-size: 1rem;
-      color: var(--text);
+      color: #ffffff;
       white-space: nowrap;
       text-decoration: none;
       letter-spacing: -0.01em;
-      transition: color 0.3s;
     }
     .nav-brand span { color: var(--accent); }
 
@@ -87,10 +91,11 @@
 
     .nav-links a {
       text-decoration: none;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.58);
       font-size: 0.88rem;
       font-weight: 500;
-      padding: 0.45rem 0.85rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius);
       transition: background 0.15s, color 0.15s;
       display: block;
     }
@@ -100,7 +105,7 @@
     /* Dark mode toggle */
     .theme-toggle {
       background: none;
-      border: 1.5px solid var(--border);
+      border: 1.5px solid rgba(255,255,255,0.2);
       border-radius: 50%;
       width: 34px;
       height: 34px;
@@ -109,7 +114,7 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.6);
       transition: border-color 0.2s, color 0.2s, background 0.2s;
       padding: 0;
     }
@@ -129,9 +134,8 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: var(--text);
+      background: rgba(255,255,255,0.8);
       border-radius: 2px;
-      transition: background 0.3s;
     }
 
     /* Mobiel menu */
@@ -140,24 +144,24 @@
       position: fixed;
       top: var(--nav-h);
       left: 0; right: 0;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
+      background: var(--sec-dark);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 0.5rem 0;
       z-index: 999;
       flex-direction: column;
-      transition: background 0.3s, border-color 0.3s;
+      transition: background 0.3s;
     }
     .mobile-menu.open { display: flex; }
     .mobile-menu a {
       text-decoration: none;
-      color: var(--text);
+      color: rgba(255,255,255,0.82);
       font-size: 0.95rem;
       font-weight: 500;
       padding: 0.75rem 2rem;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
       transition: background 0.12s;
     }
-    .mobile-menu a:hover { background: var(--accent-soft); }
+    .mobile-menu a:hover { background: var(--sec-mid); }
 
     /* Secties */
     section {
@@ -175,21 +179,13 @@
       z-index: 1;
     }
 
-    /* Sectie-specifieke achtergronden */
-    #home    { background: #ffffff; }
-    #chatbot { background: #f6f3ff; }
-    #quiz    { background: #fff9f2; }
-    #dnd     { background: #f8f7f5; }
-    #bronnen { background: #f0f7f4; }
-    #over    { background: var(--accent-soft); }
-
-    body.dark-mode #home    { background: #0f0f1a; }
-    body.dark-mode #chatbot { background: #120f24; }
-    body.dark-mode #quiz    { background: #1a140e; }
-    body.dark-mode #dnd     { background: #111111; }
-    body.dark-mode #bronnen { background: #0c1810; }
-    body.dark-mode #over    { background: #1a1408; }
-    body.dark-mode .wave-divider { display: none; }
+    /* Sectie achtergronden */
+    #home    { background: var(--sec-dark); }
+    #chatbot { background: var(--sec-dark); }
+    #quiz    { background: var(--sec-light); }
+    #dnd     { background: var(--sec-dark); }
+    #bronnen { background: var(--sec-light); }
+    #over    { background: var(--sec-dark); }
 
     /* Wave dividers */
     .wave-divider {
@@ -200,6 +196,7 @@
       margin-top: -1px;
     }
     .wave-divider svg { display: block; width: 100%; }
+    body.dark-mode .wave-divider { display: none; }
 
     /* Decoratieve blob */
     .blob-bg { position: absolute; pointer-events: none; z-index: 0; }
@@ -218,9 +215,15 @@
       margin-bottom: 2rem;
       letter-spacing: -0.02em;
       text-align: center;
+      color: var(--text);
     }
     h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
     p  { color: var(--text-muted); }
+
+    /* Koppen en tekst in donkere secties */
+    #chatbot h2, #dnd h2, #over h2 { color: #ffffff; }
+    #chatbot .section-intro, #dnd .section-intro { color: rgba(255,255,255,0.6); }
+    #dnd .loading { color: rgba(255,255,255,0.48); }
 
     .accent { color: var(--accent); }
 
@@ -255,7 +258,7 @@
       background: var(--accent-dark);
       border-color: var(--accent-dark);
       transform: translateY(-3px);
-      box-shadow: 0 8px 22px rgba(249,168,35,0.38);
+      box-shadow: 0 8px 22px rgba(245,166,35,0.42);
     }
     .btn-outline { background: transparent; color: var(--text); border-color: var(--border); }
     .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
@@ -285,13 +288,13 @@
     #home h1 { margin: 0; }
     #home .lead {
       font-size: 1.1rem;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.78);
       max-width: 600px;
       line-height: 1.78;
       text-align: center;
     }
 
-    /* Feature grid */
+    /* Feature grid - witte kaartjes op donkere shader-achtergrond */
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -299,13 +302,14 @@
       margin-top: 4.5rem;
     }
     .feature-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
+      background: #ffffff;
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius-lg);
       padding: 1.75rem 1.5rem;
       position: relative;
       overflow: hidden;
-      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, background 0.3s, color 0.3s;
+      box-shadow: 0 4px 28px rgba(0,0,0,0.35);
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
     }
     .feature-card::after {
       content: '';
@@ -318,12 +322,16 @@
       transition: transform 0.28s ease;
       border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     }
-    .feature-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 14px 36px rgba(249,168,35,0.2); border-color: rgba(249,168,35,0.4); }
+    .feature-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 44px rgba(0,0,0,0.45), 0 0 0 1px rgba(245,166,35,0.35); border-color: rgba(245,166,35,0.4); }
     .feature-card:hover::after { transform: scaleX(1); }
     .feature-icon { font-size: 1.6rem; margin-bottom: 0.85rem; display: block; }
-    .feature-card h3 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.4rem; }
-    .feature-card p  { font-size: 0.85rem; }
+    .feature-card h3 { font-size: 0.95rem; color: #1a1a2e; margin-bottom: 0.4rem; }
+    .feature-card p  { font-size: 0.85rem; color: #5c5882; }
     a.feature-card { text-decoration: none; color: inherit; display: block; }
+
+    body.dark-mode .feature-card { background: var(--bg); border-color: var(--border); box-shadow: 0 4px 28px rgba(0,0,0,0.55); }
+    body.dark-mode .feature-card h3 { color: var(--text); }
+    body.dark-mode .feature-card p  { color: var(--text-muted); }
 
     @media (max-width: 640px) { .feature-grid { grid-template-columns: 1fr; gap: 1rem; } }
 
@@ -339,7 +347,7 @@
       height: 640px;
       max-height: 82vh;
       overflow: hidden;
-      box-shadow: 0 6px 32px rgba(120,80,220,0.1);
+      box-shadow: 0 8px 44px rgba(0,0,0,0.5);
       transition: background 0.3s, border-color 0.3s;
     }
     .chat-header {
@@ -395,7 +403,8 @@
       font-size: 0.9rem;
       line-height: 1.55;
     }
-    .msg.bot  .msg-bubble { background: var(--bubble-bot); border-bottom-left-radius: 3px; color: var(--text); transition: background 0.3s, color 0.3s; }
+    .msg.bot  .msg-bubble { background: var(--bubble-bot); border-bottom-left-radius: 3px; color: #e4e0ff; transition: background 0.3s; }
+    .msg.bot  .msg-bubble p { color: inherit; }
     .msg.user .msg-bubble { background: var(--accent); color: #fff; border-bottom-right-radius: 3px; }
     .msg-bubble p + p   { margin-top: 0.5rem; }
     .msg-bubble strong  { font-weight: 700; }
@@ -412,9 +421,9 @@
     .situation-list { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
 
     .sit-btn {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--text);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #e4e0ff;
       font-size: 0.84rem;
       font-weight: 600;
       padding: 0.6rem 0.9rem;
@@ -428,10 +437,10 @@
 
     .advies-card { display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.88rem; }
     .advies-section { display: flex; flex-direction: column; gap: 0.15rem; }
-    .advies-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.65; }
+    .advies-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.58; }
     .advies-warning {
-      background: rgba(0,0,0,0.12);
-      border-left: 3px solid rgba(255,255,255,0.5);
+      background: rgba(0,0,0,0.22);
+      border-left: 3px solid rgba(255,255,255,0.35);
       padding: 0.45rem 0.7rem;
       font-size: 0.82rem;
       border-radius: 0 var(--radius) var(--radius) 0;
@@ -447,7 +456,7 @@
       padding: 2rem 2rem 2.5rem;
       max-width: 700px;
       margin: 0 auto;
-      box-shadow: 0 4px 28px rgba(249,168,35,0.09);
+      box-shadow: 0 4px 28px rgba(42,31,78,0.14);
       transition: background 0.3s, border-color 0.3s;
     }
 
@@ -532,7 +541,7 @@
     }
     .quiz-result-tip strong { color: var(--text); }
 
-    /* Do's en don'ts */
+    /* Do's en don'ts - donkere sectie */
     .dnd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     @media (max-width: 640px) { .dnd-grid { grid-template-columns: 1fr; } }
     .dnd-col { display: flex; flex-direction: column; gap: 0.75rem; }
@@ -554,15 +563,15 @@
       flex-direction: column;
       gap: 0.3rem;
       border-radius: 0 0 var(--radius) var(--radius);
-      transition: transform 0.18s, box-shadow 0.18s, background 0.3s;
+      transition: transform 0.18s, box-shadow 0.18s;
     }
     .dnd-item.green { background: var(--green-soft); border-left: 3px solid var(--green); }
     .dnd-item.red   { background: var(--red-soft);   border-left: 3px solid var(--red);   }
-    .dnd-item:hover { transform: translateX(3px); box-shadow: 0 3px 12px rgba(0,0,0,0.06); }
-    .dnd-item h3 { font-size: 0.9rem; color: var(--text); margin-bottom: 0; }
-    .dnd-item p  { font-size: 0.82rem; }
+    .dnd-item:hover { transform: translateX(3px); box-shadow: 0 3px 18px rgba(0,0,0,0.22); }
+    .dnd-item h3 { font-size: 0.9rem; color: #ffffff; margin-bottom: 0; }
+    .dnd-item p  { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
 
-    /* Bronnen */
+    /* Bronnen - lichte sectie */
     .bron-list { display: flex; flex-direction: column; gap: 0.85rem; }
     .bron-item {
       background: var(--bg);
@@ -573,9 +582,10 @@
       display: flex;
       gap: 1rem;
       align-items: flex-start;
+      box-shadow: 0 2px 12px rgba(42,31,78,0.08);
       transition: box-shadow 0.2s, transform 0.2s, background 0.3s, border-color 0.3s;
     }
-    .bron-item:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.07); transform: translateX(4px); }
+    .bron-item:hover { box-shadow: 0 6px 24px rgba(42,31,78,0.16); transform: translateX(4px); }
     .bron-num {
       width: 28px; height: 28px;
       background: var(--accent);
@@ -599,29 +609,32 @@
       padding: 0.15rem 0.5rem;
     }
 
-    /* Over */
+    /* Over - donkere sectie */
     #over .over-card {
-      background: var(--bg);
-      border: 1px solid rgba(249,168,35,0.25);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(245,166,35,0.18);
       border-radius: var(--radius-lg);
       padding: 2rem;
       max-width: 680px;
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
-      box-shadow: 0 4px 24px rgba(249,168,35,0.12);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.3);
       transition: background 0.3s, border-color 0.3s;
     }
+    body.dark-mode #over .over-card { background: rgba(255,255,255,0.03); }
+    #over .over-card p { color: rgba(255,255,255,0.68); }
+    #over .over-card p strong { color: #ffffff; }
     .placeholder-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: #fff8e1;
-      color: #92690a;
+      background: rgba(245,166,35,0.14);
+      color: var(--accent);
       font-size: 0.78rem;
       font-weight: 700;
       padding: 0.35rem 0.85rem;
-      border: 1px solid #f9d963;
+      border: 1px solid rgba(245,166,35,0.3);
       border-radius: var(--radius);
       letter-spacing: 0.03em;
     }
@@ -639,11 +652,11 @@
       section { padding: 4rem 1.25rem 3rem; }
     }
 
-    .divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+    .divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 2.5rem 0; }
 
     /* Typing indicator */
     .typing { display: flex; gap: 4px; align-items: center; padding: 0.6rem 0.85rem; }
-    .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--text-muted); animation: bounce 1.2s infinite; }
+    .typing span { width: 7px; height: 7px; border-radius: 50%; background: rgba(228,224,255,0.45); animation: bounce 1.2s infinite; }
     .typing span:nth-child(2) { animation-delay: 0.2s; }
     .typing span:nth-child(3) { animation-delay: 0.4s; }
     @keyframes bounce { 0%,80%,100% { transform:translateY(0); opacity:0.4; } 40% { transform:translateY(-5px); opacity:1; } }
@@ -656,6 +669,13 @@
     [data-reveal="delay-3"] { transition-delay: 0.28s; }
     [data-reveal="delay-4"] { transition-delay: 0.38s; }
 
+    /* Hero shader */
+    #home > .container { position: relative; z-index: 2; }
+    #home.shader-active .hero h1 { color: #ffffff; }
+    #home.shader-active .hero .lead { color: rgba(255, 255, 255, 0.88); }
+    #heroCanvas { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+    #heroOverlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: rgba(0, 0, 0, 0.32); pointer-events: none; }
+
     /* Terug naar boven */
     .back-to-top {
       position: fixed;
@@ -667,7 +687,7 @@
       border-radius: 50%;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 16px rgba(249,168,35,0.45);
+      box-shadow: 0 4px 16px rgba(245,166,35,0.48);
       z-index: 900;
       opacity: 0;
       transform: translateY(14px);
@@ -725,6 +745,8 @@
 
 <!-- HOME -->
 <section id="home">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div id="heroOverlay" aria-hidden="true"></div>
   <div class="container">
     <div class="hero">
       <span class="badge" data-reveal>Bachelorproef &middot; Vlaamse kmo's</span>
@@ -783,17 +805,12 @@
   </div>
 </section>
 
-<div class="wave-divider" style="background:#ffffff;">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
-    <path d="M0,0 C360,60 720,60 1080,30 C1260,15 1380,10 1440,30 L1440,60 L0,60 Z" fill="#f6f3ff"/>
-  </svg>
-</div>
-
+<!-- home (#0d0b1a) naar chatbot (#0d0b1a): geen wave nodig, beide donker -->
 
 <!-- CHATBOT -->
 <section id="chatbot">
   <svg class="blob-bg" style="top:20px;right:-80px;width:320px;" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="160" cy="160" rx="140" ry="115" fill="#a78bfa" opacity="0.07"/>
+    <ellipse cx="160" cy="160" rx="140" ry="115" fill="#a78bfa" opacity="0.05"/>
   </svg>
   <div class="container">
     <h2 data-reveal>Situatieadvies</h2>
@@ -820,9 +837,10 @@
   </div>
 </section>
 
-<div class="wave-divider" style="background:#f6f3ff;">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
-    <path d="M0,20 C480,60 960,0 1440,35 L1440,60 L0,60 Z" fill="#fff9f2"/>
+<!-- chatbot (#0d0b1a) naar quiz (#f4f2ff) -->
+<div class="wave-divider" style="background:#0d0b1a;">
+  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
+    <path d="M0,0 C360,72 720,72 1080,36 C1260,18 1380,12 1440,36 L1440,72 L0,72 Z" fill="#f4f2ff"/>
   </svg>
 </div>
 
@@ -830,7 +848,7 @@
 <!-- QUIZ -->
 <section id="quiz">
   <svg class="blob-bg" style="top:-20px;right:-100px;width:380px;" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="190" cy="190" rx="165" ry="130" fill="#f9a823" opacity="0.06"/>
+    <ellipse cx="190" cy="190" rx="165" ry="130" fill="#f5a623" opacity="0.07"/>
   </svg>
   <div class="container">
     <h2 data-reveal>Welke humorstijl past bij jou?</h2>
@@ -847,9 +865,10 @@
   </div>
 </section>
 
-<div class="wave-divider" style="background:#fff9f2;">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
-    <path d="M0,15 C360,60 720,0 1080,40 C1260,58 1380,50 1440,30 L1440,60 L0,60 Z" fill="#f8f7f5"/>
+<!-- quiz (#f4f2ff) naar dnd (#0d0b1a) -->
+<div class="wave-divider" style="background:#f4f2ff;">
+  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
+    <path d="M0,18 C360,72 720,0 1080,48 C1260,68 1380,58 1440,36 L1440,72 L0,72 Z" fill="#0d0b1a"/>
   </svg>
 </div>
 
@@ -857,10 +876,10 @@
 <!-- DO'S EN DON'TS -->
 <section id="dnd">
   <svg class="blob-bg" style="top:20px;right:-80px;width:300px;" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="150" cy="150" rx="130" ry="105" fill="#1a9247" opacity="0.05"/>
+    <ellipse cx="150" cy="150" rx="130" ry="105" fill="#22c55e" opacity="0.04"/>
   </svg>
   <svg class="blob-bg" style="bottom:40px;left:-70px;width:280px;" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="140" cy="140" rx="120" ry="95" fill="#c0392b" opacity="0.04"/>
+    <ellipse cx="140" cy="140" rx="120" ry="95" fill="#ef4444" opacity="0.04"/>
   </svg>
   <div class="container">
     <h2 data-reveal>Do's en don'ts</h2>
@@ -873,9 +892,10 @@
   </div>
 </section>
 
-<div class="wave-divider" style="background:#f8f7f5;">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
-    <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#f0f7f4"/>
+<!-- dnd (#0d0b1a) naar bronnen (#f4f2ff) -->
+<div class="wave-divider" style="background:#0d0b1a;">
+  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
+    <path d="M0,36 C480,72 960,0 1440,36 L1440,72 L0,72 Z" fill="#f4f2ff"/>
   </svg>
 </div>
 
@@ -883,7 +903,7 @@
 <!-- BRONNEN -->
 <section id="bronnen">
   <svg class="blob-bg" style="top:40px;right:-70px;width:280px;" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="140" cy="140" rx="120" ry="100" fill="#1a9247" opacity="0.07"/>
+    <ellipse cx="140" cy="140" rx="120" ry="100" fill="#2a1f4e" opacity="0.06"/>
   </svg>
   <div class="container">
     <h2 data-reveal>Bronnen</h2>
@@ -897,9 +917,10 @@
   </div>
 </section>
 
-<div class="wave-divider" style="background:#f0f7f4;">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60" aria-hidden="true">
-    <path d="M0,20 C360,60 720,0 1080,35 C1260,52 1380,42 1440,20 L1440,60 L0,60 Z" fill="#fef9ec"/>
+<!-- bronnen (#f4f2ff) naar over (#0d0b1a) -->
+<div class="wave-divider" style="background:#f4f2ff;">
+  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
+    <path d="M0,24 C360,72 720,0 1080,42 C1260,62 1380,52 1440,24 L1440,72 L0,72 Z" fill="#0d0b1a"/>
   </svg>
 </div>
 
@@ -907,13 +928,13 @@
 <!-- OVER -->
 <section id="over">
   <svg class="blob-bg" style="top:-40px;right:-100px;width:380px;" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="190" cy="190" rx="165" ry="135" fill="#f9a823" opacity="0.08"/>
+    <ellipse cx="190" cy="190" rx="165" ry="135" fill="#f5a623" opacity="0.06"/>
   </svg>
   <div class="container">
     <h2 data-reveal>Over dit project</h2>
     <div class="over-card" data-reveal="delay-1">
       <div><span class="placeholder-badge">Prototype: placeholder data</span></div>
-      <p style="color:var(--text);">
+      <p>
         Deze tool is ontwikkeld als onderdeel van een <strong>bachelorproef</strong> over
         strategisch humorgebruik in leiderschap binnen Vlaamse kmo's.
       </p>
@@ -929,10 +950,10 @@
         en casestudies.
       </p>
       <hr class="divider" style="margin:0;" />
-      <p style="font-size:0.85rem; color:var(--text-muted);">
-        <strong style="color:var(--text);">Studierichting:</strong> [invullen]<br />
-        <strong style="color:var(--text);">Promotor:</strong> [invullen]<br />
-        <strong style="color:var(--text);">Academiejaar:</strong> 2025-2026
+      <p style="font-size:0.85rem;">
+        <strong>Studierichting:</strong> [invullen]<br />
+        <strong>Promotor:</strong> [invullen]<br />
+        <strong>Academiejaar:</strong> 2025-2026
       </p>
     </div>
   </div>
@@ -1376,6 +1397,171 @@
   }
 
   loadData();
+</script>
+
+<script>
+  (function () {
+    'use strict';
+
+    var canvas = document.getElementById('heroCanvas');
+    var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (!gl) return;
+
+    var VS = [
+      'attribute vec4 aVertexPosition;',
+      'void main() {',
+      '  gl_Position = aVertexPosition;',
+      '}'
+    ].join('\n');
+
+    var FS = [
+      'precision highp float;',
+      'uniform vec2 iResolution;',
+      'uniform float iTime;',
+      'const float overallSpeed = 0.2;',
+      'const float gridSmoothWidth = 0.015;',
+      'const float axisWidth = 0.05;',
+      'const float majorLineWidth = 0.025;',
+      'const float minorLineWidth = 0.0125;',
+      'const float majorLineFrequency = 5.0;',
+      'const float minorLineFrequency = 1.0;',
+      'const vec4 gridColor = vec4(0.5);',
+      'const float scale = 5.0;',
+      'const vec4 lineColor = vec4(0.4, 0.2, 0.8, 1.0);',
+      'const float minLineWidth = 0.01;',
+      'const float maxLineWidth = 0.2;',
+      'const float lineSpeed = 1.0 * overallSpeed;',
+      'const float lineAmplitude = 1.0;',
+      'const float lineFrequency = 0.2;',
+      'const float warpSpeed = 0.2 * overallSpeed;',
+      'const float warpFrequency = 0.5;',
+      'const float warpAmplitude = 1.0;',
+      'const float offsetFrequency = 0.5;',
+      'const float offsetSpeed = 1.33 * overallSpeed;',
+      'const float minOffsetSpread = 0.6;',
+      'const float maxOffsetSpread = 2.0;',
+      'const int linesPerGroup = 16;',
+      '#define drawCircle(pos, radius, coord) smoothstep(radius + gridSmoothWidth, radius, length(coord - (pos)))',
+      '#define drawSmoothLine(pos, halfWidth, t) smoothstep(halfWidth, 0.0, abs(pos - (t)))',
+      '#define drawCrispLine(pos, halfWidth, t) smoothstep(halfWidth + gridSmoothWidth, halfWidth, abs(pos - (t)))',
+      '#define drawPeriodicLine(freq, width, t) drawCrispLine(freq / 2.0, width, abs(mod(t, freq) - (freq) / 2.0))',
+      'float drawGridLines(float axis) {',
+      '  return drawCrispLine(0.0, axisWidth, axis)',
+      '        + drawPeriodicLine(majorLineFrequency, majorLineWidth, axis)',
+      '        + drawPeriodicLine(minorLineFrequency, minorLineWidth, axis);',
+      '}',
+      'float drawGrid(vec2 space) {',
+      '  return min(1.0, drawGridLines(space.x) + drawGridLines(space.y));',
+      '}',
+      'float random(float t) {',
+      '  return (cos(t) + cos(t * 1.3 + 1.3) + cos(t * 1.4 + 1.4)) / 3.0;',
+      '}',
+      'float getPlasmaY(float x, float horizontalFade, float offset) {',
+      '  return random(x * lineFrequency + iTime * lineSpeed) * horizontalFade * lineAmplitude + offset;',
+      '}',
+      'void main() {',
+      '  vec2 fragCoord = gl_FragCoord.xy;',
+      '  vec4 fragColor;',
+      '  vec2 uv = fragCoord.xy / iResolution.xy;',
+      '  vec2 space = (fragCoord - iResolution.xy / 2.0) / iResolution.x * 2.0 * scale;',
+      '  float horizontalFade = 1.0 - (cos(uv.x * 6.28) * 0.5 + 0.5);',
+      '  float verticalFade = 1.0 - (cos(uv.y * 6.28) * 0.5 + 0.5);',
+      '  space.y += random(space.x * warpFrequency + iTime * warpSpeed) * warpAmplitude * (0.5 + horizontalFade);',
+      '  space.x += random(space.y * warpFrequency + iTime * warpSpeed + 2.0) * warpAmplitude * horizontalFade;',
+      '  vec4 lines = vec4(0.0);',
+      '  vec4 bgColor1 = vec4(0.1, 0.1, 0.3, 1.0);',
+      '  vec4 bgColor2 = vec4(0.3, 0.1, 0.5, 1.0);',
+      '  for(int l = 0; l < linesPerGroup; l++) {',
+      '    float normalizedLineIndex = float(l) / float(linesPerGroup);',
+      '    float offsetTime = iTime * offsetSpeed;',
+      '    float offsetPosition = float(l) + space.x * offsetFrequency;',
+      '    float rand = random(offsetPosition + offsetTime) * 0.5 + 0.5;',
+      '    float halfWidth = mix(minLineWidth, maxLineWidth, rand * horizontalFade) / 2.0;',
+      '    float offset = random(offsetPosition + offsetTime * (1.0 + normalizedLineIndex)) * mix(minOffsetSpread, maxOffsetSpread, horizontalFade);',
+      '    float linePosition = getPlasmaY(space.x, horizontalFade, offset);',
+      '    float line = drawSmoothLine(linePosition, halfWidth, space.y) / 2.0 + drawCrispLine(linePosition, halfWidth * 0.15, space.y);',
+      '    float circleX = mod(float(l) + iTime * lineSpeed, 25.0) - 12.0;',
+      '    vec2 circlePosition = vec2(circleX, getPlasmaY(circleX, horizontalFade, offset));',
+      '    float circle = drawCircle(circlePosition, 0.01, space) * 4.0;',
+      '    line = line + circle;',
+      '    lines += line * lineColor * rand;',
+      '  }',
+      '  fragColor = mix(bgColor1, bgColor2, uv.x);',
+      '  fragColor *= verticalFade;',
+      '  fragColor.a = 1.0;',
+      '  fragColor += lines;',
+      '  gl_FragColor = fragColor;',
+      '}'
+    ].join('\n');
+
+    function compileShader(type, src) {
+      var s = gl.createShader(type);
+      gl.shaderSource(s, src);
+      gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+        console.error('Shader error:', gl.getShaderInfoLog(s));
+        gl.deleteShader(s);
+        return null;
+      }
+      return s;
+    }
+
+    var vs = compileShader(gl.VERTEX_SHADER, VS);
+    var fs = compileShader(gl.FRAGMENT_SHADER, FS);
+    if (!vs || !fs) return;
+
+    var prog = gl.createProgram();
+    gl.attachShader(prog, vs);
+    gl.attachShader(prog, fs);
+    gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+      console.error('Program link error:', gl.getProgramInfoLog(prog));
+      return;
+    }
+    gl.useProgram(prog);
+
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+      -1, -1,
+       1, -1,
+      -1,  1,
+      -1,  1,
+       1, -1,
+       1,  1
+    ]), gl.STATIC_DRAW);
+
+    var posAttr = gl.getAttribLocation(prog, 'aVertexPosition');
+    gl.enableVertexAttribArray(posAttr);
+    gl.vertexAttribPointer(posAttr, 2, gl.FLOAT, false, 0, 0);
+
+    var iResLoc  = gl.getUniformLocation(prog, 'iResolution');
+    var iTimeLoc = gl.getUniformLocation(prog, 'iTime');
+
+    var startTime = Date.now();
+    var homeSection = document.getElementById('home');
+    homeSection.classList.add('shader-active');
+
+    function resize() {
+      var rect = homeSection.getBoundingClientRect();
+      canvas.width  = rect.width;
+      canvas.height = rect.height;
+      gl.viewport(0, 0, canvas.width, canvas.height);
+    }
+
+    window.addEventListener('resize', resize, { passive: true });
+    resize();
+
+    function render() {
+      var elapsed = (Date.now() - startTime) / 1000;
+      gl.uniform2f(iResLoc, canvas.width, canvas.height);
+      gl.uniform1f(iTimeLoc, elapsed);
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+      requestAnimationFrame(render);
+    }
+
+    render();
+  }());
 </script>
 </body>
 </html>
