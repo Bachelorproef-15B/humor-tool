@@ -676,6 +676,52 @@
     #heroCanvas { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
     #heroOverlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: rgba(0, 0, 0, 0.32); pointer-events: none; }
 
+    /* === VERBETERING 1: Quiz counter === */
+    .quiz-counter-bar {
+      margin-top: 2rem;
+      padding: 1.4rem 2rem;
+      background: linear-gradient(135deg, rgba(245,166,35,0.07), rgba(245,166,35,0.12));
+      border: 1px solid rgba(245,166,35,0.22);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .quiz-counter-number {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #F5A623;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .quiz-counter-text {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* === VERBETERING 4: Page load overlay === */
+    #pageLoadOverlay {
+      position: fixed;
+      inset: 0;
+      background: #0D0B1A;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #loadText {
+      font-family: var(--font);
+      font-size: clamp(1.6rem, 5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1;
+    }
+
     /* Terug naar boven */
     .back-to-top {
       position: fixed;
@@ -696,9 +742,109 @@
     }
     .back-to-top.visible { opacity:1; transform:none; pointer-events:auto; }
     .back-to-top:hover { background: var(--accent-dark); }
+
+    /* === THERMOMETER === */
+    #humorThermometer {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 850;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      pointer-events: none;
+    }
+    @media (max-width: 768px) { #humorThermometer { display: none; } }
+    .thermo-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .thermo-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .thermo-tube {
+      width: 16px;
+      height: 200px;
+      background: #1A1040;
+      border: 1px solid rgba(245,166,35,0.3);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .thermo-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      background: linear-gradient(to top, #F5A623, #FFD700);
+      transition: height 0.35s ease;
+      animation: thermoPulse 2.4s ease-in-out infinite;
+    }
+    @keyframes thermoPulse {
+      0%, 100% { box-shadow: 0 0 6px rgba(245,166,35,0.45); }
+      50%       { box-shadow: 0 0 16px rgba(245,166,35,0.85); }
+    }
+    .thermo-bulb {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #FFD700, #F5A623);
+      box-shadow: 0 0 12px rgba(245,166,35,0.65);
+      margin-top: -3px;
+      flex-shrink: 0;
+      animation: thermoPulse 2.4s ease-in-out infinite;
+    }
+    .thermo-labels {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+    .thermo-label {
+      font-size: 10px;
+      font-family: var(--font);
+      color: rgba(255,255,255,0.3);
+      white-space: nowrap;
+      line-height: 1;
+      transition: color 0.4s ease;
+    }
+    .thermo-label.thermo-lit { color: rgba(255,255,255,0.88); }
+    .thermo-tooltip {
+      position: absolute;
+      left: calc(100% + 10px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1A1040;
+      border: 1px solid rgba(245,166,35,0.5);
+      border-radius: 6px;
+      padding: 8px 11px;
+      font-size: 11px;
+      font-family: var(--font);
+      color: #fff;
+      line-height: 1.45;
+      width: 155px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .thermo-tooltip.thermo-show { opacity: 1; }
   </style>
 </head>
 <body>
+
+<script>document.body.style.overflow='hidden';</script>
+<div id="pageLoadOverlay" aria-hidden="true">
+  <div id="loadText"></div>
+</div>
 
 <nav id="mainNav">
   <a class="nav-brand" href="#home">Humor <span>&amp;</span> Leiderschap</a>
@@ -861,6 +1007,9 @@
         <div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div>
       </div>
       <div class="quiz-stage" id="quizStage"></div>
+    </div>
+    <div class="quiz-counter-bar" id="counterBar">
+      <span class="quiz-counter-text">Al&nbsp;</span><span class="quiz-counter-number" id="counterNumber">0</span><span class="quiz-counter-text">&nbsp;leidinggevenden ontdekten hun humorstijl</span>
     </div>
   </div>
 </section>
@@ -1561,6 +1710,136 @@
     }
 
     render();
+  }());
+</script>
+
+<script>
+  /* ===================== VERBETERING 1: QUIZ COUNTER ===================== */
+  (function () {
+    var counterBar = document.getElementById('counterBar');
+    var counterNum = document.getElementById('counterNumber');
+    if (!counterBar || !counterNum) return;
+
+    var animated = false;
+    var TARGET   = 284;
+    var DURATION = 2000;
+
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function runCounter() {
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / DURATION, 1);
+        counterNum.textContent = Math.round(easeOut(progress) * TARGET);
+        if (progress < 1) requestAnimationFrame(step);
+        else counterNum.textContent = TARGET;
+      }
+      requestAnimationFrame(step);
+    }
+
+    if ('IntersectionObserver' in window) {
+      var cObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && !animated) {
+            animated = true;
+            cObs.unobserve(e.target);
+            runCounter();
+          }
+        });
+      }, { threshold: 0.4 });
+      cObs.observe(counterBar);
+    } else {
+      counterNum.textContent = TARGET;
+    }
+  }());
+
+  /* ===================== VERBETERING 4: PAGE LOAD ANIMATIE ===================== */
+  (function () {
+    var overlay = document.getElementById('pageLoadOverlay');
+    var display = document.getElementById('loadText');
+    if (!overlay || !display) return;
+
+    var text    = 'Humor & Leiderschap';
+    var i       = 0;
+    var CHAR_MS = 80;
+
+    function typeNext() {
+      if (i >= text.length) {
+        setTimeout(function () {
+          overlay.style.transition = 'transform 0.8s ease-in-out';
+          overlay.style.transform  = 'translateY(-100%)';
+          overlay.addEventListener('transitionend', function () {
+            overlay.remove();
+            document.body.style.overflow = '';
+          }, { once: true });
+        }, 500);
+        return;
+      }
+
+      var ch = text[i];
+      if (ch === '&') {
+        var sp = document.createElement('span');
+        sp.style.color = '#F5A623';
+        sp.textContent = '&';
+        display.appendChild(sp);
+      } else {
+        display.appendChild(document.createTextNode(ch));
+      }
+      i++;
+      setTimeout(typeNext, CHAR_MS);
+    }
+
+    typeNext();
+  }());
+</script>
+
+<div id="humorThermometer" aria-hidden="true">
+  <div class="thermo-inner">
+    <div class="thermo-col">
+      <div class="thermo-tube">
+        <div class="thermo-fill" id="thermoFill"></div>
+      </div>
+      <div class="thermo-bulb"></div>
+    </div>
+    <div class="thermo-labels">
+      <span class="thermo-label" id="thermoLabelTop">Humorstrateeg</span>
+      <span class="thermo-label" id="thermoLabelMid">Gevorderd</span>
+      <span class="thermo-label" id="thermoLabelBot">Beginner</span>
+    </div>
+  </div>
+  <div class="thermo-tooltip" id="thermoTooltip">
+    Je bent klaar om humor strategisch in te zetten!
+  </div>
+</div>
+
+<script>
+  (function () {
+    'use strict';
+    var fill     = document.getElementById('thermoFill');
+    var tooltip  = document.getElementById('thermoTooltip');
+    var labelTop = document.getElementById('thermoLabelTop');
+    var labelMid = document.getElementById('thermoLabelMid');
+    var labelBot = document.getElementById('thermoLabelBot');
+    if (!fill || !tooltip || !labelTop || !labelMid || !labelBot) return;
+
+    function getScrollPct() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max <= 0) return 0;
+      return Math.min(1, (window.pageYOffset || document.documentElement.scrollTop) / max);
+    }
+
+    function update() {
+      var pct = getScrollPct();
+      fill.style.height = (pct * 100) + '%';
+      labelBot.classList.toggle('thermo-lit', pct >= 0.02);
+      labelMid.classList.toggle('thermo-lit', pct >= 0.48);
+      labelTop.classList.toggle('thermo-lit', pct >= 0.92);
+      tooltip.classList.toggle('thermo-show', pct >= 0.97);
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
   }());
 </script>
 </body>
