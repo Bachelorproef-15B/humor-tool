@@ -83,7 +83,29 @@
       "aanbevolenHumorstijl": "affiliative",
       "concreteTip": "Gebruik een luchtige observatie over hoe het team altijd fel discussieert omdat iedereen gepassioneerd is, en benoem dat als kracht voor je tussenkomst.",
       "waarschuwing": "Gebruik nooit humor om het conflict zelf te minimaliseren of weg te lachen. Erken eerst de ernst van de situatie.",
-      "voorbeeld": "'Jullie passie voor dit project is duidelijk, bijna te duidelijk. Laten we die energie samen in de juiste richting sturen.'"
+      "voorbeeld": "'Jullie passie voor dit project is duidelijk, bijna te duidelijk. Laten we die energie samen in de juiste richting sturen.'",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Gebruik humor om de gedeelde passie van beide teamleden te benadrukken en te herframen als kracht. Maak een luchtige observatie over hoe het conflict aantoont dat iedereen echt betrokken is bij het project. Gebruik dit als brug om samen naar een oplossing te werken.",
+          "extraTip": "Benoem concreet een moment waarop je het team al eerder zag samenwerken en maak daar een warme grap over om de sfeer te normaliseren.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Deel een persoonlijke anekdote over hoe jij zelf ooit met een soortgelijk meningsverschil omging, en relativeer de situatie vanuit je eigen ervaring. Dit straalt kalmte uit en helpt het team de situatie in perspectief te plaatsen. Ga na de anekdote snel over naar concrete stappen richting een oplossing.",
+          "extraTip": "Jouw zichtbare rust in een conflictsituatie werkt aanstekelijk: het team voelt dat het hanteerbaar is als jij er rustig bij blijft.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "Als je toch humor wil inzetten in een conflictsituatie, beperk het dan strikt tot een milde ironie over de situatie zelf, nooit over een van de betrokken personen. Vermijd sarcasme en cynisme, want dat versterkt de spanning. Ga daarna direct over naar oplossingsgerichte communicatie.",
+          "extraTip": "",
+          "waarschuwing": "Agressieve humor bij een teamconflict wordt snel gezien als partij kiezen en ondermijnt je neutraliteit als leidinggevende, waardoor de bemiddeling mislukt."
+        },
+        "self-defeating": {
+          "tip": "Je kunt kort aangeven dat je zelf ook niet altijd weet hoe je meningsverschillen het best aanpakt, om de drempel te verlagen. Doe dit voorzichtig en ga daarna snel over naar concrete stappen richting een oplossing. Zorg dat je rol als leider geloofwaardig blijft.",
+          "extraTip": "",
+          "waarschuwing": "Als bemiddelaar moet je geloofwaardig en stabiel overkomen; overdreven zelfrelativering laat beide partijen twijfelen aan jouw vermogen om de situatie te leiden."
+        }
+      }
     },
     {
       "id": "sit_02",
@@ -101,7 +123,29 @@
       "aanbevolenHumorstijl": "self-enhancing",
       "concreteTip": "Open met een zelfonthullende observatie die aantoont dat je de realiteit ziet, maar er toch positief in staat. Dit creert psychologische veiligheid voor het team.",
       "waarschuwing": "Relativeer nooit de tekortkoming zelf, enkel jouw eigen reactie erop. Het team wil zien dat je het serieus neemt.",
-      "voorbeeld": "'Ik had gehoopt u vandaag champagne aan te bieden. We hebben bruiswater. Maar de weg naar champagne ligt er, en die gaan we samen bewandelen.'"
+      "voorbeeld": "'Ik had gehoopt u vandaag champagne aan te bieden. We hebben bruiswater. Maar de weg naar champagne ligt er, en die gaan we samen bewandelen.'",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Open met een luchtige opmerking die het team betrekt bij de resultaten, zoals een verwijzing naar een gedeeld moment dat iedereen zal herkennen. Dit creert een gevoel van saamhorigheid voor de uitdagingen die nog komen. Zorg dat de humor de ernst van de matige resultaten niet wegwuift.",
+          "extraTip": "Vraag het team om zelf het grappigste obstakel van het jaar te benoemen, zodat de opening meteen verbindend werkt.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Open met een zelfonthullende observatie die aantoont dat je de realiteit ziet maar er toch positief in staat. Dit creert psychologische veiligheid voor het team en toont dat je het aankan. Relativeer je eigen reactie op de cijfers, nooit de cijfers zelf.",
+          "extraTip": "Voeg na de relativerende opening een concrete zin toe over wat jij persoonlijk geleerd hebt dit jaar, dat maakt je authenticiteit tastbaar.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "Vermijd elke vorm van kritische of spottende humor bij het presenteren van tegenvallende resultaten. Als je toch iets relatiefs wil zeggen, richt dat dan enkel op externe omstandigheden, nooit op het team of individuen. Zorg dat de algehele toon empathisch en oplossingsgerich blijft.",
+          "extraTip": "",
+          "waarschuwing": "Sarcastische humor bij tegenvallende resultaten wordt door het team snel ervaren als het afschuiven van verantwoordelijkheid, en beschadigt het vertrouwen in jou als leider."
+        },
+        "self-defeating": {
+          "tip": "Je kunt kort en oprecht erkennen dat jij zelf ook teleurgesteld is in de resultaten, om eerlijk over te komen. Beperk dit tot een korte erkenning en schakel dan snel over naar een positieve boodschap over de weg vooruit. Vermijd dat het team het gevoel krijgt dat jij de situatie niet aankan.",
+          "extraTip": "",
+          "waarschuwing": "Te veel zelfondermijnende humor bij slecht nieuws ondermijnt het vertrouwen van het team in jou als leider op een moment dat ze net nood hebben aan stabiliteit en richting."
+        }
+      }
     },
     {
       "id": "sit_04",
@@ -110,7 +154,29 @@
       "aanbevolenHumorstijl": "affiliative",
       "concreteTip": "Gebruik inclusieve humor die de nieuwe medewerker verwelkomt in de groep zonder hem/haar als buitenstaander te framen. Gedeelde teamverhalen werken goed.",
       "waarschuwing": "Vermijd inside jokes die de nieuwe medewerker nog niet begrijpt: dit vergroot het gevoel van buitenstaander zijn.",
-      "voorbeeld": "'Wij hebben hier een gulden regel: de koffiepot is heilig. Al de rest leren we je wel bij.' (warm, inclusief, laagdrempelig)"
+      "voorbeeld": "'Wij hebben hier een gulden regel: de koffiepot is heilig. Al de rest leren we je wel bij.' (warm, inclusief, laagdrempelig)",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Gebruik inclusieve humor die de nieuwe medewerker verwelkomt in de groep zonder hem of haar als buitenstaander te framen. Gedeelde teamverhalen en lichte grappen over de werkplek of routines werken goed. Vermijd inside jokes die de nieuwe collega nog niet begrijpt.",
+          "extraTip": "Vraag het team om zelf een grappige ongeschreven regel te delen, zodat de nieuwe medewerker meteen het gevoel krijgt erbij te horen.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Deel een eigen anekdote over jouw eerste dag of een moment waarop jij ook nieuw was en je weg moest vinden. Dit maakt je toegankelijker en normaliseert de onwennigheid van de nieuwe collega. Sluit af met een positieve blik op wat de nieuwe medewerker kan verwachten.",
+          "extraTip": "Jouw persoonlijke verhaal over een eigen beginperiode creert direct een menselijke connectie en verlaagt de drempel om vragen te stellen.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "Vermijd bij de onboarding elke vorm van humor die de nieuwe medewerker zou kunnen uitsluiten of in verlegenheid brengen. Grapjes over anderen in het team zijn ook risicovol, want de nieuwe collega kent de verhoudingen nog niet. Kies voor neutrale, situationele humor over het werk zelf.",
+          "extraTip": "",
+          "waarschuwing": "Agressieve humor bij een onboarding creert een onveilige eerste indruk en kan ertoe leiden dat de nieuwe medewerker zich nooit echt welkom voelt in het team."
+        },
+        "self-defeating": {
+          "tip": "Een kleine zelfrelativering, zoals een luchtige grap over je eigen gebrekkige geheugen voor namen, kan de drempel verlagen bij een eerste kennismaking. Zorg dat het luchtig blijft en dat je daarna duidelijk de leiding neemt in het welkomstgesprek. De nieuwe medewerker zoekt houvast bij de leidinggevende.",
+          "extraTip": "",
+          "waarschuwing": "Als je jezelf te veel wegrelativeert bij een onboarding, geef je de nieuwe medewerker het gevoel dat er geen duidelijke leider is om op te vertrouwen in de beginfase."
+        }
+      }
     },
     {
       "id": "sit_05",
@@ -119,7 +185,29 @@
       "aanbevolenHumorstijl": "affiliative",
       "concreteTip": "Een korte, speelse onderbreking kan de groep resetten. Benoem het patroon met humor en stuur dan actief bij met een vraag die terugkeert naar het doel.",
       "waarschuwing": "Gebruik humor als reset, niet als vervanging van sturing. Volg de grap onmiddellijk op met een concrete vraag of beslissing.",
-      "voorbeeld": "'We zijn nu 20 minuten bezig met de kleur van de knop. Ik ga even een executive decision nemen: de knop wordt blauw. Gaan we verder?' (gecombineerd met een lach)"
+      "voorbeeld": "'We zijn nu 20 minuten bezig met de kleur van de knop. Ik ga even een executive decision nemen: de knop wordt blauw. Gaan we verder?' (gecombineerd met een lach)",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Een korte, speelse opmerking richting de groep kan de vastgelopen vergadering resetten zonder dat iemand zich aangevallen voelt. Benoem het patroon met humor en stuur daarna actief bij met een concrete vraag die terugkeert naar het hoofddoel. Gebruik humor als reset, nooit als vervanging van sturing.",
+          "extraTip": "Verbind de grap aan een directe actie, zodat de lach onmiddellijk gevolgd wordt door een beslissing of volgende stap.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Erken intern dat dit soort vergaderingen nu eenmaal voorkomen, en neem rustig het woord om de vergadering terug op koers te brengen. Je kunt een milde zelfrelaterende opmerking maken over hoe ook jij soms de neiging heeft om in details te blijven hangen. Volg dit direct op met een beslissing of richting.",
+          "extraTip": "Jouw kalmte en relativeringsvermogen zijn krachtig in een vastgelopen vergadering: je toont dat je de situatie aankan zonder dramatisch te reageren.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "Vermijd spottende opmerkingen over wie het meest aan het woord is of wie de vergadering doet vastlopen. Als je humor inzet, richt die dan op de situatie of het onderwerp, nooit op een persoon. Ga daarna direct over naar een concrete sturing van de vergadering.",
+          "extraTip": "",
+          "waarschuwing": "Een spottende opmerking over een collega in een groepssetting treft die persoon extra hard door de aanwezigheid van anderen en beschadigt het psychologisch veilige klimaat."
+        },
+        "self-defeating": {
+          "tip": "Je kunt als voorzitter aangeven dat jij ook had moeten ingrijpen toen de discussie begon af te wijken, en dat je het nu rechtzet. Dit toont zelfreflectie en neemt de verantwoordelijkheid op. Ga daarna snel over naar een concrete beslissing of volgend agendapunt.",
+          "extraTip": "",
+          "waarschuwing": "Overdrijf de zelfkritiek niet: als voorzitter moet je de vergadering in de hand houden, en te veel zelfrelaterende humor ondermijnt die autoriteit in de ogen van het team."
+        }
+      }
     },
     {
       "id": "sit_06",
@@ -137,7 +225,29 @@
       "aanbevolenHumorstijl": "affiliative",
       "concreteTip": "Dit is het ideale moment voor warme, inclusieve humor die de gedeelde inspanning viert. Verwijs naar specifieke momenten uit het project die het team zal herkennen.",
       "waarschuwing": "Zorg dat iedereen zich opgenomen voelt in de viering. Vermijd humor die bepaalde personen uitsluit of een enkeling overmatig benadrukt.",
-      "voorbeeld": "'Drie maanden geleden dacht ik dat dit project ons zou doen. Vandaag mag ik zeggen: het heeft ons gemaakt. Proficiat aan iedereen, ook aan de koffiemachine.'"
+      "voorbeeld": "'Drie maanden geleden dacht ik dat dit project ons zou doen. Vandaag mag ik zeggen: het heeft ons gemaakt. Proficiat aan iedereen, ook aan de koffiemachine.'",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Verwijs met humor naar een specifiek gedeeld moment uit het project dat het team zal herkennen, zoals een moeilijk moment dat jullie samen overwonnen. Dit versterkt het gevoel van teamidentiteit en geeft de viering een persoonlijk karakter. Zorg dat iedereen zich opgenomen voelt in de grap.",
+          "extraTip": "Vraag het team zelf om het grappigste of meest onverwachte moment uit het project te delen, zodat de viering echt van het team wordt.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Deel een eerlijk moment waarop jij als leidinggevende ook even twijfelde of het zou lukken, en relativeer dat nu met een lach. Dit maakt je menselijk en versterkt het triomfgevoel van het team. Sluit af met een positieve blik op de volgende uitdaging die jullie samen wachten.",
+          "extraTip": "Jouw eerlijkheid over eigen twijfels maakt de overwinning groter voor het hele team en versterkt het vertrouwen in toekomstige projecten.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "In een vieringsmoment heeft de groep nood aan positieve verbinding, niet aan scherpe humor of sarcasme. Als je toch iets scherps wil zeggen, richt dat dan uitsluitend op externe omstandigheden die jullie samen overwonnen, nooit op teamleden of hun prestaties. Houd de energie positief en inclusief.",
+          "extraTip": "",
+          "waarschuwing": "Een agressieve of spottende grap in een vieringsmoment kan de vreugde er snel uithalen en laat sommige teamleden met een wrang gevoel achter."
+        },
+        "self-defeating": {
+          "tip": "Een luchtige opmerking over hoe ook jij niet altijd zeker was van de aanpak kan de viering menselijker maken. Zorg dat de focus op het team blijft en niet op jouw onzekerheid. Eindig altijd met een duidelijk en oprecht compliment voor het hele team.",
+          "extraTip": "",
+          "waarschuwing": "Te veel zelfrelativering in een vieringsmoment trekt de aandacht weg van het team en kan overkomen alsof jij de verdienste van het team wegrelativeert."
+        }
+      }
     },
     {
       "id": "sit_08",
@@ -146,7 +256,29 @@
       "aanbevolenHumorstijl": "self-enhancing",
       "concreteTip": "Erken de fout openlijk en gebruik zelfrelaterende humor om te tonen dat je het aankan. Dit versterkt eerder dan ondermijnt je gezag, omdat het authenticiteit uitstraalt.",
       "waarschuwing": "Relativeer de fout, niet de verantwoordelijkheid. De humor mag het probleem niet doen verdwijnen: actie blijft nodig.",
-      "voorbeeld": "'Ik heb die vergadering verkeerd ingepland. Klassiek. Hier is de nieuwe uitnodiging, ditmaal nagekeken door twee mensen en de kalender-app.'"
+      "voorbeeld": "'Ik heb die vergadering verkeerd ingepland. Klassiek. Hier is de nieuwe uitnodiging, ditmaal nagekeken door twee mensen en de kalender-app.'",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Betrek het team bij de fout door er samen luchtig over te praten en te benadrukken dat iedereen wel eens een blunder maakt. Dit normaliseert fouten maken in de teamcultuur en verlaagt de drempel voor anderen om fouten toe te geven. Sluit af met een concrete actie om de fout recht te zetten.",
+          "extraTip": "Door de fout samen te benoemen versterk je een cultuur van open communicatie en psychologische veiligheid in je team.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Erken de fout openlijk en gebruik zelfrelaterende humor om te tonen dat je het aankan zonder je gezag te verliezen. Dit straalt authenticiteit en veerkracht uit, wat het vertrouwen van het team versterkt. Relativeer je eigen reactie op de fout, nooit de fout of de gevolgen ervan.",
+          "extraTip": "Voeg na de relativerende opmerking altijd een concrete opvolgactie toe, zodat het team ziet dat je verantwoordelijkheid neemt en verder gaat.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "Vermijd de neiging om via een verkapte grap of sarcastische opmerking de schuld bij anderen te leggen. Als je humor inzet bij een eigen fout, richt die dan uitsluitend op jezelf. Elke hint naar de schuld van een collega, ook in grappige vorm, beschadigt het vertrouwen in de teamrelatie.",
+          "extraTip": "",
+          "waarschuwing": "Agressieve humor bij een eigen fout waarbij anderen betrokken zijn, wordt snel gelezen als het afschuiven van verantwoordelijkheid en beschadigt de relatie met je team."
+        },
+        "self-defeating": {
+          "tip": "Een korte opmerking zoals 'Dat is een klassieke fout van mij' kan de erkenning van de fout menselijker maken. Beperk dit tot een korte, luchtige erkenning en neem daarna daadkrachtig de verantwoordelijkheid op. Overdrijf de zelfkritiek niet, want het team heeft nood aan een leider die verder kan.",
+          "extraTip": "",
+          "waarschuwing": "Te veel zelfondermijnende humor bij een eigen fout vergroot de onzekerheid in het team over jouw competentie als leidinggevende op momenten dat ze houvast nodig hebben."
+        }
+      }
     },
     {
       "id": "sit_09",
@@ -155,7 +287,29 @@
       "aanbevolenHumorstijl": "self-enhancing",
       "concreteTip": "Humor kan een buffer zijn tegen verandermoeheid. Gebruik het spaarzaam maar consistent om veerkracht en positivisme te signaleren zonder de uitdagingen te minimaliseren.",
       "waarschuwing": "Vermijd humor die de weerstand van het team wegwuift of bagatelliseert. Erken altijd eerst de moeilijkheid.",
-      "voorbeeld": "'We zijn nu in maand vier van de transitie. Ik beloof jullie: de andere kant van deze tunnel bestaat. Ik heb er alvast de catering besteld.'"
+      "voorbeeld": "'We zijn nu in maand vier van de transitie. Ik beloof jullie: de andere kant van deze tunnel bestaat. Ik heb er alvast de catering besteld.'",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Gebruik gezamenlijke humor om de vermoeidheid van het team te benoemen en te normaliseren als iets dat iedereen deelt. Verwijs naar een gedeeld moment waarop het ook al moeilijk was en jullie er samen door kwamen. Dit versterkt het gevoel van saamhorigheid in een uitdagende periode.",
+          "extraTip": "Organiseer een informeel moment waar het team even kan lachen over de absurde of onverwachte kanten van de verandering, zodat de spanning wat afneemt.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Gebruik zelfrelativerende humor spaarzaam maar consistent om veerkracht en positivisme te signaleren zonder de uitdagingen te minimaliseren. Jouw innerlijke rust en relativering stralen naar het team en fungeren als kompas in moeilijke tijden. Erken altijd eerst de moeilijkheid voordat je relativeert.",
+          "extraTip": "Deel af en toe een persoonlijke anekdote over hoe jij omgaat met onzekerheid, dat maakt je menselijk en versterkt het vertrouwen van het team in jou.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "Cynische of spottende humor over de verandering of de organisatie die ze oplegt kan tijdelijk opluchten maar ondermijnt op termijn het draagvlak. Als je humor inzet, laat die dan positief en constructief zijn. Richt grapjes op de uitdagingen zelf, nooit op de mensen of de organisatie.",
+          "extraTip": "",
+          "waarschuwing": "Cynisme is bijzonder besmettelijk in een veranderingstraject: als leidinggevende geeft jouw cynische humor het team de stille toestemming om de verandering te saboteren."
+        },
+        "self-defeating": {
+          "tip": "Je kunt eerlijk zijn dat jij ook niet altijd weet hoe het precies zal verlopen, maar beperk dat tot een korte en oprechte erkenning. Ga daarna snel over naar een positief perspectief op de voortgang die al gemaakt is. Het team heeft nood aan een leider die ondanks onzekerheid stabiliteit uitstraalt.",
+          "extraTip": "",
+          "waarschuwing": "Te veel zelfondermijnende humor tijdens een langdurig veranderingstraject ondermijnt het vertrouwen van het team in de leiding en vergroot de weerstand en onzekerheid."
+        }
+      }
     },
     {
       "id": "sit_10",
@@ -164,7 +318,29 @@
       "aanbevolenHumorstijl": "affiliative",
       "concreteTip": "Lichte affiliatieve humor kan de relatie versoepelen en vertrouwen wekken, maar enkel als de andere partij er ook voor openstaat. Lees de kamer.",
       "waarschuwing": "Nooit humor gebruiken rond de inhoud van de onderhandeling zelf. Dit kan als onprofessioneel of als onderwaardering van de deal worden ervaren.",
-      "voorbeeld": "'Ik heb gehoord dat jullie koffie in Gent beter is dan in Brussel. Dat alleen is al reden genoeg om hier samen te werken.' (ijsbreker, niet meer)"
+      "voorbeeld": "'Ik heb gehoord dat jullie koffie in Gent beter is dan in Brussel. Dat alleen is al reden genoeg om hier samen te werken.' (ijsbreker, niet meer)",
+      "alternatiefAdvies": {
+        "affiliative": {
+          "tip": "Lichte, warme humor kan de relatie met de externe partner versoepelen en een ontspannen sfeer creeren voor de onderhandeling. Gebruik humor enkel als ijsbreker of om een gespannen moment te ontspannen, nooit rond de inhoud van de onderhandeling. Lees altijd de kamer voordat je humor inzet.",
+          "extraTip": "Een kleine persoonlijke anekdote of een compliment over iets dat je van de andere partij weet, werkt als ijsbreker zonder enig risico.",
+          "waarschuwing": ""
+        },
+        "self-enhancing": {
+          "tip": "Gebruik zelfrelaterende humor om jezelf menselijker te maken tegenover de externe partner, zonder je professionele positie te ondermijnen. Een lichte grap over de complexiteit van de onderhandeling toont dat je er ervaring mee hebt. Zorg dat de humor je geloofwaardigheid versterkt, niet vermindert.",
+          "extraTip": "Jouw rust en relativeringsvermogen stralen vertrouwen uit tegenover de andere partij, wat de onderhandeling ten goede komt.",
+          "waarschuwing": ""
+        },
+        "aggressive": {
+          "tip": "Vermijd elke vorm van spottende of sceptische humor tegenover de externe partner of hun aanbod. Dit wordt als onprofessioneel of zelfs vijandig ervaren en beschadigt de relatie die je probeert op te bouwen. Hou je humor positief en gericht op gedeelde uitdagingen als je het toch inzet.",
+          "extraTip": "",
+          "waarschuwing": "Agressieve of sarcastische humor in een onderhandeling wordt door de andere partij bijna altijd gelezen als onrespect of zwakte, en ondergraaft je onderhandelingspositie."
+        },
+        "self-defeating": {
+          "tip": "Een milde zelfrelativerende opmerking kan de sfeer ontspannen, maar wees voorzichtig in onderhandelingen waar autoriteit telt. De externe partner moet jou zien als een gelijkwaardige of sterke partij. Beperk zelfrelativering tot kleine, luchtige momenten en herstel daarna snel je professionele positie.",
+          "extraTip": "",
+          "waarschuwing": "Zelfondermijnende humor bij onderhandelingen kan je gepercipieerde macht verzwakken en de andere partij het gevoel geven dat ze de bovenhand hebben."
+        }
+      }
     }
   ],
 

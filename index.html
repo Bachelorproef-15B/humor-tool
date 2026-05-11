@@ -850,8 +850,8 @@
   <a class="nav-brand" href="#home">Humor <span>&amp;</span> Leiderschap</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#home"    onclick="closeMenu()">Home</a></li>
-    <li><a href="#chatbot" onclick="closeMenu()">Chatbot</a></li>
     <li><a href="#quiz"    onclick="closeMenu()">Quiz</a></li>
+    <li><a href="#chatbot" onclick="closeMenu()">Chatbot</a></li>
     <li><a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a></li>
     <li><a href="#bronnen" onclick="closeMenu()">Bronnen</a></li>
     <li><a href="#over"    onclick="closeMenu()">Over</a></li>
@@ -881,8 +881,8 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home"    onclick="closeMenu()">Home</a>
-  <a href="#chatbot" onclick="closeMenu()">Chatbot</a>
   <a href="#quiz"    onclick="closeMenu()">Quiz</a>
+  <a href="#chatbot" onclick="closeMenu()">Chatbot</a>
   <a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a>
   <a href="#bronnen" onclick="closeMenu()">Bronnen</a>
   <a href="#over"    onclick="closeMenu()">Over</a>
@@ -951,7 +951,44 @@
   </div>
 </section>
 
-<!-- home (#0d0b1a) naar chatbot (#0d0b1a): geen wave nodig, beide donker -->
+<!-- home (#0d0b1a) naar quiz (#f4f2ff) -->
+<div class="wave-divider" style="background:#0d0b1a;">
+  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
+    <path d="M0,0 C360,72 720,72 1080,36 C1260,18 1380,12 1440,36 L1440,72 L0,72 Z" fill="#f4f2ff"/>
+  </svg>
+</div>
+
+
+<!-- QUIZ -->
+<section id="quiz">
+  <svg class="blob-bg" style="top:-20px;right:-100px;width:380px;" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="190" cy="190" rx="165" ry="130" fill="#f5a623" opacity="0.07"/>
+  </svg>
+  <div class="container">
+    <h2 data-reveal>Welke humorstijl past bij jou?</h2>
+    <p class="section-intro" data-reveal="delay-1">
+      Zes situaties, vier keuzes per vraag. Ontdek welke humorstijl het best bij jou als leidinggevende aansluit.
+    </p>
+    <div class="quiz-shell" data-reveal="delay-2">
+      <div class="quiz-progress-label" id="quizProgressLabel">Vraag 1 van 6</div>
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div>
+      </div>
+      <div class="quiz-stage" id="quizStage"></div>
+    </div>
+    <div class="quiz-counter-bar" id="counterBar">
+      <span class="quiz-counter-text">Al&nbsp;</span><span class="quiz-counter-number" id="counterNumber">0</span><span class="quiz-counter-text">&nbsp;leidinggevenden ontdekten hun humorstijl</span>
+    </div>
+  </div>
+</section>
+
+<!-- quiz (#f4f2ff) naar chatbot (#0d0b1a) -->
+<div class="wave-divider" style="background:#f4f2ff;">
+  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
+    <path d="M0,18 C360,72 720,0 1080,48 C1260,68 1380,58 1440,36 L1440,72 L0,72 Z" fill="#0d0b1a"/>
+  </svg>
+</div>
+
 
 <!-- CHATBOT -->
 <section id="chatbot">
@@ -983,43 +1020,7 @@
   </div>
 </section>
 
-<!-- chatbot (#0d0b1a) naar quiz (#f4f2ff) -->
-<div class="wave-divider" style="background:#0d0b1a;">
-  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
-    <path d="M0,0 C360,72 720,72 1080,36 C1260,18 1380,12 1440,36 L1440,72 L0,72 Z" fill="#f4f2ff"/>
-  </svg>
-</div>
-
-
-<!-- QUIZ -->
-<section id="quiz">
-  <svg class="blob-bg" style="top:-20px;right:-100px;width:380px;" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="190" cy="190" rx="165" ry="130" fill="#f5a623" opacity="0.07"/>
-  </svg>
-  <div class="container">
-    <h2 data-reveal>Welke humorstijl past bij jou?</h2>
-    <p class="section-intro" data-reveal="delay-1">
-      Zes situaties, vier keuzes per vraag. Ontdek welke humorstijl het best bij jou als leidinggevende aansluit.
-    </p>
-    <div class="quiz-shell" data-reveal="delay-2">
-      <div class="quiz-progress-label" id="quizProgressLabel">Vraag 1 van 6</div>
-      <div class="quiz-progress-track">
-        <div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div>
-      </div>
-      <div class="quiz-stage" id="quizStage"></div>
-    </div>
-    <div class="quiz-counter-bar" id="counterBar">
-      <span class="quiz-counter-text">Al&nbsp;</span><span class="quiz-counter-number" id="counterNumber">0</span><span class="quiz-counter-text">&nbsp;leidinggevenden ontdekten hun humorstijl</span>
-    </div>
-  </div>
-</section>
-
-<!-- quiz (#f4f2ff) naar dnd (#0d0b1a) -->
-<div class="wave-divider" style="background:#f4f2ff;">
-  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
-    <path d="M0,18 C360,72 720,0 1080,48 C1260,68 1380,58 1440,36 L1440,72 L0,72 Z" fill="#0d0b1a"/>
-  </svg>
-</div>
+<!-- chatbot (#0d0b1a) naar dnd (#0d0b1a): geen wave nodig, beide donker -->
 
 
 <!-- DO'S EN DON'TS -->
@@ -1317,6 +1318,13 @@
     addBotHtml(html);
   }
 
+  const STIJL_NAAM_KORT = {
+    'affiliative':    'Affiliatief',
+    'self-enhancing': 'Zelfversterkend',
+    'aggressive':     'Agressief',
+    'self-defeating': 'Zelfondermijnend'
+  };
+
   function handleSituationClick(situatieId) {
     if (chatBlocked) return;
     const situatie = appData.situaties.find(s => s.id === situatieId);
@@ -1329,11 +1337,101 @@
     });
 
     addUserMessage(situatie.titel);
+    handleSituationFlow(situatie);
+  }
 
-    addAdviesMessageTyped(situatie).then(() => {
+  async function handleSituationFlow(situatie) {
+    await addAdviesMessageTyped(situatie);
+    if (situatie.aanbevolenHumorstijl !== 'geen') {
+      await showFollowupQuestion(situatie);
+    } else {
       document.getElementById('resetBtn').style.display = 'flex';
       scrollChat();
+    }
+  }
+
+  async function showFollowupQuestion(situatie) {
+    const naamKort = STIJL_NAAM_KORT[situatie.aanbevolenHumorstijl] || situatie.aanbevolenHumorstijl;
+    await typeBotMessage('Is ' + naamKort + ' jouw voorkeurstijl?');
+
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = 'msg bot';
+    div.innerHTML = '<div class="msg-avatar">&#128516;</div>'
+      + '<div class="msg-bubble">'
+      + '<div class="situation-list">'
+      + '<button class="sit-btn yn-btn" onclick="handleFollowupJa(\'' + situatie.id + '\')">Ja</button>'
+      + '<button class="sit-btn yn-btn" onclick="handleFollowupNee(\'' + situatie.id + '\')">Nee</button>'
+      + '</div></div>';
+    messages.appendChild(div);
+    scrollChat();
+  }
+
+  async function handleFollowupJa(situatieId) {
+    if (chatBlocked) return;
+    const situatie = appData.situaties.find(s => s.id === situatieId);
+    if (!situatie) return;
+
+    document.querySelectorAll('.yn-btn').forEach(btn => {
+      btn.disabled = true; btn.style.opacity = '0.45'; btn.style.cursor = 'default';
     });
+
+    addUserMessage('Ja');
+
+    const advies = situatie.alternatiefAdvies && situatie.alternatiefAdvies[situatie.aanbevolenHumorstijl];
+    const extraTip = advies && advies.extraTip ? advies.extraTip : 'Pas deze stijl bewust toe in vergelijkbare situaties.';
+    await typeBotMessage('Top! Dan zit je goed met deze aanpak. Hier nog een extra tip: ' + extraTip);
+    document.getElementById('resetBtn').style.display = 'flex';
+    scrollChat();
+  }
+
+  async function handleFollowupNee(situatieId) {
+    if (chatBlocked) return;
+    const situatie = appData.situaties.find(s => s.id === situatieId);
+    if (!situatie) return;
+
+    document.querySelectorAll('.yn-btn').forEach(btn => {
+      btn.disabled = true; btn.style.opacity = '0.45'; btn.style.cursor = 'default';
+    });
+
+    addUserMessage('Nee');
+    await typeBotMessage('Geen probleem! Wat is dan jouw voorkeurstijl?');
+
+    const messages = document.getElementById('chatMessages');
+    const div = document.createElement('div');
+    div.className = 'msg bot';
+    const btns = appData.humorstijlen.map(function(h) {
+      return '<button class="sit-btn stijl-btn" onclick="handleStyleChoice(\'' + situatie.id + '\',\'' + h.id + '\')">'
+        + escHtml(STIJL_NAAM_KORT[h.id] || h.naam) + '</button>';
+    }).join('');
+    div.innerHTML = '<div class="msg-avatar">&#128516;</div>'
+      + '<div class="msg-bubble"><div class="situation-list">' + btns + '</div></div>';
+    messages.appendChild(div);
+    scrollChat();
+  }
+
+  async function handleStyleChoice(situatieId, stijlId) {
+    if (chatBlocked) return;
+    const situatie = appData.situaties.find(s => s.id === situatieId);
+    const stijl = appData.humorstijlen.find(h => h.id === stijlId);
+    if (!situatie || !stijl) return;
+
+    document.querySelectorAll('.stijl-btn').forEach(btn => {
+      btn.disabled = true; btn.style.opacity = '0.45'; btn.style.cursor = 'default';
+    });
+
+    addUserMessage(STIJL_NAAM_KORT[stijlId] || stijl.naam);
+
+    const advies = situatie.alternatiefAdvies && situatie.alternatiefAdvies[stijlId];
+    const tip = advies && advies.tip ? advies.tip : 'Pas deze stijl bewust toe in deze specifieke situatie.';
+    const waarschuwing = advies && advies.waarschuwing ? advies.waarschuwing : '';
+
+    await typeBotMessage(tip);
+    if (waarschuwing) {
+      await typeBotMessage('Let op: ' + waarschuwing);
+    }
+    document.getElementById('resetBtn').style.display = 'flex';
+    scrollChat();
   }
 
   function scrollChat() {
