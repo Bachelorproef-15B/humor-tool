@@ -184,7 +184,6 @@
     #chatbot { background: var(--sec-dark); }
     #quiz    { background: var(--sec-light); }
     #dnd     { background: var(--sec-dark); }
-    #bronnen { background: var(--sec-light); }
     #over    { background: var(--sec-dark); }
 
     /* Wave dividers */
@@ -222,7 +221,8 @@
 
     /* Koppen en tekst in donkere secties */
     #chatbot h2, #dnd h2, #over h2 { color: #ffffff; }
-    #chatbot .section-intro, #dnd .section-intro { color: rgba(255,255,255,0.6); }
+    #chatbot .section-intro { color: rgba(255,255,255,0.7); margin-bottom: 48px; }
+    #dnd .section-intro { color: rgba(255,255,255,0.6); }
     #dnd .loading { color: rgba(255,255,255,0.48); }
 
     .accent { color: var(--accent); }
@@ -262,6 +262,8 @@
     }
     .btn-outline { background: transparent; color: var(--text); border-color: var(--border); }
     .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    #chatbot .btn-outline { color: var(--accent); border-color: rgba(245,166,35,0.4); }
+    #chatbot .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
     /* Home hero */
     #home .hero {
@@ -294,7 +296,7 @@
       text-align: center;
     }
 
-    /* Feature grid - witte kaartjes op donkere shader-achtergrond */
+    /* Feature grid - cosmic dark cards */
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -302,36 +304,35 @@
       margin-top: 4.5rem;
     }
     .feature-card {
-      background: #ffffff;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem 1.5rem;
+      background: rgba(20, 15, 40, 0.6);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-radius: 16px;
+      padding: 28px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 4px 28px rgba(0,0,0,0.35);
-      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: default;
     }
-    .feature-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--accent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.28s ease;
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    a.feature-card { text-decoration: none; color: inherit; display: block; cursor: pointer; }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(251, 146, 60, 0.5);
+      box-shadow: 0 12px 40px rgba(251, 146, 60, 0.15);
     }
-    .feature-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 44px rgba(0,0,0,0.45), 0 0 0 1px rgba(245,166,35,0.35); border-color: rgba(245,166,35,0.4); }
-    .feature-card:hover::after { transform: scaleX(1); }
+    .feature-card:active {
+      transform: scale(0.97);
+      animation: cardPulse 0.4s ease forwards;
+    }
+    @keyframes cardPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(251,146,60,0.55); }
+      50%  { box-shadow: 0 0 0 14px rgba(251,146,60,0); }
+      100% { box-shadow: 0 0 0 0 rgba(251,146,60,0); }
+    }
     .feature-icon { font-size: 1.6rem; margin-bottom: 0.85rem; display: block; }
-    .feature-card h3 { font-size: 0.95rem; color: #1a1a2e; margin-bottom: 0.4rem; }
-    .feature-card p  { font-size: 0.85rem; color: #5c5882; }
-    a.feature-card { text-decoration: none; color: inherit; display: block; }
-
-    body.dark-mode .feature-card { background: var(--bg); border-color: var(--border); box-shadow: 0 4px 28px rgba(0,0,0,0.55); }
-    body.dark-mode .feature-card h3 { color: var(--text); }
-    body.dark-mode .feature-card p  { color: var(--text-muted); }
+    .feature-card h3 { font-size: 0.95rem; color: #ffffff; margin-bottom: 0.4rem; }
+    .feature-card p  { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
 
     @media (max-width: 640px) { .feature-grid { grid-template-columns: 1fr; gap: 1rem; } }
 
@@ -339,35 +340,42 @@
     #chatbot { padding-bottom: 5rem; }
 
     .chat-wrapper {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      background: rgba(20, 15, 40, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(168, 85, 247, 0.15);
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
       height: 640px;
       max-height: 82vh;
+      max-width: 860px;
+      margin: 0 auto;
       overflow: hidden;
-      box-shadow: 0 8px 44px rgba(0,0,0,0.5);
-      transition: background 0.3s, border-color 0.3s;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
     .chat-header {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      background: linear-gradient(135deg, rgba(251,146,60,0.22) 0%, rgba(251,146,60,0.04) 100%);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.15);
       color: #fff;
-      padding: 1rem 1.5rem;
+      padding: 0 1.5rem;
+      height: 64px;
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      flex-shrink: 0;
     }
     .chat-avatar {
       width: 38px; height: 38px;
       border-radius: 50%;
-      background: rgba(0,0,0,0.15);
+      background: rgba(251, 146, 60, 0.15);
+      box-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
       display: flex; align-items: center; justify-content: center;
       font-size: 1.15rem;
       flex-shrink: 0;
     }
-    .chat-header-text strong { display: block; font-size: 0.95rem; font-weight: 800; }
-    .chat-header-text span   { font-size: 0.78rem; opacity: 0.88; }
+    .chat-header-text strong { display: block; font-size: 1.125rem; font-weight: 700; color: #ffffff; }
+    .chat-header-text span   { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
 
     .chat-messages {
       flex: 1;
@@ -378,16 +386,17 @@
       gap: 1rem;
       scroll-behavior: smooth;
     }
-    .chat-messages::-webkit-scrollbar { width: 4px; }
-    .chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    .chat-messages::-webkit-scrollbar { width: 6px; }
+    .chat-messages::-webkit-scrollbar-thumb { background: rgba(168,85,247,0.3); border-radius: 4px; }
+    .chat-messages::-webkit-scrollbar-track { background: transparent; }
 
-    /* Chat bubble slide-in */
-    .msg { display: flex; align-items: flex-end; gap: 0.5rem; max-width: 85%; opacity: 0; }
-    .msg.bot  { align-self: flex-start; animation: msgInBot  0.3s ease forwards; }
+    /* Chat bubble animations */
+    .msg { display: flex; align-items: flex-end; gap: 0.5rem; max-width: 75%; opacity: 0; }
+    .msg.bot  { align-self: flex-start; animation: msgInBot  0.4s ease forwards; }
     .msg.user { align-self: flex-end; flex-direction: row-reverse; animation: msgInUser 0.3s ease forwards; }
 
-    @keyframes msgInBot  { from { opacity:0; transform: translateX(-14px) translateY(6px); } to { opacity:1; transform: none; } }
-    @keyframes msgInUser { from { opacity:0; transform: translateX(14px)  translateY(6px); } to { opacity:1; transform: none; } }
+    @keyframes msgInBot  { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: none; } }
+    @keyframes msgInUser { from { opacity:0; transform: translateX(14px) translateY(6px); } to { opacity:1; transform: none; } }
 
     .msg-avatar {
       width: 28px; height: 28px; border-radius: 50%;
@@ -398,16 +407,51 @@
       color: #fff;
     }
     .msg-bubble {
-      padding: 0.75rem 1rem;
-      border-radius: 14px;
-      font-size: 0.9rem;
-      line-height: 1.55;
+      padding: 14px 18px;
+      border-radius: 16px;
+      font-size: 0.9375rem;
+      line-height: 1.5;
     }
-    .msg.bot  .msg-bubble { background: var(--bubble-bot); border-bottom-left-radius: 3px; color: #e4e0ff; transition: background 0.3s; }
+    .msg.bot  .msg-bubble {
+      background: rgba(76, 29, 149, 0.4);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-bottom-left-radius: 4px;
+      color: #ffffff;
+    }
     .msg.bot  .msg-bubble p { color: inherit; }
     .msg.user .msg-bubble { background: var(--accent); color: #fff; border-bottom-right-radius: 3px; }
     .msg-bubble p + p   { margin-top: 0.5rem; }
     .msg-bubble strong  { font-weight: 700; }
+
+    /* Situation list — full-width, out of the bubble visually */
+    .msg:has(.situation-list) { max-width: 100%; width: 100%; }
+    .msg-bubble:has(.situation-list) { background: transparent; border: none; padding: 0; }
+
+    .situation-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .sit-btn {
+      width: 100%;
+      background: rgba(30, 20, 50, 0.5);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      padding: 14px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s ease;
+    }
+    .sit-btn:hover  {
+      border-color: rgba(251, 146, 60, 0.5);
+      background: rgba(40, 25, 65, 0.7);
+      transform: translateX(4px);
+    }
+    .sit-btn:active {
+      transform: scale(0.98);
+      background: rgba(251, 146, 60, 0.15);
+    }
+    .sit-btn:disabled { cursor: default; transform: none; }
 
     /* Typewriter cursor */
     .typing-cursor::after {
@@ -417,23 +461,6 @@
       margin-left: 1px;
     }
     @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
-
-    .situation-list { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.75rem; }
-
-    .sit-btn {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: #e4e0ff;
-      font-size: 0.84rem;
-      font-weight: 600;
-      padding: 0.6rem 0.9rem;
-      border-radius: var(--radius);
-      cursor: pointer;
-      text-align: left;
-      transition: background 0.14s, color 0.14s, border-color 0.14s, transform 0.14s;
-    }
-    .sit-btn:hover  { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateX(4px); }
-    .sit-btn:disabled { cursor: default; }
 
     .advies-card { display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.88rem; }
     .advies-section { display: flex; flex-direction: column; gap: 0.15rem; }
@@ -446,7 +473,20 @@
       border-radius: 0 var(--radius) var(--radius) 0;
     }
 
-    .chat-footer { padding: 0.9rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: center; transition: border-color 0.3s; }
+    .chat-footer {
+      padding: 0.9rem 1.5rem;
+      border-top: 1px solid rgba(168, 85, 247, 0.15);
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .chat-wrapper { border-radius: 16px; padding: 0; }
+      .chat-messages { padding: 1rem; }
+      .msg { max-width: 90%; }
+      .msg-bubble { font-size: 0.875rem; }
+      .sit-btn { font-size: 0.875rem; padding: 12px 16px; }
+    }
 
     /* Quiz sectie */
     .quiz-shell {
@@ -571,44 +611,6 @@
     .dnd-item h3 { font-size: 0.9rem; color: #ffffff; margin-bottom: 0; }
     .dnd-item p  { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
 
-    /* Bronnen - lichte sectie */
-    .bron-list { display: flex; flex-direction: column; gap: 0.85rem; }
-    .bron-item {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-      padding: 1.1rem 1.4rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      box-shadow: 0 2px 12px rgba(42,31,78,0.08);
-      transition: box-shadow 0.2s, transform 0.2s, background 0.3s, border-color 0.3s;
-    }
-    .bron-item:hover { box-shadow: 0 6px 24px rgba(42,31,78,0.16); transform: translateX(4px); }
-    .bron-num {
-      width: 28px; height: 28px;
-      background: var(--accent);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      border-radius: var(--radius);
-    }
-    .bron-body { flex: 1; }
-    .bron-body strong { font-size: 0.92rem; color: var(--text); }
-    .bron-body p { font-size: 0.84rem; margin-top: 0.2rem; }
-    .bron-nota {
-      display: inline-block;
-      margin-top: 0.4rem;
-      font-size: 0.74rem;
-      font-style: italic;
-      color: var(--text-muted);
-      background: var(--surface);
-      padding: 0.15rem 0.5rem;
-    }
-
     /* Over - donkere sectie */
     #over .over-card {
       background: rgba(255,255,255,0.04);
@@ -616,6 +618,7 @@
       border-radius: var(--radius-lg);
       padding: 2rem;
       max-width: 680px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
@@ -853,7 +856,6 @@
     <li><a href="#quiz"    onclick="closeMenu()">Quiz</a></li>
     <li><a href="#chatbot" onclick="closeMenu()">Chatbot</a></li>
     <li><a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a></li>
-    <li><a href="#bronnen" onclick="closeMenu()">Bronnen</a></li>
     <li><a href="#over"    onclick="closeMenu()">Over</a></li>
   </ul>
   <button class="theme-toggle" id="themeToggle" aria-label="Thema wisselen" onclick="toggleTheme()">
@@ -884,7 +886,6 @@
   <a href="#quiz"    onclick="closeMenu()">Quiz</a>
   <a href="#chatbot" onclick="closeMenu()">Chatbot</a>
   <a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a>
-  <a href="#bronnen" onclick="closeMenu()">Bronnen</a>
   <a href="#over"    onclick="closeMenu()">Over</a>
 </div>
 
@@ -1042,39 +1043,6 @@
   </div>
 </section>
 
-<!-- dnd (#0d0b1a) naar bronnen (#f4f2ff) -->
-<div class="wave-divider" style="background:#0d0b1a;">
-  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
-    <path d="M0,36 C480,72 960,0 1440,36 L1440,72 L0,72 Z" fill="#f4f2ff"/>
-  </svg>
-</div>
-
-
-<!-- BRONNEN -->
-<section id="bronnen">
-  <svg class="blob-bg" style="top:40px;right:-70px;width:280px;" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="140" cy="140" rx="120" ry="100" fill="#2a1f4e" opacity="0.06"/>
-  </svg>
-  <div class="container">
-    <h2 data-reveal>Bronnen</h2>
-    <p class="section-intro" data-reveal="delay-1">
-      De inhoud van dit prototype is gebaseerd op onderstaande academische bronnen.
-      De data is momenteel een placeholder en wordt later vervangen door fieldresearch.
-    </p>
-    <div class="bron-list" id="bronList" data-reveal="delay-2">
-      <div class="loading"><div class="spinner"></div> Laden...</div>
-    </div>
-  </div>
-</section>
-
-<!-- bronnen (#f4f2ff) naar over (#0d0b1a) -->
-<div class="wave-divider" style="background:#f4f2ff;">
-  <svg viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="72" aria-hidden="true">
-    <path d="M0,24 C360,72 720,0 1080,42 C1260,62 1380,52 1440,24 L1440,72 L0,72 Z" fill="#0d0b1a"/>
-  </svg>
-</div>
-
-
 <!-- OVER -->
 <section id="over">
   <svg class="blob-bg" style="top:-40px;right:-100px;width:380px;" viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1083,27 +1051,23 @@
   <div class="container">
     <h2 data-reveal>Over dit project</h2>
     <div class="over-card" data-reveal="delay-1">
-      <div><span class="placeholder-badge">Prototype: placeholder data</span></div>
       <p>
-        Deze tool is ontwikkeld als onderdeel van een <strong>bachelorproef</strong> over
-        strategisch humorgebruik in leiderschap binnen Vlaamse kmo's.
+        Deze tool is ontwikkeld als onderdeel van een <strong>bachelorproef</strong>
+        aan de <strong>Arteveldehogeschool</strong>, in opdracht van Humorstrateeg.
       </p>
       <p>
-        De huidige inhoud (humorstijlen, situatieadviezen, do's en don'ts en bronnen)
-        is op dit moment <strong>placeholder data</strong> gebaseerd op algemene kennis
-        over humor in organisatiegedrag. Alle teksten zijn duidelijk gemarkeerd met
-        "vervangen door field research".
+        Het onderzoek focust op het strategisch gebruik van humor binnen leiderschap in Vlaamse kmo's.
+        De inzichten zijn gebaseerd op een uitgebreide literatuurstudie, een enquete bij
+        <strong>219 Vlaamse werknemers</strong> en <strong>13 diepte-interviews</strong> met
+        leidinggevenden uit de retail- en consultancysector.
       </p>
       <p>
-        In een volgende fase wordt de data vervangen door bevindingen uit kwalitatief
-        fieldresearch bij leidinggevenden van Vlaamse kmo's: interviews, observaties
-        en casestudies.
+        De tool helpt leidinggevenden om humor bewust en effectief in te zetten als hefboom voor
+        een betere werksfeer, sterkere samenwerking en toegankelijker leiderschap.
       </p>
       <hr class="divider" style="margin:0;" />
       <p style="font-size:0.85rem;">
-        <strong>Studierichting:</strong> [invullen]<br />
-        <strong>Promotor:</strong> [invullen]<br />
-        <strong>Academiejaar:</strong> 2025-2026
+        <strong>Arteveldehogeschool</strong> &nbsp;|&nbsp; <strong>Academiejaar:</strong> 2025-2026
       </p>
     </div>
   </div>
@@ -1139,7 +1103,6 @@
 
   function renderAll() {
     renderDnD();
-    renderBronnen();
     initChat();
     initQuiz();
   }
@@ -1158,19 +1121,6 @@
       </div>`;
   }
 
-  function renderBronnen() {
-    const list = document.getElementById('bronList');
-    list.innerHTML = appData.bronnen.map((b, i) => `
-      <div class="bron-item">
-        <div class="bron-num">${i + 1}</div>
-        <div class="bron-body">
-          <strong>${b.auteur} (${b.jaar}). ${b.titel}.</strong>
-          <p>${b.uitgever}</p>
-          <span class="bron-nota">${b.nota}</span>
-        </div>
-      </div>`).join('');
-  }
-
   /* ===================== DARK MODE ===================== */
   let darkMode = false;
 
@@ -1185,6 +1135,7 @@
   const BOT_TYPING_DELAY = 1000;   // ms typing indicator
   const CHAR_DELAY       = 22;     // ms per character (~45 chars/sec)
   let chatBlocked = false;
+  let currentSituatie = null;
 
   function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -1256,7 +1207,7 @@
         <div class="advies-card">
           <div class="advies-section">
             <span class="advies-label">Situatie</span>
-            <strong>${escHtml(situatie.titel)}</strong>
+            <strong>${escHtml(situatie.naam)}</strong>
             <p style="margin-top:0.25rem;font-size:0.83rem;">${escHtml(situatie.beschrijving)}</p>
           </div>
           <div class="advies-section">
@@ -1264,15 +1215,8 @@
             <strong>${escHtml(stijlNaam)}</strong>
           </div>
           <div class="advies-section">
-            <span class="advies-label">Concrete tip</span>
-            <span>${escHtml(situatie.concreteTip)}</span>
-          </div>
-          <div class="advies-section">
-            <span class="advies-label">Voorbeeld</span>
-            <em style="font-size:0.85rem;">${escHtml(situatie.voorbeeld)}</em>
-          </div>
-          <div class="advies-warning">
-            Let op: ${escHtml(situatie.waarschuwing)}
+            <span class="advies-label">Advies</span>
+            <span>${escHtml(situatie.advies)}</span>
           </div>
         </div>
       </div>`;
@@ -1312,17 +1256,17 @@
       <div class="situation-list">
         ${appData.situaties.map(s => `
           <button class="sit-btn" onclick="handleSituationClick('${s.id}')">
-            ${s.titel}
+            ${s.naam}
           </button>`).join('')}
       </div>`;
     addBotHtml(html);
   }
 
   const STIJL_NAAM_KORT = {
-    'affiliative':    'Affiliatief',
-    'self-enhancing': 'Zelfversterkend',
-    'aggressive':     'Agressief',
-    'self-defeating': 'Zelfondermijnend'
+    'affiliatief':      'Affiliatief',
+    'zelfversterkend':  'Zelfversterkend',
+    'agressief':        'Agressief',
+    'zelfondermijnend': 'Zelfondermijnend'
   };
 
   function handleSituationClick(situatieId) {
@@ -1336,7 +1280,8 @@
       btn.style.cursor = 'default';
     });
 
-    addUserMessage(situatie.titel);
+    currentSituatie = situatie;
+    addUserMessage(situatie.naam);
     handleSituationFlow(situatie);
   }
 
@@ -1379,8 +1324,8 @@
     addUserMessage('Ja');
 
     const advies = situatie.alternatiefAdvies && situatie.alternatiefAdvies[situatie.aanbevolenHumorstijl];
-    const extraTip = advies && advies.extraTip ? advies.extraTip : 'Pas deze stijl bewust toe in vergelijkbare situaties.';
-    await typeBotMessage('Top! Dan zit je goed met deze aanpak. Hier nog een extra tip: ' + extraTip);
+    const tip = advies ? advies : 'Pas deze stijl bewust toe in vergelijkbare situaties.';
+    await typeBotMessage('Top! Dan zit je goed met deze aanpak. Nog een concrete tip voor "' + situatie.naam + '": ' + tip);
     document.getElementById('resetBtn').style.display = 'flex';
     scrollChat();
   }
@@ -1423,13 +1368,10 @@
     addUserMessage(STIJL_NAAM_KORT[stijlId] || stijl.naam);
 
     const advies = situatie.alternatiefAdvies && situatie.alternatiefAdvies[stijlId];
-    const tip = advies && advies.tip ? advies.tip : 'Pas deze stijl bewust toe in deze specifieke situatie.';
-    const waarschuwing = advies && advies.waarschuwing ? advies.waarschuwing : '';
+    const tip = advies ? advies : 'Pas deze stijl bewust toe in deze specifieke situatie.';
+    const stijlLabel = STIJL_NAAM_KORT[stijlId] || stijl.naam;
 
-    await typeBotMessage(tip);
-    if (waarschuwing) {
-      await typeBotMessage('Let op: ' + waarschuwing);
-    }
+    await typeBotMessage('Voor de situatie "' + situatie.naam + '" met ' + stijlLabel + ': ' + tip);
     document.getElementById('resetBtn').style.display = 'flex';
     scrollChat();
   }
