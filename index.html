@@ -72,6 +72,7 @@
       padding: 0 2rem;
       z-index: 1000;
       gap: 1rem;
+      /* theme-toggle removed */
       transition: box-shadow 0.3s ease;
     }
     nav.scrolled { box-shadow: 0 2px 28px rgba(0,0,0,0.5); border-bottom-color: transparent; }
@@ -102,23 +103,6 @@
     .nav-links a:hover,
     .nav-links a.active { background: var(--accent); color: #fff; }
 
-    /* Dark mode toggle */
-    .theme-toggle {
-      background: none;
-      border: 1.5px solid rgba(255,255,255,0.2);
-      border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: rgba(255,255,255,0.6);
-      transition: border-color 0.2s, color 0.2s, background 0.2s;
-      padding: 0;
-    }
-    .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
     /* Hamburger */
     .hamburger {
@@ -651,7 +635,7 @@
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      nav { padding: 0 1.25rem; grid-template-columns: auto 1fr auto auto; }
+      nav { padding: 0 1.25rem; grid-template-columns: auto 1fr auto; }
       section { padding: 4rem 1.25rem 3rem; }
     }
 
@@ -679,32 +663,6 @@
     #heroCanvas { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
     #heroOverlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: rgba(0, 0, 0, 0.32); pointer-events: none; }
 
-    /* === VERBETERING 1: Quiz counter === */
-    .quiz-counter-bar {
-      margin-top: 2rem;
-      padding: 1.4rem 2rem;
-      background: linear-gradient(135deg, rgba(245,166,35,0.07), rgba(245,166,35,0.12));
-      border: 1px solid rgba(245,166,35,0.22);
-      border-radius: var(--radius-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      text-align: center;
-    }
-    .quiz-counter-number {
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: #F5A623;
-      line-height: 1;
-      letter-spacing: -0.03em;
-    }
-    .quiz-counter-text {
-      font-size: 1rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
 
     /* === VERBETERING 4: Page load overlay === */
     #pageLoadOverlay {
@@ -815,12 +773,12 @@
     .thermo-label {
       font-size: 10px;
       font-family: var(--font);
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.62);
       white-space: nowrap;
       line-height: 1;
       transition: color 0.4s ease;
     }
-    .thermo-label.thermo-lit { color: rgba(255,255,255,0.88); }
+    .thermo-label.thermo-lit { color: rgba(255,255,255,0.95); }
     .thermo-tooltip {
       position: absolute;
       left: calc(100% + 10px);
@@ -853,29 +811,11 @@
   <a class="nav-brand" href="#home">Humor <span>&amp;</span> Leiderschap</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#home"    onclick="closeMenu()">Home</a></li>
-    <li><a href="#quiz"    onclick="closeMenu()">Quiz</a></li>
+    <li><a href="#quiz"    onclick="closeMenu()">Doe de Humortest</a></li>
     <li><a href="#chatbot" onclick="closeMenu()">Chatbot</a></li>
     <li><a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a></li>
     <li><a href="#over"    onclick="closeMenu()">Over</a></li>
   </ul>
-  <button class="theme-toggle" id="themeToggle" aria-label="Thema wisselen" onclick="toggleTheme()">
-    <!-- Maan: zichtbaar in light mode -->
-    <svg id="iconMoon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M13.5 10.5A6 6 0 0 1 5.5 2.5a6 6 0 1 0 8 8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <!-- Zon: zichtbaar in dark mode -->
-    <svg id="iconSun" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none;">
-      <circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/>
-      <line x1="8" y1="1" x2="8" y2="3"   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="8" y1="13" x2="8" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="1" y1="8" x2="3" y2="8"   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="13" y1="8" x2="15" y2="8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="3.1" y1="3.1" x2="4.5" y2="4.5"   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="11.5" y1="11.5" x2="12.9" y2="12.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="12.9" y1="3.1" x2="11.5" y2="4.5"  stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <line x1="4.5" y1="11.5" x2="3.1" y2="12.9"  stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    </svg>
-  </button>
   <button class="hamburger" id="hamburgerBtn" aria-label="Menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </button>
@@ -883,7 +823,7 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home"    onclick="closeMenu()">Home</a>
-  <a href="#quiz"    onclick="closeMenu()">Quiz</a>
+  <a href="#quiz"    onclick="closeMenu()">Doe de Humortest</a>
   <a href="#chatbot" onclick="closeMenu()">Chatbot</a>
   <a href="#dnd"     onclick="closeMenu()">Do's &amp; don'ts</a>
   <a href="#over"    onclick="closeMenu()">Over</a>
@@ -966,7 +906,7 @@
     <ellipse cx="190" cy="190" rx="165" ry="130" fill="#f5a623" opacity="0.07"/>
   </svg>
   <div class="container">
-    <h2 data-reveal>Welke humorstijl past bij jou?</h2>
+    <h2 data-reveal>Doe de Humortest</h2>
     <p class="section-intro" data-reveal="delay-1">
       Zes situaties, vier keuzes per vraag. Ontdek welke humorstijl het best bij jou als leidinggevende aansluit.
     </p>
@@ -976,9 +916,6 @@
         <div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div>
       </div>
       <div class="quiz-stage" id="quizStage"></div>
-    </div>
-    <div class="quiz-counter-bar" id="counterBar">
-      <span class="quiz-counter-text">Al&nbsp;</span><span class="quiz-counter-number" id="counterNumber">0</span><span class="quiz-counter-text">&nbsp;leidinggevenden ontdekten hun humorstijl</span>
     </div>
   </div>
 </section>
@@ -1058,7 +995,7 @@
       <p>
         Het onderzoek focust op het strategisch gebruik van humor binnen leiderschap in Vlaamse kmo's.
         De inzichten zijn gebaseerd op een uitgebreide literatuurstudie, een enquete bij
-        <strong>219 Vlaamse werknemers</strong> en <strong>13 diepte-interviews</strong> met
+        <strong>219 Vlaamse werknemers</strong> en <strong>13 interviews</strong> met
         leidinggevenden uit de retail- en consultancysector.
       </p>
       <p>
@@ -1119,16 +1056,6 @@
         <div class="dnd-header red">Don'ts</div>
         ${donts.map(d => `<div class="dnd-item red"><h3>${escHtml(d.titel)}</h3><p>${escHtml(d.uitleg)}</p></div>`).join('')}
       </div>`;
-  }
-
-  /* ===================== DARK MODE ===================== */
-  let darkMode = false;
-
-  function toggleTheme() {
-    darkMode = !darkMode;
-    document.body.classList.toggle('dark-mode', darkMode);
-    document.getElementById('iconMoon').style.display = darkMode ? 'none'  : '';
-    document.getElementById('iconSun').style.display  = darkMode ? ''      : 'none';
   }
 
   /* ===================== CHATBOT ===================== */
@@ -1218,6 +1145,7 @@
             <span class="advies-label">Advies</span>
             <span>${escHtml(situatie.advies)}</span>
           </div>
+          ${situatie.waarschuwing ? `<div class="advies-warning">⚠️ <strong>Let op:</strong> ${escHtml(situatie.waarschuwing)}</div>` : ''}
         </div>
       </div>`;
     messages.appendChild(div);
@@ -1325,7 +1253,8 @@
 
     const advies = situatie.alternatiefAdvies && situatie.alternatiefAdvies[situatie.aanbevolenHumorstijl];
     const tip = advies ? advies : 'Pas deze stijl bewust toe in vergelijkbare situaties.';
-    await typeBotMessage('Top! Dan zit je goed met deze aanpak. Nog een concrete tip voor "' + situatie.naam + '": ' + tip);
+    const warning = situatie.waarschuwing ? '\n\n⚠️ Let op: ' + situatie.waarschuwing : '';
+    await typeBotMessage('Top! Dan zit je goed met deze aanpak. Nog een concrete tip voor "' + situatie.naam + '": ' + tip + warning);
     document.getElementById('resetBtn').style.display = 'flex';
     scrollChat();
   }
@@ -1370,8 +1299,9 @@
     const advies = situatie.alternatiefAdvies && situatie.alternatiefAdvies[stijlId];
     const tip = advies ? advies : 'Pas deze stijl bewust toe in deze specifieke situatie.';
     const stijlLabel = STIJL_NAAM_KORT[stijlId] || stijl.naam;
+    const warning = situatie.waarschuwing ? '\n\n⚠️ Let op: ' + situatie.waarschuwing : '';
 
-    await typeBotMessage('Voor de situatie "' + situatie.naam + '" met ' + stijlLabel + ': ' + tip);
+    await typeBotMessage('Voor de situatie "' + situatie.naam + '" met ' + stijlLabel + ': ' + tip + warning);
     document.getElementById('resetBtn').style.display = 'flex';
     scrollChat();
   }
@@ -1754,46 +1684,6 @@
 </script>
 
 <script>
-  /* ===================== VERBETERING 1: QUIZ COUNTER ===================== */
-  (function () {
-    var counterBar = document.getElementById('counterBar');
-    var counterNum = document.getElementById('counterNumber');
-    if (!counterBar || !counterNum) return;
-
-    var animated = false;
-    var TARGET   = 284;
-    var DURATION = 2000;
-
-    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-
-    function runCounter() {
-      var startTime = null;
-      function step(ts) {
-        if (!startTime) startTime = ts;
-        var progress = Math.min((ts - startTime) / DURATION, 1);
-        counterNum.textContent = Math.round(easeOut(progress) * TARGET);
-        if (progress < 1) requestAnimationFrame(step);
-        else counterNum.textContent = TARGET;
-      }
-      requestAnimationFrame(step);
-    }
-
-    if ('IntersectionObserver' in window) {
-      var cObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting && !animated) {
-            animated = true;
-            cObs.unobserve(e.target);
-            runCounter();
-          }
-        });
-      }, { threshold: 0.4 });
-      cObs.observe(counterBar);
-    } else {
-      counterNum.textContent = TARGET;
-    }
-  }());
-
   /* ===================== VERBETERING 4: PAGE LOAD ANIMATIE ===================== */
   (function () {
     var overlay = document.getElementById('pageLoadOverlay');
