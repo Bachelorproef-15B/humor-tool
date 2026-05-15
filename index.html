@@ -450,11 +450,15 @@
     .advies-section { display: flex; flex-direction: column; gap: 0.15rem; }
     .advies-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.58; }
     .advies-warning {
-      background: rgba(0,0,0,0.22);
-      border-left: 3px solid rgba(255,255,255,0.35);
-      padding: 0.45rem 0.7rem;
-      font-size: 0.82rem;
-      border-radius: 0 var(--radius) var(--radius) 0;
+      background: rgba(245,166,35,0.16);
+      border: 1px solid rgba(245,166,35,0.45);
+      border-left: 3px solid #f5a623;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.83rem;
+      border-radius: var(--radius);
+      margin-top: 0.25rem;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.52;
     }
 
     .chat-footer {
@@ -1145,7 +1149,10 @@
             <span class="advies-label">Advies</span>
             <span>${escHtml(situatie.advies)}</span>
           </div>
-          ${situatie.waarschuwing ? `<div class="advies-warning">⚠️ <strong>Let op:</strong> ${escHtml(situatie.waarschuwing)}</div>` : ''}
+          <div class="advies-section">
+            <span class="advies-label" style="color:#f5a623;opacity:1;">⚠️ Let op</span>
+            <div class="advies-warning">${escHtml(situatie.waarschuwing || 'Houd altijd rekening met de context, de relatie en de gevoeligheden van je medewerkers voor je humor inzet.')}</div>
+          </div>
         </div>
       </div>`;
     messages.appendChild(div);
