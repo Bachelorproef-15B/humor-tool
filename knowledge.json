@@ -2,14 +2,14 @@
   "_meta": {
     "status": "gebaseerd op field research en desk research bachelorproef 2026",
     "project": "Bachelorproef: Strategisch humorgebruik in leiderschap bij Vlaamse kmo's",
-    "versie": "2.0.0"
+    "versie": "2.1.0"
   },
 
   "humorstijlen": [
     {
       "id": "affiliatief",
       "naam": "Affiliatieve humor",
-      "uitleg": "Verbindende humor die relaties versterkt. Grappen die iedereen includeren, luchtige opmerkingen die de groep samenbrengen. De leidinggevende lacht met het team, nooit over het team. Dit is de veiligste en meest effectieve humorstijl voor leidinggevenden: ze bevordert psychologische veiligheid en innovatief gedrag bij medewerkers (Mensink, 2026). 80% van de 219 bevraagde werknemers ervaart humor van hun leidinggevende vaak of altijd als positief.",
+      "uitleg": "Verbindende humor die relaties versterkt. Grappen die iedereen includeren, luchtige opmerkingen die de groep samenbrengen. De leidinggevende lacht met het team, nooit over het team. Dit is de veiligste en meest effectieve humorstijl voor leidinggevenden: ze bevordert psychologische veiligheid en innovatief gedrag bij medewerkers.",
       "wanneerWel": [
         "Bij teambuilding en informele momenten om de groepscohesie te versterken",
         "Om de sfeer te verlichten aan het begin van een vergadering of stand-up",
@@ -26,7 +26,7 @@
     {
       "id": "zelfversterkend",
       "naam": "Zelfversterkende humor (zelfspot)",
-      "uitleg": "Humor gericht op jezelf: je eigen fouten, beperkingen en tekortkomingen relativeren. Bijna alle 13 bevraagde leidinggevenden noemen dit de krachtigste en veiligste vorm van humor in leiderschap. Een voormalig CFO omschreef het zo: 'De veiligste vorm van humor die er bestaat, simpelweg omdat er niemand anders door gekwetst kan worden.' Een voormalig CEO in de bouwsector: 'Je moet kunnen relativeren over je eigen stommiteiten om mensen te kunnen leiden.' Zelfrelativering toont authenticiteit en verlaagt de hierarchische drempel.",
+      "uitleg": "Humor gericht op jezelf: je eigen fouten, beperkingen en tekortkomingen relativeren. Leidinggevenden noemen dit de krachtigste en veiligste vorm van humor in leiderschap. Een voormalig CFO omschreef het zo: 'De veiligste vorm van humor die er bestaat, simpelweg omdat er niemand anders door gekwetst kan worden.' Zelfrelativering toont authenticiteit en verlaagt de hierarchische drempel.",
       "wanneerWel": [
         "Bij eigen fouten of vergissingen die zichtbaar zijn voor het team",
         "Om de drempel te verlagen bij het begin van een moeilijk gesprek",
@@ -43,7 +43,7 @@
     {
       "id": "agressief",
       "naam": "Agressieve humor",
-      "uitleg": "Humor ten koste van anderen: sarcasme, iemand belachelijk maken, uitsluiten. Dit is de meest schadelijke stijl voor leidinggevenden. 43,5% van de 219 bevraagde werknemers heeft meegemaakt dat humor van hun leidinggevende verkeerd viel. De voornaamste oorzaken: grappen ten koste van een persoon (11,6%), sarcasme (10,6%), grensoverschrijding (8,8%) en verkeerde timing (8,3%). Agressieve humor vertraagt innovatief gedrag en ondermijnt psychologische veiligheid (Mensink, 2026).",
+      "uitleg": "Humor ten koste van anderen: sarcasme, iemand belachelijk maken, uitsluiten. Dit is de meest schadelijke stijl voor leidinggevenden. Een groot deel van de werknemers heeft al meegemaakt dat humor van hun leidinggevende verkeerd viel, vaak door grappen ten koste van een persoon, sarcasme of grensoverschrijding. Agressieve humor vertraagt innovatief gedrag en ondermijnt psychologische veiligheid.",
       "wanneerWel": [
         "Zelden aanbevolen in leiderschapscontexten",
         "Enkel als de grap strikt over jezelf gaat, nooit over een ander",
@@ -60,7 +60,7 @@
     {
       "id": "zelfondermijnend",
       "naam": "Zelfondermijnende humor",
-      "uitleg": "Jezelf structureel als minderwaardig voorstellen om anderen te laten lachen of goedkeuring te zoeken. Dit verschilt van zelfspot: zelfspot is een eenmalige relativering van een fout, zelfondermijning is een patroon waarbij je je eigen geloofwaardigheid stelselmatig afbreekt. Uit de desk research blijkt dat dit de professionele geloofwaardigheid ernstig kan beschadigen (Bitterly et al., 2017). Het team heeft houvast nodig bij de leidinggevende, niet de indruk dat die zelf niet weet waar hij of zij mee bezig is.",
+      "uitleg": "Jezelf structureel als minderwaardig voorstellen om anderen te laten lachen of goedkeuring te zoeken. Dit verschilt van zelfspot: zelfspot is een eenmalige relativering van een fout, zelfondermijning is een patroon waarbij je je eigen geloofwaardigheid stelselmatig afbreekt. Onderzoek toont aan dat dit de professionele geloofwaardigheid ernstig kan beschadigen. Het team heeft houvast nodig bij de leidinggevende, niet de indruk dat die zelf niet weet waar hij of zij mee bezig is.",
       "wanneerWel": [
         "Zelden strategisch inzetbaar als leidinggevende",
         "Eenmalig om de drempel te verlagen bij een heel nieuwe groep, mits snel gecorrigeerd door daadkrachtig gedrag"
@@ -81,12 +81,13 @@
       "naam": "Teammeeting of stand-up opstarten",
       "beschrijving": "Je begint een vergadering of dagelijkse stand-up. De energie is laag en je wil de groep activeren zodat blokkades makkelijker bovenkomen.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Gebruik een luchtige openingsvraag of een speelse stelling om mensen meteen te betrekken. Leidinggevenden uit het onderzoek groeperen hun team soms rond een grappige vraag ('Welke chocoladereep ben jij vandaag?') of vragen mensen te gaan staan of zitten bij stellingen. Dit verlaagt de drempel om openlijk te spreken. 76% van de respondenten vindt dat humor de sfeer aangenamer maakt (gem. 4,05/5). Vermijd grapjes die bepaalde mensen uitsluiten of die enkel voor een deel van het team begrijpelijk zijn.",
+      "advies": "Gebruik een luchtige openingsvraag of een speelse stelling om mensen meteen te betrekken. Groeperingen rondom een grappige vraag of stellingen waarbij iedereen kan gaan staan of zitten, verlagen de drempel om openlijk te spreken. Wissel de opener elke vergadering af zodat het geen automatisme wordt. Vermijd grapjes die bepaalde mensen uitsluiten of die enkel voor een deel van het team begrijpelijk zijn.",
+      "waarschuwing": "Humor werkt alleen als ze authentiek aanvoelt. Geforceerde of gescripte grappen voelen voor het team onecht aan en ondermijnen het open klimaat dat je net wil creëren. Varieer, maar overdrijf niet.",
       "alternatiefAdvies": {
-        "affiliatief": "Open met een inclusieve openingsvraag of speelse stelling die iedereen betrekt. Laat mensen antwoorden in groep, met de nadruk op gezamenlijkheid. Bv. 'Welke chocoladereep ben jij vandaag?' of 'Ga staan als jij ook maandagochtend moeite hebt om op gang te komen.' Dit creert meteen een open sfeer en maakt blokkades bespreekbaarder. Varieer de vraag per vergadering zodat het geen automatisme wordt.",
-        "zelfversterkend": "Begin de meeting door zelf toe te geven dat jij ook geen zin hebt in vergaderen, of verwijs kort naar je eigen vergissing van de vorige keer. Dit maakt je menselijk en verlaagt de hierarchische drempel al voor het eerste agendapunt. Combineer het daarna meteen met een duidelijk signaal dat je de vergadering nu echt start, zodat het luchtige moment naadloos overgaat in focus.",
-        "agressief": "Vermijd dit. Sarcastische opmerkingen over wie er te laat is, wie er slaperig uitziet of wie zijn werk nog niet af heeft, zetten mensen meteen in de verdediging. Dit sluit een open gesprek af voor het begonnen is en schaadt het psychologisch veilige klimaat al voor de vergadering op gang komt.",
-        "zelfondermijnend": "Vermijd dit als patroon. Een eenmalige luchtige opmerking over je eigen voorbereiding kan de sfeer ontspannen, maar als je te veel twijfelt aan je eigen structuur geef je het team het gevoel dat ze hun tijd verspillen. Houd de zelfkritiek licht, kort en gevolgd door een daadkrachtige start."
+        "affiliatief": "Open met een inclusieve openingsvraag of speelse stelling die iedereen betrekt. Laat mensen antwoorden in groep, met de nadruk op gezamenlijkheid. Dit creert meteen een open sfeer en maakt blokkades bespreekbaarder. Varieer de vraag per vergadering zodat het geen automatisme wordt.",
+        "zelfversterkend": "Begin de meeting door zelf toe te geven dat jij ook geen zin hebt in vergaderen, of verwijs kort naar je eigen vergissing van de vorige keer. Dit maakt je menselijk en verlaagt de hierarchische drempel al voor het eerste agendapunt. Combineer het daarna meteen met een duidelijk signaal dat je de vergadering nu echt start.",
+        "agressief": "Vermijd dit. Sarcastische opmerkingen over wie er te laat is, wie er slaperig uitziet of wie zijn werk nog niet af heeft, zetten mensen meteen in de verdediging. Dit sluit een open gesprek af voor het begonnen is.",
+        "zelfondermijnend": "Vermijd dit als patroon. Een eenmalige luchtige opmerking over je eigen voorbereiding kan de sfeer ontspannen, maar als je te veel twijfelt aan je eigen structuur geef je het team het gevoel dat ze hun tijd verspillen."
       }
     },
     {
@@ -94,12 +95,13 @@
       "naam": "Spanning of stress op de werkvloer",
       "beschrijving": "De druk is hoog, deadlines naderen of er is een moeilijke periode achter de rug. De sfeer is gespannen.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Humor werkt hier als drukventiel, maar alleen NA het moeilijkste moment, niet erin. 10 van de 13 bevraagde leidinggevenden geven voorbeelden van humor als spanningsbreker. Een leidinggevende in de sociale sector: 'Een klein stom mopje kan de druk even wegnemen.' Maar: 'In het oog van een acute crisis hoort geen humor.' Wacht tot het ergste moment voorbij is. 71% vindt dat humor helpt om spanningen te verminderen (gem. 3,90/5). Enquete bevestigt: 'In een stressvolle situatie is het niet altijd gepast.'",
+      "advies": "Humor werkt hier als drukventiel, maar alleen NA het moeilijkste moment, niet erin. Leidinggevenden geven aan dat een kleine, luchtige opmerking de druk even kan wegnemen, maar bevestigen ook: 'In het oog van een acute crisis hoort geen humor.' Wacht tot het ergste moment voorbij is voor je iets relativeert.",
+      "waarschuwing": "Timing is cruciaal. Humor tijdens een acute crisis of op het hoogtepunt van stress wordt niet als opluchting maar als gebrek aan empathie ervaren. Wacht altijd tot het ergste achter de rug is voor je de sfeer probeert te verlichten.",
       "alternatiefAdvies": {
-        "affiliatief": "Na het spannende moment, gebruik een luchtige opmerking die de hele groep erkent. Bv. 'We hebben het weer overleefd - wie trakteert op koffie?' Dit brengt het team weer samen en geeft een collectieve adempauze. Timing is alles: wacht tot iedereen voelt dat het ergste achter de rug is, anders werkt de grap averechts.",
-        "zelfversterkend": "Deel een eigen stressmoment of blunder om te tonen dat jij ook maar een mens bent. Bv. 'Ik zit al drie keer op hetzelfde e-mailtje te antwoorden.' Dit verlaagt de druk en laat zien dat fouten erbij horen. Jouw zichtbare kalmte en zelfrelativing na een stressmoment werkt aanstekelijk voor het team.",
-        "agressief": "Absoluut niet in stressvolle momenten. Sarcasme of iemand uitlachen bij hoge druk is bijzonder schadelijk. 43,5% van de respondenten heeft al negatieve ervaringen gehad. Agressieve humor in een gespannen situatie wordt niet als ontlading maar als aanval ervaren, en verbreekt het vertrouwen precies op het moment dat het team jou het meest nodig heeft.",
-        "zelfondermijnend": "Niet aan te raden. In een stressvolle situatie heeft je team een stabiele leider nodig. Je kunt kort en oprecht erkennen dat jij ook onder druk stond, maar beperk het daartoe en ga daarna over naar een concrete volgende stap. Te veel zelfondermijning vergroot de onzekerheid over jouw vermogen om de situatie aan te sturen."
+        "affiliatief": "Na het spannende moment, gebruik een luchtige opmerking die de hele groep erkent. Dit brengt het team weer samen en geeft een collectieve adempauze. Timing is alles: wacht tot iedereen voelt dat het ergste achter de rug is, anders werkt de grap averechts.",
+        "zelfversterkend": "Deel een eigen stressmoment of blunder om te tonen dat jij ook maar een mens bent. Dit verlaagt de druk en laat zien dat fouten erbij horen. Jouw zichtbare kalmte en zelfrelativering na een stressmoment werkt aanstekelijk voor het team.",
+        "agressief": "Absoluut niet in stressvolle momenten. Sarcasme of iemand uitlachen bij hoge druk is bijzonder schadelijk. Agressieve humor in een gespannen situatie wordt niet als ontlading maar als aanval ervaren, en verbreekt het vertrouwen precies op het moment dat het team jou het meest nodig heeft.",
+        "zelfondermijnend": "Niet aan te raden. In een stressvolle situatie heeft je team een stabiele leider nodig. Je kunt kort en oprecht erkennen dat jij ook onder druk stond, maar beperk het daartoe en ga daarna over naar een concrete volgende stap."
       }
     },
     {
@@ -107,12 +109,13 @@
       "naam": "Feedback geven of iemand corrigeren",
       "beschrijving": "Een medewerker heeft een fout gemaakt of vertoont gedrag dat bijgestuurd moet worden. Je wil dit aankaarten zonder de relatie te beschadigen.",
       "aanbevolenHumorstijl": "zelfversterkend",
-      "advies": "Corrigeren met een knipoog is mogelijk bij kleine, terugkerende fouten in een vertrouwde relatie. Een medewerker die steeds te laat komt krijgt geen formele reprimande maar een speelse woordspeling. Op een werf werd iemand die een fout maakte vergeleken met 'Guust Flater' in plaats van een donderpreek. De grens ligt bij toxiciteit: als de humor zelf ongemak veroorzaakt, stop dan onmiddellijk. Humor mag bij feedback enkel als de relatie sterk genoeg is en de fout relatief klein.",
+      "advies": "Corrigeren met een knipoog is mogelijk bij kleine, terugkerende fouten in een vertrouwde relatie. Een speelse woordspeling of een luchtige vergelijking kan de boodschap verzachten zonder die af te zwakken. De grens ligt bij toxiciteit: als de humor zelf ongemak veroorzaakt, stop dan onmiddellijk. Humor mag bij feedback enkel als de relatie sterk genoeg is en de fout relatief klein.",
+      "waarschuwing": "Humor bij feedback werkt alleen als de relatie sterk genoeg is en de fout beperkt van ernst is. In een zwakke of gespannen relatie kan zelfs een milde grap worden ervaren als minachting of afwijzing. Wanneer de boodschap niet aankomt, schakel dan onmiddellijk over naar directe, oprechte communicatie.",
       "alternatiefAdvies": {
-        "affiliatief": "Gebruik humor enkel als de relatie sterk genoeg is en de fout beperkt van ernst. Een luchtige vergelijking of herkenbare opmerking kan de boodschap verzachten zonder die af te zwakken. Bv. bij iemand die te laat komt: 'Ah, de beroemde flexibele agenda weer!' Combineer dit altijd met een duidelijke, concrete boodschap. Humor is de verpakking, niet de inhoud van de feedback.",
-        "zelfversterkend": "Deel eerst je eigen soortgelijke fout voor je de ander feedback geeft. 'Ik heb dat vroeger ook gedaan, en toen...' Dit maakt feedback minder bedreigend en normaliseert de fout. Ga daarna over naar concrete afspraken. Jouw zelfonthulling verlaagt de drempel voor de medewerker om open te zijn over wat er misliep.",
-        "agressief": "Vermijd dit volledig bij feedback. Iemand publiekelijk belachelijk maken of sarcastisch zijn bij een correctie beschadigt de relatie permanent. Een respondent verwoordde het zo: 'Een grap over de onzekerheid of een fout van een persoon is niet gepast.' Agressieve humor bij feedback ondermijnt psychologische veiligheid en maakt dat medewerkers fouten in de toekomst verbergen.",
-        "zelfondermijnend": "Niet effectief. Als je jezelf steeds afbreekt bij het geven van feedback, neemt niemand je serieus en wordt de boodschap niet gehoord. Je kunt kort aangeven dat ook jij niet altijd de perfecte aanpak kiest, maar ga daarna snel en daadkrachtig over naar de concrete bijsturing. Zorg dat de medewerker weet dat je de feedback serieus bedoelt."
+        "affiliatief": "Gebruik humor enkel als de relatie sterk genoeg is en de fout beperkt van ernst. Een luchtige vergelijking of herkenbare opmerking kan de boodschap verzachten zonder die af te zwakken. Combineer dit altijd met een duidelijke, concrete boodschap. Humor is de verpakking, niet de inhoud van de feedback.",
+        "zelfversterkend": "Deel eerst je eigen soortgelijke fout voor je de ander feedback geeft. 'Ik heb dat vroeger ook gedaan, en toen...' Dit maakt feedback minder bedreigend en normaliseert de fout. Ga daarna over naar concrete afspraken.",
+        "agressief": "Vermijd dit volledig bij feedback. Iemand publiekelijk belachelijk maken of sarcastisch zijn bij een correctie beschadigt de relatie permanent. Agressieve humor bij feedback ondermijnt psychologische veiligheid en maakt dat medewerkers fouten in de toekomst verbergen.",
+        "zelfondermijnend": "Niet effectief. Als je jezelf steeds afbreekt bij het geven van feedback, neemt niemand je serieus en wordt de boodschap niet gehoord. Je kunt kort aangeven dat ook jij niet altijd de perfecte aanpak kiest, maar ga daarna snel en daadkrachtig over naar de concrete bijsturing."
       }
     },
     {
@@ -120,12 +123,13 @@
       "naam": "Nieuw teamlid verwelkomen of onboarding",
       "beschrijving": "Een nieuwe medewerker of stagiair start. De groepsdynamiek is al sterk aanwezig en de nieuwkomer voelt zich onwennig.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Alle 13 bevraagde leidinggevenden waarschuwen dat humor voor nieuwkomers overweldigend kan zijn. Maak in het begin bewust geen grappen ten koste van nieuwkomers. Stagiairs mogen nooit het mikpunt zijn. Een nieuwe medewerker observeert eerst de cultuur en begint pas later zelf met humor. Vermijd inside jokes die de nieuwe collega niet kan plaatsen. Respondenten met minder dan 6 maanden dienst scoren hoger (4,3-4,5) door het 'honeymoon-effect': ze zijn extra gevoelig voor de toon die jij zet.",
+      "advies": "Leidinggevenden waarschuwen dat humor voor nieuwkomers overweldigend kan zijn. Maak in het begin bewust geen grappen ten koste van nieuwkomers. Stagiairs mogen nooit het mikpunt zijn. Een nieuwe medewerker observeert eerst de cultuur en begint pas later zelf met humor. Vermijd inside jokes die de nieuwe collega niet kan plaatsen.",
+      "waarschuwing": "Nieuwkomers zijn extra gevoelig voor de toon die je zet en interpreteren jouw humor als signaal van de teamcultuur. Grappen die voor het vaste team vertrouwd voelen, kunnen voor een nieuwkomer overweldigend of uitsluitend aanvoelen. Geef hen de tijd om de cultuur te leren kennen voor je hen in de humor betrekt.",
       "alternatiefAdvies": {
-        "affiliatief": "Gebruik inclusieve humor om het ijs te breken zonder de nieuwkomer als doelwit te gebruiken. Stel grappige kennismakingsvragen, deel een leuke anekdote over het team of verwijs naar een gedeelde teamroutine. Bv. 'Wij hebben hier een gulden regel: de koffiepot is van iedereen en niemand wast hem af.' Vermijd inside jokes die de nieuwe collega niet kan plaatsen.",
+        "affiliatief": "Gebruik inclusieve humor om het ijs te breken zonder de nieuwkomer als doelwit te gebruiken. Stel grappige kennismakingsvragen, deel een leuke anekdote over het team of verwijs naar een gedeelde teamroutine. Vermijd inside jokes die de nieuwe collega niet kan plaatsen.",
         "zelfversterkend": "Vertel over je eigen onhandige eerste dag of beginnersfout. Dit laat de nieuwkomer zien dat fouten erbij horen en dat je benaderbaar bent. Jouw persoonlijk verhaal over een eigen beginperiode creert direct een menselijke connectie en verlaagt de drempel om vragen te stellen.",
-        "agressief": "Absoluut niet bij onboarding. Nieuwkomers zijn kwetsbaar en grappen ten koste van hen kunnen als pesten worden ervaren. Een leidinggevende uit het onderzoek was heel expliciet: 'Stagiairs mogen nooit het mikpunt worden.' Agressieve humor bij een eerste indruk kan ertoe leiden dat de nieuwe medewerker zich nooit echt welkom voelt.",
-        "zelfondermijnend": "Niet aan te raden. Een nieuwe medewerker moet vertrouwen opbouwen in jou als leider. Als je jezelf voortdurend afbreekt, schep je onzekerheid op een moment dat de nieuwkomer net houvast zoekt. Een kleine zelfrelaterende grap over je geheugen voor namen kan de sfeer ontspannen, maar houd het kort en neem daarna duidelijk de leiding."
+        "agressief": "Absoluut niet bij onboarding. Nieuwkomers zijn kwetsbaar en grappen ten koste van hen kunnen als pesten worden ervaren. Agressieve humor bij een eerste indruk kan ertoe leiden dat de nieuwe medewerker zich nooit echt welkom voelt.",
+        "zelfondermijnend": "Niet aan te raden. Een nieuwe medewerker moet vertrouwen opbouwen in jou als leider. Als je jezelf voortdurend afbreekt, schep je onzekerheid op een moment dat de nieuwkomer net houvast zoekt. Een kleine zelfrelaterende grap kan de sfeer ontspannen, maar houd het kort en neem daarna duidelijk de leiding."
       }
     },
     {
@@ -133,11 +137,12 @@
       "naam": "Slecht nieuws brengen of ontslag meedelen",
       "beschrijving": "Je moet aan een medewerker of het team meedelen dat er slecht nieuws is: reorganisatie, ontslag of een fundamentele tegenvaller.",
       "aanbevolenHumorstijl": "geen",
-      "advies": "Alle 13 bevraagde leidinggevenden zijn hier unaniem: geen humor bij echt slecht nieuws. Directheid, feitelijkheid en empathie zijn de enige gepaste aanpak. Open eventueel met: 'Dit wordt geen leuk gesprek.' NA de boodschap, als het team begint te verwerken, kan een kleine luchtige opmerking helpen om weer te ademen. Neem als leidinggevende nooit zelf het initiatief daartoe. Als de ontvanger zelf met een relativerende opmerking komt, mag je daarin meegaan.",
+      "advies": "Geen humor bij echt slecht nieuws. Directheid, feitelijkheid en empathie zijn de enige gepaste aanpak. Open eventueel met: 'Dit wordt geen leuk gesprek.' NA de boodschap, als het team begint te verwerken, kan een kleine luchtige opmerking helpen om weer te ademen. Neem als leidinggevende nooit zelf het initiatief daartoe. Als de ontvanger zelf met een relativerende opmerking komt, mag je daarin meegaan.",
+      "waarschuwing": "Geen enkele vorm van humor is gepast bij echt slecht nieuws. Elk relativerig of grappig element bij ontslag of fundamentele tegenslagen wordt als respectloos ervaren en beschadigt het vertrouwen blijvend. Directheid en empathie zijn de enige gepaste aanpak.",
       "alternatiefAdvies": {
         "affiliatief": "Niet bij het nieuws zelf. Pas na de verwerking, als het team zelf ruimte creert, kan een luchtige opmerking helpen om als groep weer te ademen. Respecteer altijd het tempo van de ontvanger. Elke poging tot humor bij slecht nieuws, ook goed bedoeld, wordt door de ontvanger ervaren als bagatellisering.",
         "zelfversterkend": "Niet bij het nieuws zelf. Zelfs een milde zelfrelaterende opmerking is hier ongepast: jij bent niet het onderwerp, de persoon die het slecht nieuws ontvangt is dat. Als de ontvanger later zelf met een relativerende opmerking komt, mag je daarin meegaan. Neem nooit zelf het initiatief.",
-        "agressief": "Absoluut niet. Alle 13 leidinggevenden zijn hier unaniem: geen sarcasme, geen scherpe opmerkingen bij ontslagen of zwaar nieuws. Elk grappig of relativerig element wordt als respectloos ervaren en beschadigt het vertrouwen blijvend.",
+        "agressief": "Absoluut niet. Geen sarcasme, geen scherpe opmerkingen bij ontslagen of zwaar nieuws. Elk grappig of relativerig element wordt als respectloos ervaren en beschadigt het vertrouwen blijvend.",
         "zelfondermijnend": "Niet doen. Jezelf wegcijferen bij het brengen van slecht nieuws ondermijnt de ernst van de boodschap en is respectloos naar de ontvanger. In een gesprek over ontslag of fundamenteel slecht nieuws is geen enkele vorm van humor gepast, ongeacht de relatie of de intentie."
       }
     },
@@ -146,12 +151,13 @@
       "naam": "Creativiteit en brainstormen stimuleren",
       "beschrijving": "Je wil het team aanzetten tot creatief denken en nieuwe ideeen genereren. De sfeer moet open zijn zodat mensen durven buiten de lijntjes te denken.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Humor is een motor voor innovatie. In een open en humoristische sfeer durven medewerkers sneller hun mond opendoen. Uit de interviews: in een tech-startup ontstond een werkend product tijdens een speels cafegesprek. In een kartonbedrijf bracht plagerij over een concurrent een gat in het eigen aanbod aan het licht. Een leidinggevende uit de retailsector speelde het gedrag van verloren klanten na met overdrijving, wat leidde tot een concrete verbetering in de winkelinrichting. Verbind de luchtige sessie altijd aan een concrete volgende stap.",
+      "advies": "Humor is een motor voor innovatie. In een open en humoristische sfeer durven medewerkers sneller hun mond opendoen. Leidinggevenden geven aan dat de meest onverwachte ideeen vaak ontstaan in informele, luchtige gesprekken. Verbind de luchtige sessie altijd aan een concrete volgende stap zodat de creativiteit ook resultaat oplevert.",
+      "waarschuwing": "Humor is een middel, geen doel op zich. Als de luchtige sfeer overgaat in afdwalen of niet serieus nemen van ideeen, verliest de brainstorm zijn focus. Zorg altijd voor een duidelijke structuur na de creatieve fase.",
       "alternatiefAdvies": {
-        "affiliatief": "Creeer een losse sfeer waarin wilde ideeen welkom zijn. Lach samen over gekke voorstellen zonder ze af te schieten. De beste ideeen ontstaan vaak uit een grap. Begin met een speelse ijsbrekeroefening die niets met het onderwerp te maken heeft - dit activeert het creatief denken voor de eigenlijke brainstorm begint. Gebruik humor om drempels weg te nemen, niet om de sessie te vullen.",
-        "zelfversterkend": "Deel je eigen mislukte ideeen of 'domme' vragen om te tonen dat alles gezegd mag worden. Als jij als leidinggevende het eerste 'gekke' idee gooit, geef je het team de impliciete toestemming om ook buiten de lijntjes te denken. Dit maakt duidelijk dat psychologische veiligheid hier echt bestaat.",
+        "affiliatief": "Creeer een losse sfeer waarin wilde ideeen welkom zijn. Lach samen over gekke voorstellen zonder ze af te schieten. De beste ideeen ontstaan vaak uit een grap. Begin met een speelse ijsbrekeroefening die niets met het onderwerp te maken heeft — dit activeert het creatief denken voor de eigenlijke brainstorm begint.",
+        "zelfversterkend": "Deel je eigen mislukte ideeen of 'domme' vragen om te tonen dat alles gezegd mag worden. Als jij als leidinggevende het eerste 'gekke' idee gooit, geef je het team de impliciete toestemming om ook buiten de lijntjes te denken.",
         "agressief": "Vermijd dit volledig. Sarcasme over ideeen doodt creativiteit onmiddellijk. Als medewerkers bang zijn uitgelachen te worden, houden ze hun mond. Een sarcastische reactie op een creatief idee heeft een multipliereffect: iedereen zal daarna twee keer nadenken voor ze iets zeggen.",
-        "zelfondermijnend": "Niet effectief als voortdurend patroon. Je kunt de drempel verlagen door aan te geven dat jij zelf ook nog geen idee hebt wat de beste richting is, maar ga daarna actief de ideeen van anderen stimuleren en structureren. Als je te lang in de zelfondermijnende rol blijft, neemt het team je niet serieus als moderator."
+        "zelfondermijnend": "Niet effectief als voortdurend patroon. Je kunt de drempel verlagen door aan te geven dat jij zelf ook nog geen idee hebt wat de beste richting is, maar ga daarna actief de ideeen van anderen stimuleren en structureren."
       }
     },
     {
@@ -159,12 +165,13 @@
       "naam": "Conflict tussen teamleden",
       "beschrijving": "Twee of meer medewerkers liggen in de clinch. De spanning is voelbaar in het team en heeft impact op de samenwerking.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Een team uit het onderzoek organiseerde een oefening waarbij iedereen grappige slogans mocht bedenken voor irritante gewoontes. Daarna konden collega's elkaar op een luchtige manier wijzen op storend gedrag. Gebruik humor om de gedeelde passie te benoemen, niet om het conflict weg te lachen. Als humor zelf de oorzaak is van het ongemak (iemand wordt te lang als doelwit gebruikt), grijp dan onmiddellijk in. Erken altijd eerst de ernst van de situatie voordat je iets relativeert.",
+      "advies": "Gebruik humor om de gedeelde passie te benoemen, niet om het conflict weg te lachen. Luchtige teambuildingmomenten of oefeningen waarbij irritante gewoontes op een speelse manier worden benoemd, kunnen de spanning verlagen. Als humor zelf de oorzaak is van het ongemak, grijp dan onmiddellijk in. Erken altijd eerst de ernst van de situatie voordat je iets relativeert.",
+      "waarschuwing": "Gebruik humor nooit om een conflict te omzeilen of weg te lachen. Erken altijd eerst de ernst van de situatie. Agressieve of sarcastische humor in conflictsituaties wordt snel ervaren als partij kiezen en ondermijnt je neutraliteit als bemiddelaar.",
       "alternatiefAdvies": {
-        "affiliatief": "Gebruik verbindende humor om de spanning tussen partijen te verlagen. Maak een luchtige observatie die de gedeelde passie van beide kanten erkent en herframt als kracht. Bv. 'Jullie allebei zo gepassioneerd - dat is eigenlijk een goed teken.' Organiseer eventueel een teambuildingmoment waar samen gelachen kan worden. Gebruik dit als brug naar een constructief gesprek, nooit om het conflict weg te lachen.",
+        "affiliatief": "Gebruik verbindende humor om de spanning tussen partijen te verlagen. Maak een luchtige observatie die de gedeelde passie van beide kanten erkent en herframt als kracht. Organiseer eventueel een teambuildingmoment waar samen gelachen kan worden. Gebruik dit als brug naar een constructief gesprek, nooit om het conflict weg te lachen.",
         "zelfversterkend": "Deel je eigen ervaringen met vergelijkbare conflicten en hoe je die oploste. Dit toont kwetsbaarheid en moedigt openheid aan. Jouw zichtbare rust in een conflictsituatie werkt aanstekelijk: het team voelt dat de situatie hanteerbaar is als jij er kalm bij blijft.",
-        "agressief": "Niet doen in een conflictsituatie. Sarcasme of iemand belachelijk maken maakt de situatie erger. Als je toch humor inzet, beperk die dan strikt tot een milde ironie over de situatie zelf, nooit over een van de betrokken personen. Agressieve humor wordt snel gezien als partij kiezen en ondermijnt je neutraliteit als bemiddelaar.",
-        "zelfondermijnend": "Niet aan te raden bij conflicten. Een leider moet stevig staan. Je kunt kort aangeven dat ook jij niet altijd weet hoe conflicten het best worden aangepakt, maar doe dit voorzichtig en ga daarna snel over naar concrete stappen. Te veel zelfrelativering laat beide partijen twijfelen aan jouw vermogen om de situatie te leiden."
+        "agressief": "Niet doen in een conflictsituatie. Sarcasme of iemand belachelijk maken maakt de situatie erger. Als je toch humor inzet, beperk die dan strikt tot een milde ironie over de situatie zelf, nooit over een van de betrokken personen.",
+        "zelfondermijnend": "Niet aan te raden bij conflicten. Een leider moet stevig staan. Je kunt kort aangeven dat ook jij niet altijd weet hoe conflicten het best worden aangepakt, maar doe dit voorzichtig en ga daarna snel over naar concrete stappen."
       }
     },
     {
@@ -172,12 +179,13 @@
       "naam": "Dagelijkse informele momenten",
       "beschrijving": "Koffiegesprekken, de wandelgang, de gemeenschappelijke eetzaal. De toevallige ontmoetingen buiten de vergaderzaal.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Humor ontstaat organisch in de marges van de werkdag. Running jokes en teamtradities (een bel bij een deal, memes op het prikbord, teamspecifieke bijnamen) versterken de groepscohesie op een manier die geen vergadering kan evenaren. Een leidinggevende uit de retailsector eet bewust in de gemeenschappelijke eetzaal. 61,6% heeft dagelijks contact met hun leidinggevende. Die groep scoort hoger op humorbeleving (4,11-4,23 vs 3,20-3,80 bij maandelijks contact). Geforceerde humor in informele momenten voelt onecht en bereikt het tegenovergestelde.",
+      "advies": "Humor ontstaat organisch in de marges van de werkdag. Running jokes en teamtradities — zoals een ritueel bij een deal, memes op het prikbord of teamspecifieke bijnamen — versterken de groepscohesie op een manier die geen vergadering kan evenaren. Wie bewust aanwezig is in informele ruimtes en regelmatig contact heeft met het team, versterkt de impact van humor als leiderschapsinstrument. Geforceerde humor in informele momenten voelt onecht en bereikt het tegenovergestelde.",
+      "waarschuwing": "Informele momenten zijn ook professionele momenten. Humor die in een vergadering als 'luchtig' overkomt, heeft in de wandelgang een grotere emotionele lading. Wees extra voorzichtig in chat- en appberichten: context valt weg en een goed bedoelde opmerking kan snel als kwetsend worden gelezen.",
       "alternatiefAdvies": {
-        "affiliatief": "Dit is het uitgelezen moment voor affiliatieve humor. Eet samen met je team, loop bewust door de gemeenschappelijke ruimtes, vraag hoe het weekend was voor je aan werk begint. Bouw kleine tradities in: een vaste openingsvraag op maandagochtend, een running joke die het team zelf gevoed heeft, een ritueel bij successen. Humor die hier organisch ontstaat is krachtiger dan alles wat je in een vergadering plant.",
-        "zelfversterkend": "Deel in informele momenten ook eens iets persoonlijks over jezelf, zonder dat het over werk gaat. Humor over je eigen weekend-avonturen of kleine tegenslagen werkt hier goed. Informele momenten zijn de beste kans om zelfspot op een authentieke manier in te zetten, zonder de druk van een professionele context.",
-        "agressief": "Wees extra voorzichtig in informele contexten: de hierarchische bescherming valt weg en mensen gaan ervan uit dat wat gezegd wordt ook gemeend is. Spottende humor die 'maar een grapje' leek in de vergaderzaal, heeft in de wandelgang een grotere emotionele impact. Tekstuele kanalen (chat, WhatsApp) zijn extra gevaarlijk: context valt weg en een goedbedoelde opmerking kan snel als kwetsend worden gelezen.",
-        "zelfondermijnend": "In kleine doses kan het, maar overdrijf niet. Informele momenten lenen zich voor wat meer zelfonthulling dan in een formele setting. Maar een leidinggevende die bij elke koffiepauze over zijn eigen tekortkomingen klaagt, verliest geloofwaardigheid. Structurele zelfondermijning in informele gesprekken tast je professionele imago aan op de plekken waar dat imago het meest gevormd wordt."
+        "affiliatief": "Dit is het uitgelezen moment voor affiliatieve humor. Eet samen met je team, loop bewust door de gemeenschappelijke ruimtes, vraag hoe het weekend was voor je aan werk begint. Bouw kleine tradities in: een vaste openingsvraag op maandagochtend, een running joke die het team zelf gevoed heeft, een ritueel bij successen.",
+        "zelfversterkend": "Deel in informele momenten ook eens iets persoonlijks over jezelf, zonder dat het over werk gaat. Humor over je eigen weekend-avonturen of kleine tegenslagen werkt hier goed. Informele momenten zijn de beste kans om zelfspot op een authentieke manier in te zetten.",
+        "agressief": "Wees extra voorzichtig in informele contexten: de hierarchische bescherming valt weg en mensen gaan ervan uit dat wat gezegd wordt ook gemeend is. Tekstuele kanalen (chat, WhatsApp) zijn extra gevaarlijk: context valt weg en een goedbedoelde opmerking kan snel als kwetsend worden gelezen.",
+        "zelfondermijnend": "In kleine doses kan het, maar overdrijf niet. Informele momenten lenen zich voor wat meer zelfonthulling dan in een formele setting. Maar een leidinggevende die bij elke koffiepauze over zijn eigen tekortkomingen klaagt, verliest geloofwaardigheid."
       }
     },
     {
@@ -185,10 +193,11 @@
       "naam": "Presentaties en grote bijeenkomsten",
       "beschrijving": "Je geeft een presentatie aan een grote groep: het voltallige team, een townhall of een externe bijeenkomst.",
       "aanbevolenHumorstijl": "zelfversterkend",
-      "advies": "Een voormalig CFO bereidt bewust grappige momenten voor in grote presentaties om de aandacht vast te houden. Een directeur verwijst naar zijn eigen 'lelijke Excel-tabellen' voor de zaal er zelf iets over kan zeggen - dat haalt de spanning eraf. Het contrasteffect is krachtig: een hele dag luchtigheid gevolgd door een serieuze beslissing maakt die boodschap extra indringend. Townhalls met een ontspannen sfeer gecombineerd met serieuze bedrijfsdoelen werken op deze manier. Bereid humorvolle momenten voor maar oefen ze niet te rigide in.",
+      "advies": "Leidinggevenden bereiden bewust luchtige momenten voor in grote presentaties om de aandacht vast te houden. Door zelf te verwijzen naar een kleine persoonlijke beperking of grappige detail voor de zaal er iets over kan zeggen, haal je de spanning eraf. Het contrasteffect is krachtig: een overwegend luchtige bijeenkomst gevolgd door een serieuze beslissing maakt die boodschap extra indringend. Bereid humorvolle momenten voor, maar oefen ze niet te rigide in.",
+      "waarschuwing": "Voorbereide humor werkt alleen als ze niet als ingestudeerd overkomt. Een te strak gescripte grap verliest de spontaniteit die ze effectief maakt. Zorg ook dat humor voor een grote groep altijd inclusief is en nooit een individueel teamlid, afdeling of afwezige als doelwit gebruikt.",
       "alternatiefAdvies": {
-        "affiliatief": "Open de bijeenkomst met een inclusieve luchtige vraag of een verwijzing naar een gedeeld teammoment dat iedereen herkent. Dit creert meteen verbinding in een grote groep en verlaagt de afstand tussen spreker en publiek. Sluit ook luchtig af: een positieve noot zorgt ervoor dat mensen met een goed gevoel vertrekken en de boodschap langer onthouden.",
-        "zelfversterkend": "Bereid een of twee zelfrelaterende momenten voor in je presentatie. Verwijs naar je eigen beperkte PowerPoint-vaardigheden of maak een luchtige bekentenis over je voorbereiding voor de zaal er zelf iets over kan zeggen. Dit maakt je menselijk en houdt de aandacht vast. Het contrasteffect werkt: als je overwegend luchtig bent en dan iets serieus zegt, landt die boodschap extra hard.",
+        "affiliatief": "Open de bijeenkomst met een inclusieve luchtige vraag of een verwijzing naar een gedeeld teammoment dat iedereen herkent. Dit creert meteen verbinding in een grote groep. Sluit ook luchtig af: een positieve noot zorgt ervoor dat mensen met een goed gevoel vertrekken en de boodschap langer onthouden.",
+        "zelfversterkend": "Bereid een of twee zelfrelaterende momenten voor in je presentatie. Verwijs naar een beperking in je eigen voorbereiding of maak een luchtige bekentenis voor de zaal er zelf iets over kan zeggen. Het contrasteffect werkt: als je overwegend luchtig bent en dan iets serieus zegt, landt die boodschap extra hard.",
         "agressief": "Niet doen voor een grote groep. Spottende grappen over andere afdelingen, over absentees of over de kwaliteit van eerdere presentaties versterken de hierarchische afstand en schaden het gevoel van veiligheid. Wat in een kleine setting als plagerij overkomt, voelt voor een individu in een volle zaal als publieke vernedering.",
         "zelfondermijnend": "Niet aan te raden als patroon. Een kleine zelfrelaterende grap bij het begin kan de spanning breken, maar zorg dat het bij die ene grap blijft en dat je daarna de autoriteit van de spreker terugpakt. Te veel zelfkritiek voor een grote groep tast je geloofwaardigheid aan op een schaal die in een kleine vergadering nooit het geval zou zijn."
       }
@@ -198,12 +207,13 @@
       "naam": "Multiculturele of diverse teams",
       "beschrijving": "Je team bestaat uit mensen met verschillende culturele achtergronden, leeftijden of referentiekaders. Wat voor de ene grappig is, kan voor de andere kwetsend zijn.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "In tekstuele kanalen (WhatsApp, chat) valt context weg waardoor goedbedoelde opmerkingen sneller verkeerd landen. Grappen over afkomst zijn altijd risicovol. Generatieverschillen spelen een rol: humor die vroeger aanvaard was, wordt vandaag niet meer geapprecieerd. Vlamingen maken vaker tijd voor informele omgang, Nederlanders zien dat soms als tijdverlies. Ga er nooit vanuit dat jouw humor universeel begrepen wordt: 43,5% van de respondenten heeft een negatieve ervaring gehad. Culturele sensitiviteit is geen luxe maar een vereiste.",
+      "advies": "In tekstuele kanalen (WhatsApp, chat) valt context weg waardoor goedbedoelde opmerkingen sneller verkeerd landen. Grappen over afkomst zijn altijd risicovol. Generatieverschillen spelen een rol: humor die vroeger aanvaard was, wordt vandaag niet meer geapprecieerd. Ga er nooit vanuit dat jouw humor universeel begrepen wordt. Culturele sensitiviteit is geen luxe maar een vereiste.",
+      "waarschuwing": "Ga er nooit vanuit dat jouw referentiekader universeel gedeeld wordt. Grappen over afkomst, leeftijd, gender of religie zijn altijd risicovol, ook als ze goed bedoeld zijn en ook als de betrokken persoon lijkt mee te lachen. Bouw eerst vertrouwen, dan humor.",
       "alternatiefAdvies": {
         "affiliatief": "Focus op universele, verbindende humor: werksituaties die iedereen herkent, gedeelde uitdagingen, successen die het hele team aanbelangen. Bouw de teamcultuur op aan de hand van gedeelde ervaringen binnen het team zelf, niet aan de hand van externe culturele codes. Running jokes die het team zelf heeft gecreeerd zijn de veiligste en meest verbindende vorm.",
         "zelfversterkend": "Zelfrelaterende humor is in diverse teams de meest universele vorm: jij bent het onderwerp, niet de teamleden of hun achtergronden. Dit maakt de humor veilig ongeacht culturele verschillen. Jouw bereidheid om jezelf te relativeren toont aan de hele groep dat kwetsbaarheid en humor hier hand in hand gaan.",
-        "agressief": "Absoluut niet. Grappen over afkomst, accent, religie, leeftijd of gender zijn een absolute no-go, bevestigd door alle 13 bevraagde leidinggevenden. Dit geldt ook als de betrokken persoon lijkt mee te lachen. Humor mag lachen met mensen zijn, nooit mensen uitlachen.",
-        "zelfondermijnend": "Niet effectief in een diverse context. Mensen uit andere culturele achtergronden kunnen moeilijk inschatten of je het meent of niet, wat leidt tot verwarring over jouw autoriteit. In sommige culturen wordt zelfondermijning gezien als eerlijkheid, in andere als gebrek aan zelfrespect. Gebruik het spaarzaam en alleen als je zeker bent van de interpretatie."
+        "agressief": "Absoluut niet. Grappen over afkomst, accent, religie, leeftijd of gender zijn een absolute no-go. Dit geldt ook als de betrokken persoon lijkt mee te lachen. Humor mag lachen met mensen zijn, nooit mensen uitlachen.",
+        "zelfondermijnend": "Niet effectief in een diverse context. Mensen uit andere culturele achtergronden kunnen moeilijk inschatten of je het meent of niet, wat leidt tot verwarring over jouw autoriteit. Gebruik het spaarzaam en alleen als je zeker bent van de interpretatie."
       }
     }
   ],
@@ -213,12 +223,12 @@
       {
         "id": "do_01",
         "titel": "Wees authentiek: geforceerde humor werkt averechts",
-        "uitleg": "80% van de 219 bevraagde werknemers ervaart humor van hun leidinggevende als spontaan en niet geforceerd (gem. 4,07/5). Respondenten geven zelf aan: 'Mijn leidinggevende probeert regelmatig met humor iets te zeggen, maar het gaat hem echt niet af.' Authenticiteit is de basis van effectieve humor in leiderschap."
+        "uitleg": "De grote meerderheid van werknemers ervaart humor van hun leidinggevende als spontaan en niet geforceerd. Respondenten geven zelf aan dat geforceerde humor onmiddellijk opvalt en het tegenovergestelde bereikt van wat bedoeld was. Authenticiteit is de basis van effectieve humor in leiderschap."
       },
       {
         "id": "do_02",
         "titel": "Gebruik zelfspot: de veiligste en krachtigste vorm",
-        "uitleg": "Bijna alle 13 bevraagde leidinggevenden noemen zelfrelativering de sterkste humorvorm. Een voormalig CEO in de bouwsector: 'Je moet kunnen relativeren over je eigen stommiteiten om mensen te kunnen leiden.' Een voormalig CFO: 'De veiligste vorm van humor die er bestaat, simpelweg omdat er niemand anders door gekwetst kan worden.' Wees trots, maar niet te trots."
+        "uitleg": "Leidinggevenden noemen zelfrelativering unaniem de sterkste humorvorm. Een voormalig CEO: 'Je moet kunnen relativeren over je eigen stommiteiten om mensen te kunnen leiden.' Een voormalig CFO: 'De veiligste vorm van humor die er bestaat, simpelweg omdat er niemand anders door gekwetst kan worden.' Wees trots, maar niet te trots."
       },
       {
         "id": "do_03",
@@ -228,12 +238,12 @@
       {
         "id": "do_04",
         "titel": "Gebruik humor als spanningsbreker NA het moeilijke moment",
-        "uitleg": "10 van de 13 bevraagde leidinggevenden beschrijven humor als drukventiel. Maar de timing is cruciaal: humor komt na het ergste moment, niet erin. In het oog van een acute crisis hoort geen humor. Wacht tot het team even kan ademen, en help hen dan verder ademen."
+        "uitleg": "Leidinggevenden beschrijven humor als drukventiel, maar de timing is cruciaal: humor komt na het ergste moment, niet erin. In het oog van een acute crisis hoort geen humor. Wacht tot het team even kan ademen, en help hen dan verder ademen."
       },
       {
         "id": "do_05",
         "titel": "Bouw vaste humorvolle momenten in",
-        "uitleg": "Luchtige stand-ups, speelse vergadertechnieken en teamtradities creeren een structurele basis voor een open werkcultuur. Respondenten met dagelijks contact met hun leidinggevende scoren hoger op humorbeleving (4,11-4,23 vs 3,20-3,80 bij maandelijks contact). Regelmaat en aanwezigheid versterken de impact van humor."
+        "uitleg": "Luchtige stand-ups, speelse vergadertechnieken en teamtradities creeren een structurele basis voor een open werkcultuur. Regelmatig contact tussen leidinggevende en team versterkt de impact van humor: wie aanwezig is en zichtbaar blijft, bouwt een sterkere humorbeleving op."
       },
       {
         "id": "do_06",
@@ -243,7 +253,7 @@
       {
         "id": "do_07",
         "titel": "Pas je humor aan bij nieuwkomers",
-        "uitleg": "Alle 13 leidinggevenden waarschuwen: humor kan overweldigend zijn voor nieuwe medewerkers. Geef hen tijd om de cultuur te observeren. Maak in de beginperiode bewust geen grappen ten koste van nieuwkomers en stagiairs. Wacht tot de relatie en het vertrouwen opgebouwd zijn."
+        "uitleg": "Leidinggevenden waarschuwen dat humor overweldigend kan zijn voor nieuwe medewerkers. Geef hen tijd om de cultuur te observeren. Maak in de beginperiode bewust geen grappen ten koste van nieuwkomers en stagiairs. Wacht tot de relatie en het vertrouwen opgebouwd zijn."
       },
       {
         "id": "do_08",
@@ -253,7 +263,7 @@
       {
         "id": "do_09",
         "titel": "Wees aanwezig in informele momenten",
-        "uitleg": "76% van de respondenten vindt dat humor de sfeer aangenamer maakt (gem. 4,05/5). Humor die ontstaat in de wandelgang, aan de koffieautomaat of in de eetzaal is krachtiger dan geplande humor in een vergadering. Leidinggevenden die bewust in de gemeenschappelijke ruimtes aanwezig zijn, bouwen informele verbindingen op die de professionele samenwerking versterken."
+        "uitleg": "Een grote meerderheid van werknemers vindt dat humor de sfeer aangenamer maakt. Humor die ontstaat in de wandelgang, aan de koffieautomaat of in de eetzaal is krachtiger dan geplande humor in een vergadering. Leidinggevenden die bewust in de gemeenschappelijke ruimtes aanwezig zijn, bouwen informele verbindingen op die de professionele samenwerking versterken."
       },
       {
         "id": "do_10",
@@ -265,32 +275,32 @@
       {
         "id": "dont_01",
         "titel": "Maak nooit grappen ten koste van een specifieke persoon",
-        "uitleg": "Humor mag lachen met mensen zijn, nooit mensen uitlachen. Grappen gericht op een individu zijn de voornaamste oorzaak van negatieve ervaringen (11,6% van de 43,5% negatieve incidenten). Dit geldt ook als die persoon lijkt mee te lachen: leidinggevenden schatten hun eigen humor vaak te positief in (Rosenberg et al., 2024). Medewerkers rapporteren drie keer zoveel negatieve incidenten als leidinggevenden zelf."
+        "uitleg": "Humor mag lachen met mensen zijn, nooit mensen uitlachen. Grappen gericht op een individu zijn de voornaamste oorzaak van negatieve ervaringen met humor op de werkvloer. Dit geldt ook als die persoon lijkt mee te lachen: leidinggevenden schatten hun eigen humor vaak te positief in. Medewerkers rapporteren beduidend meer negatieve incidenten dan leidinggevenden zelf."
       },
       {
         "id": "dont_02",
         "titel": "Vermijd seksistische, racistische en discriminerende humor",
-        "uitleg": "Dit is een absolute no-go, bevestigd door alle 13 bevraagde leidinggevenden. Grappen over afkomst, geslacht, religie of leeftijd zijn altijd risicovol, ongeacht de intentie of de vertrouwdheid met de groep. Het schaadt niet alleen de betrokken persoon maar ook het psychologisch veilige klimaat van het hele team."
+        "uitleg": "Dit is een absolute no-go, bevestigd door alle bevraagde leidinggevenden. Grappen over afkomst, geslacht, religie of leeftijd zijn altijd risicovol, ongeacht de intentie of de vertrouwdheid met de groep. Het schaadt niet alleen de betrokken persoon maar ook het psychologisch veilige klimaat van het hele team."
       },
       {
         "id": "dont_03",
         "titel": "Gebruik geen humor bij ontslag of fundamenteel slecht nieuws",
-        "uitleg": "Alle 13 bevraagde leidinggevenden zijn hier unaniem. Elk grappig of relativerig element bij echt slecht nieuws wordt als respectloos ervaren en beschadigt het vertrouwen blijvend. Directheid, feitelijkheid en empathie zijn de enige gepaste toon. Als de ontvanger zelf met een relativerende opmerking komt, mag je daarin meegaan, maar neem nooit zelf het initiatief."
+        "uitleg": "Leidinggevenden zijn hier unaniem: geen humor bij echt slecht nieuws. Elk grappig of relativerig element wordt als respectloos ervaren en beschadigt het vertrouwen blijvend. Directheid, feitelijkheid en empathie zijn de enige gepaste toon. Als de ontvanger zelf met een relativerende opmerking komt, mag je daarin meegaan, maar neem nooit zelf het initiatief."
       },
       {
         "id": "dont_04",
         "titel": "Forceer humor niet",
-        "uitleg": "Geforceerde humor is een van de grootste frustraties van medewerkers. Respondenten geven letterlijk aan: 'Mijn leidinggevende probeert regelmatig met humor iets te zeggen, maar het gaat hem echt niet af.' Slechts 5% ervaart humor van hun leidinggevende zelden of nooit als positief, maar die groep heeft bijna altijd te maken gehad met geforceerde of ongepaste humor."
+        "uitleg": "Geforceerde humor is een van de grootste frustraties van medewerkers. Respondenten geven aan: 'Mijn leidinggevende probeert regelmatig met humor iets te zeggen, maar het gaat hem echt niet af.' De meeste medewerkers ervaren humor als positief — maar alleen als die authentiek en spontaan aanvoelt."
       },
       {
         "id": "dont_05",
         "titel": "Laat sarcasme niet de boventoon voeren",
-        "uitleg": "Sarcasme is de op een na grootste oorzaak van negatieve ervaringen met humor op de werkvloer (10,6% van de gevallen). Het is ook de meest misleidende vorm: sarcasme voelt voor de gebruiker als humor maar wordt door de ontvanger vaak als aanval of kritiek ervaren. Vermijd het volledig in leiderschapscontexten."
+        "uitleg": "Sarcasme is een van de grootste oorzaken van negatieve ervaringen met humor op de werkvloer. Het is ook de meest misleidende vorm: sarcasme voelt voor de gebruiker als humor maar wordt door de ontvanger vaak als aanval of kritiek ervaren. Vermijd het volledig in leiderschapscontexten."
       },
       {
         "id": "dont_06",
         "titel": "Houd dezelfde persoon niet te lang als doelwit",
-        "uitleg": "Zelfs als iemand lijkt mee te lachen, is langdurig terugkeren naar dezelfde persoon schadelijk. Grensoverschrijding (8,8%) is de derde grootste oorzaak van negatieve ervaringen. Wat begint als plagerij, kan overgaan in een pestpatroon als er geen grens gesteld wordt."
+        "uitleg": "Zelfs als iemand lijkt mee te lachen, is langdurig terugkeren naar dezelfde persoon schadelijk. Grensoverschrijding is een van de voornaamste oorzaken van negatieve ervaringen. Wat begint als plagerij, kan overgaan in een pestpatroon als er geen grens gesteld wordt."
       },
       {
         "id": "dont_07",
@@ -300,12 +310,12 @@
       {
         "id": "dont_08",
         "titel": "Ga er niet vanuit dat jouw humor universeel begrepen wordt",
-        "uitleg": "43,5% van de 219 respondenten heeft al meegemaakt dat humor van hun leidinggevende verkeerd viel. Culturele achtergrond, generatie en de persoonlijke relatie bepalen sterk hoe humor geinterpreteerd wordt. Wat jij grappig vindt, hoeft voor een ander helemaal niet grappig te zijn."
+        "uitleg": "Een aanzienlijk deel van de werknemers heeft al meegemaakt dat humor van hun leidinggevende verkeerd viel. Culturele achtergrond, generatie en de persoonlijke relatie bepalen sterk hoe humor geinterpreteerd wordt. Wat jij grappig vindt, hoeft voor een ander helemaal niet grappig te zijn."
       },
       {
         "id": "dont_09",
         "titel": "Vergeet niet dat medewerkers soms meelachen omdat jij de baas bent",
-        "uitleg": "Leidinggevenden schatten hun eigen humor soms verkeerd in (Rosenberg et al., 2024): medewerkers rapporteren drie keer zoveel negatieve incidenten als leidinggevenden zelf. Wie macht heeft, heeft ook de macht om mensen te laten meelachen uit ongemak of loyaliteit. Dat is geen echte verbinding."
+        "uitleg": "Leidinggevenden schatten hun eigen humor soms verkeerd in: medewerkers rapporteren beduidend meer negatieve incidenten dan leidinggevenden zelf. Wie macht heeft, heeft ook de macht om mensen te laten meelachen uit ongemak of loyaliteit. Dat is geen echte verbinding."
       },
       {
         "id": "dont_10",
@@ -410,7 +420,7 @@
       "jaar": 2026,
       "titel": "Strategisch humorgebruik in leiderschap bij Vlaamse kmo's",
       "uitgever": "Bachelorproef, Arteveldehogeschool",
-      "nota": "Eigen onderzoek: enquete bij 219 Vlaamse werknemers en 13 diepte-interviews met leidinggevenden uit de retail- en consultancysector."
+      "nota": "Eigen onderzoek: enquete bij Vlaamse werknemers en interviews met leidinggevenden uit de retail- en consultancysector."
     }
   ]
 }
