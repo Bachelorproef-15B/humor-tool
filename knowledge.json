@@ -26,7 +26,7 @@
     {
       "id": "zelfversterkend",
       "naam": "Zelfversterkende humor (zelfspot)",
-      "uitleg": "Humor gericht op jezelf: je eigen fouten, beperkingen en tekortkomingen relativeren. Leidinggevenden noemen dit de krachtigste en veiligste vorm van humor in leiderschap — er is geen risico op kwetsen want jij bent het enige doelwit. Zelfrelativering toont authenticiteit, verlaagt de hierarchische drempel en maakt je als leidinggevende benaderbaar.",
+      "uitleg": "Humor gericht op jezelf: je eigen fouten, beperkingen en tekortkomingen relativeren. Leidinggevenden noemen dit de krachtigste en veiligste vorm van humor in leiderschap, want er is geen risico op kwetsen: jij bent het enige doelwit. Zelfrelativering toont authenticiteit, verlaagt de hierarchische drempel en maakt je als leidinggevende benaderbaar.",
       "wanneerWel": [
         "Bij eigen fouten of vergissingen die zichtbaar zijn voor het team",
         "Om de drempel te verlagen bij het begin van een moeilijk gesprek",
@@ -95,7 +95,7 @@
       "naam": "Spanning of stress op de werkvloer",
       "beschrijving": "De druk is hoog, deadlines naderen of er is een moeilijke periode achter de rug. De sfeer is gespannen.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Humor werkt hier als drukventiel, maar alleen NA het moeilijkste moment, niet erin. Een kleine, luchtige opmerking kan de druk even wegnemen — maar nooit midden in een acute crisis. Wacht tot het ergste voorbij is voor je iets relativeert, dan helpt humor om als team weer adem te halen.",
+      "advies": "Humor werkt hier als drukventiel, maar alleen NA het moeilijkste moment, niet erin. Een kleine, luchtige opmerking kan de druk even wegnemen, maar nooit midden in een acute crisis. Wacht tot het ergste voorbij is voor je iets relativeert, dan helpt humor om als team weer adem te halen.",
       "waarschuwing": "Timing is cruciaal. Humor tijdens een acute crisis of op het hoogtepunt van stress wordt niet als opluchting maar als gebrek aan empathie ervaren. Wacht altijd tot het ergste achter de rug is voor je de sfeer probeert te verlichten.",
       "alternatiefAdvies": {
         "affiliatief": "Na het spannende moment, gebruik een luchtige opmerking die de hele groep erkent. Dit brengt het team weer samen en geeft een collectieve adempauze. Timing is alles: wacht tot iedereen voelt dat het ergste achter de rug is, anders werkt de grap averechts.",
@@ -137,7 +137,7 @@
       "naam": "Slecht nieuws brengen of ontslag meedelen",
       "beschrijving": "Je moet aan een medewerker of het team meedelen dat er slecht nieuws is: reorganisatie, ontslag of een fundamentele tegenvaller.",
       "aanbevolenHumorstijl": "geen",
-      "advies": "Geen humor bij echt slecht nieuws. Directheid, feitelijkheid en empathie zijn de enige gepaste aanpak. NA de boodschap, als het team begint te verwerken, kan een kleine luchtige opmerking helpen om weer te ademen. Neem als leidinggevende nooit zelf het initiatief daartoe — als de ontvanger zelf met een relativerende opmerking komt, mag je daarin meegaan.",
+      "advies": "Geen humor bij echt slecht nieuws. Directheid, feitelijkheid en empathie zijn de enige gepaste aanpak. NA de boodschap, als het team begint te verwerken, kan een kleine luchtige opmerking helpen om weer te ademen. Neem als leidinggevende nooit zelf het initiatief daartoe. Als de ontvanger zelf met een relativerende opmerking komt, mag je daarin meegaan.",
       "waarschuwing": "Geen enkele vorm van humor is gepast bij echt slecht nieuws. Elk relativerig of grappig element bij ontslag of fundamentele tegenslagen wordt als respectloos ervaren en beschadigt het vertrouwen blijvend. Directheid en empathie zijn de enige gepaste aanpak.",
       "alternatiefAdvies": {
         "affiliatief": "Niet bij het nieuws zelf. Pas na de verwerking, als het team zelf ruimte creert, kan een luchtige opmerking helpen om als groep weer te ademen. Respecteer altijd het tempo van de ontvanger. Elke poging tot humor bij slecht nieuws, ook goed bedoeld, wordt door de ontvanger ervaren als bagatellisering.",
@@ -154,7 +154,7 @@
       "advies": "Humor is een motor voor innovatie. In een open en humoristische sfeer durven medewerkers sneller hun mond opendoen. Leidinggevenden geven aan dat de meest onverwachte ideeen vaak ontstaan in informele, luchtige gesprekken. Verbind de luchtige sessie altijd aan een concrete volgende stap zodat de creativiteit ook resultaat oplevert.",
       "waarschuwing": "Humor is een middel, geen doel op zich. Als de luchtige sfeer overgaat in afdwalen of niet serieus nemen van ideeen, verliest de brainstorm zijn focus. Zorg altijd voor een duidelijke structuur na de creatieve fase.",
       "alternatiefAdvies": {
-        "affiliatief": "Creeer een losse sfeer waarin wilde ideeen welkom zijn. Lach samen over gekke voorstellen zonder ze af te schieten. De beste ideeen ontstaan vaak uit een grap. Begin met een speelse ijsbrekeroefening die niets met het onderwerp te maken heeft — dit activeert het creatief denken voor de eigenlijke brainstorm begint.",
+        "affiliatief": "Creeer een losse sfeer waarin wilde ideeen welkom zijn. Lach samen over gekke voorstellen zonder ze af te schieten. De beste ideeen ontstaan vaak uit een grap. Begin met een speelse ijsbrekeroefening die niets met het onderwerp te maken heeft, want dat activeert het creatief denken voor de eigenlijke brainstorm begint.",
         "zelfversterkend": "Deel je eigen mislukte ideeen of 'domme' vragen om te tonen dat alles gezegd mag worden. Als jij als leidinggevende het eerste 'gekke' idee gooit, geef je het team de impliciete toestemming om ook buiten de lijntjes te denken.",
         "agressief": "Vermijd dit volledig. Sarcasme over ideeen doodt creativiteit onmiddellijk. Als medewerkers bang zijn uitgelachen te worden, houden ze hun mond. Een sarcastische reactie op een creatief idee heeft een multipliereffect: iedereen zal daarna twee keer nadenken voor ze iets zeggen.",
         "zelfondermijnend": "Niet effectief als voortdurend patroon. Je kunt de drempel verlagen door aan te geven dat jij zelf ook nog geen idee hebt wat de beste richting is, maar ga daarna actief de ideeen van anderen stimuleren en structureren."
@@ -179,7 +179,7 @@
       "naam": "Dagelijkse informele momenten",
       "beschrijving": "Koffiegesprekken, de wandelgang, de gemeenschappelijke eetzaal. De toevallige ontmoetingen buiten de vergaderzaal.",
       "aanbevolenHumorstijl": "affiliatief",
-      "advies": "Humor ontstaat organisch in de marges van de werkdag. Running jokes en teamtradities — zoals een ritueel bij een deal, memes op het prikbord of teamspecifieke bijnamen — versterken de groepscohesie op een manier die geen vergadering kan evenaren. Wie bewust aanwezig is in informele ruimtes en regelmatig contact heeft met het team, versterkt de impact van humor als leiderschapsinstrument. Geforceerde humor in informele momenten voelt onecht en bereikt het tegenovergestelde.",
+      "advies": "Humor ontstaat organisch in de marges van de werkdag. Running jokes en teamtradities (zoals een ritueel bij een deal, memes op het prikbord of teamspecifieke bijnamen) versterken de groepscohesie op een manier die geen vergadering kan evenaren. Wie bewust aanwezig is in informele ruimtes en regelmatig contact heeft met het team, versterkt de impact van humor als leiderschapsinstrument. Geforceerde humor in informele momenten voelt onecht en bereikt het tegenovergestelde.",
       "waarschuwing": "Informele momenten zijn ook professionele momenten. Humor die in een vergadering als 'luchtig' overkomt, heeft in de wandelgang een grotere emotionele lading. Wees extra voorzichtig in chat- en appberichten: context valt weg en een goed bedoelde opmerking kan snel als kwetsend worden gelezen.",
       "alternatiefAdvies": {
         "affiliatief": "Dit is het uitgelezen moment voor affiliatieve humor. Eet samen met je team, loop bewust door de gemeenschappelijke ruimtes, vraag hoe het weekend was voor je aan werk begint. Bouw kleine tradities in: een vaste openingsvraag op maandagochtend, een running joke die het team zelf gevoed heeft, een ritueel bij successen.",
@@ -223,7 +223,7 @@
       {
         "id": "do_01",
         "titel": "Wees authentiek: geforceerde humor werkt averechts",
-        "uitleg": "Medewerkers prikken er meteen doorheen wanneer humor geforceerd aanvoelt of niet bij de stijl van de leidinggevende past. Geforceerde humor bereikt het tegenovergestelde van wat bedoeld was: in plaats van verbinding ontstaat er afstand. Authenticiteit is de basis van effectieve humor in leiderschap — gebruik alleen wat van nature bij jou past."
+        "uitleg": "Medewerkers prikken er meteen doorheen wanneer humor geforceerd aanvoelt of niet bij de stijl van de leidinggevende past. Geforceerde humor bereikt het tegenovergestelde van wat bedoeld was: in plaats van verbinding ontstaat er afstand. Authenticiteit is de basis van effectieve humor in leiderschap. Gebruik alleen wat van nature bij jou past."
       },
       {
         "id": "do_02",
@@ -290,7 +290,7 @@
       {
         "id": "dont_04",
         "titel": "Forceer humor niet",
-        "uitleg": "Geforceerde humor is een van de grootste frustraties van medewerkers. Ze prikken er meteen doorheen wanneer humor niet bij de stijl van de leidinggevende past of er duidelijk ingestudeerd uitziet. Medewerkers ervaren humor als positief — maar alleen als die authentiek en spontaan aanvoelt, niet als iets dat geprobeerd wordt."
+        "uitleg": "Geforceerde humor is een van de grootste frustraties van medewerkers. Ze prikken er meteen doorheen wanneer humor niet bij de stijl van de leidinggevende past of er duidelijk ingestudeerd uitziet. Medewerkers ervaren humor als positief, maar alleen als die authentiek en spontaan aanvoelt, niet als iets dat geprobeerd wordt."
       },
       {
         "id": "dont_05",
@@ -305,7 +305,7 @@
       {
         "id": "dont_07",
         "titel": "Maak geen grapje vlak na iemands fout of pijnlijk moment",
-        "uitleg": "Timing is cruciaal. Een medewerker die net een fout heeft gemaakt of iets pijnlijks heeft meegemaakt, is kwetsbaar. Humor op dat moment — ook als het zacht bedoeld is — wordt ervaren als afwijzing of minachting. Wacht altijd tot de persoon zelf ruimte geeft voor iets lichters."
+        "uitleg": "Timing is cruciaal. Een medewerker die net een fout heeft gemaakt of iets pijnlijks heeft meegemaakt, is kwetsbaar. Humor op dat moment, ook als het zacht bedoeld is, wordt ervaren als afwijzing of minachting. Wacht altijd tot de persoon zelf ruimte geeft voor iets lichters."
       },
       {
         "id": "dont_08",
@@ -320,7 +320,7 @@
       {
         "id": "dont_10",
         "titel": "Gebruik humor niet om echte problemen of confrontaties te vermijden",
-        "uitleg": "Humor is een aanvulling op daadkrachtig leiderschap, geen vervanging ervan. Wie te vaak grappen inzet om moeilijke gesprekken of beslissingen te vermijden, verliest geloofwaardigheid. Medewerkers herkennen uitstelgedrag sneller dan de leidinggevende zelf vermoedt — en associeren het met gebrek aan daadkracht."
+        "uitleg": "Humor is een aanvulling op daadkrachtig leiderschap, geen vervanging ervan. Wie te vaak grappen inzet om moeilijke gesprekken of beslissingen te vermijden, verliest geloofwaardigheid. Medewerkers herkennen uitstelgedrag sneller dan de leidinggevende zelf vermoedt en associëren het met gebrek aan daadkracht."
       }
     ]
   },
